@@ -1,0 +1,377 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ====== libs ======
+@import "libs/index";
+
+// ====== fonts ======
+@import "fonts";
+@import "icomoon";
+
+// ====== Base ======
+@import "base/index";
+
+// ====== Components ======
+@import "components/index";
+
+// ====== Pages ======
+@import "pages/index";
+
+// ====== LUMINAIRE-TYPES START ======
+.luminaire-types {
+	background: linear-gradient(270.15deg, #fff1dd -9.41%, #deebf8 105.22%);
+	padding: 12px 0;
+
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+
+	.catalog-btn {
+		&:not(:last-child) {
+			@include adaptiv-value("margin-right", 24, 20, 1);
+		}
+	}
+
+	&__menu {
+		flex: 1;
+
+		&:not(:last-child) {
+			@include adaptiv-value("margin-right", 24, 20, 1);
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		margin-top: -5px;
+		margin-bottom: -5px;
+		@include adaptiv-value("margin-left", -13, -6, 0);
+		@include adaptiv-value("margin-right", -13, -6, 0);
+
+		@media screen and (min-width: 1440px) {
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		@include adaptiv-value("padding-left", 13, 6, 0);
+		@include adaptiv-value("padding-right", 13, 6, 0);
+
+		a {
+			display: inline-flex;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			font-family: $fontSecond;
+			font-size: 14px;
+			line-height: 20px;
+			color: $fontColor;
+			text-decoration: underline transparent from-font;
+			text-underline-offset: 3px;
+			transition: $transition ease text-decoration 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline $fontColor from-font;
+				}
+			}
+		}
+	}
+}
+
+.catalog-btn {
+	font-weight: 600;
+	padding-left: 16px;
+	padding-right: 25px;
+
+	i {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+// ====== LUMINAIRE-TYPES END ======
+
+// ====== FRONTPAGE START ======
+.frontpage {
+	background: linear-gradient(173.28deg, #cde4f9 -2.13%, #ffeac1 98.82%);
+	padding-top: 15px;
+
+	&__row {
+		display: flex;
+	}
+
+	&__sidebar {
+		flex: 0 0 280px;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__content {
+		flex: 1;
+
+		section {
+			@include adaptiv-value("margin-bottom", 64, 50, 1);
+		}
+	}
+}
+
+// ====== LAMPS-SIDEBAR START ======
+.lamps-sidebar {
+	border-radius: 2px;
+	background-color: $White;
+	box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.06);
+	font-size: 14px;
+	line-height: 20px;
+	@include adaptiv-value("padding-bottom", 25, 20, 1);
+
+	&__title {
+		font-weight: 600;
+		@include adaptiv-font(18, 25, 16, 1);
+		color: $White;
+		padding: 15px 25px;
+		@include adaptiv-value("padding-left", 25, 15, 1);
+		@include adaptiv-value("padding-right", 25, 15, 1);
+		background-color: $Orange;
+
+		&:not(:last-child) {
+			@include adaptiv-value("margin-bottom", 24, 20, 1);
+		}
+	}
+
+	&__accordion {
+		@include adaptiv-value("padding-left", 25, 15, 1);
+		@include adaptiv-value("padding-right", 25, 15, 1);
+	}
+
+	&__accordion-item {
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		transition: $transition ease opacity 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	a.lamps-sidebar__button {
+		padding: 5px 0;
+		text-decoration: underline transparent from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 1;
+				text-decoration: underline $fontColor from-font;
+			}
+		}
+	}
+
+	&__button-image {
+		flex: 0 0 20px;
+		position: relative;
+		padding-bottom: 20px;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+
+	&__button-title {
+		text-align: left;
+		flex: 1;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		color: $fontColor;
+	}
+
+	&__text {
+		margin-top: 16px;
+		margin-bottom: 16px;
+		background-color: $LBlue2;
+		@include adaptiv-value("margin-left", -25, -15, 1);
+		@include adaptiv-value("margin-right", -25, -15, 1);
+
+		@include adaptiv-value("padding-top", 24, 20, 1);
+		@include adaptiv-value("padding-bottom", 24, 20, 1);
+		@include adaptiv-value("padding-left", 52, 28, 1);
+		@include adaptiv-value("padding-right", 25, 15, 1);
+
+		li {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__link {
+		color: $fontColor;
+		text-decoration: underline transparent from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline $fontColor from-font;
+			}
+		}
+	}
+}
+// ====== LAMPS-SIDEBAR END ======
+
+// ====== MAIN-BANNERS START ======
+.main-banners {
+	display: flex;
+
+	&__item {
+		flex: 1;
+		display: flex;
+		min-height: 350px;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+		color: $White;
+		@include adaptiv-value("padding-top", 30, 20, 1);
+		@include adaptiv-value("padding-bottom", 30, 20, 1);
+		@include adaptiv-value("padding-left", 40, 15, 1);
+		@include adaptiv-value("padding-right", 40, 15, 1);
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		border-radius: 2px;
+	}
+
+	&__title {
+		flex: 1;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__features {
+		display: flex;
+		flex-wrap: wrap;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__feature {
+	}
+
+	&__feature-wrapper {
+		max-width: 174px;
+	}
+
+	&__feature-title {
+		font-weight: 700;
+		@include adaptiv-font(28, 31, 16, 1);
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__feature-text {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	
+	&__item--big {
+		flex: 2;
+	}
+
+	&__item--small {
+		.main-banners__title {
+			@include adaptiv-font(28, 31, 16, 1);
+		}
+		.main-banners__feature-title {
+			@include adaptiv-font(22, 26, 16, 1);
+		}
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 20px;
+		color: $Orange;
+		display: flex;
+		align-items: center;
+
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline $Orange;
+				}
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		span {
+			text-decoration: underline transparent;
+			text-underline-offset: 3px;
+			transition: $transition ease text-decoration 0s;
+		}
+
+		i {
+			margin-left: 8px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+// ====== MAIN-BANNERS END ======
+
+// ====== FRONTPAGE END ======
+
+// ====== SEARCH START ======
+
+// ====== SEARCH END ======

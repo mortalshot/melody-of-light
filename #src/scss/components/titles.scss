@@ -1,0 +1,15 @@
+h1 {
+    font-weight: 700;
+    @include adaptiv-font(44, 48, 24, 1);
+    color: $Black;
+}
+
+h2 {
+    font-weight: 700;
+    @include adaptiv-font(34, 37, 18, 1);
+}
+
+h3 {
+    font-weight: 700;
+    @include adaptiv-font(28, 31, 16, 1);
+}

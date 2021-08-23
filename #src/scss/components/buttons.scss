@@ -1,0 +1,37 @@
+.btn {
+    text-align: center;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 2px;
+    padding: 14px 32px;
+}
+
+.btn-bg {
+    background-color: $Orange;
+    color: $White;
+    transition: $transition ease opacity 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.text-link {
+    text-decoration: underline transparent from-font;
+    text-underline-offset: 3px;
+    transition: $transition ease text-decoration 0s;
+    
+    @media (any-hover: hover) {
+        &:hover {
+            text-decoration: underline $fontColor from-font;
+        }
+    }
+}
