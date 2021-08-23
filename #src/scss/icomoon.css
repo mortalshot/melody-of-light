@@ -28,6 +28,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-catalog2:before {
+  content: "\e916";
+}
+.icon-wishlist2:before {
+  content: "\e915";
+}
+.icon-cart2:before {
+  content: "\e917";
+}
+.icon-accept:before {
+  content: "\e912";
+}
+.icon-home:before {
+  content: "\e913";
+}
+.icon-close-circle:before {
+  content: "\e914";
+}
 .icon-mail:before {
   content: "\e900";
 }

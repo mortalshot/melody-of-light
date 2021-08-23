@@ -11,25 +11,11 @@
 
 <body class="site">
     <div class="site__wrap">
-        <header class="site__header header">
+        <header class="site__header header header--desktop">
             <div class="header__wrapper">
                 <div class="header__top">
                     <div class="header__row _container">
-                        <div class="header__location location">
-                            <a href="" class="location__button">
-                                <i class="icon-location"></i>
-                                <span>Санкт-Петербург</span>
-                                <i class="icon-toggle"></i>
-                            </a>
-
-                            <div class="location__dropdown">
-                                <div class="location__dropdown-info">Информация о доставке будет отображаться для региона: <span class="location__dropdown-city">Санкт-Петербург</span></div>
-                                <div class="location__controls">
-                                    <div class="location__control"><a href="" class="btn btn-bg">Да, всё верно</a></div>
-                                    <div class="location__control"><a href="" class="btn popup-link">Нет, другой</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        @@include('_location.html')
 
                         <nav class="header__top-menu header-menu">
                             <ul class="header-menu__list">
@@ -180,3 +166,78 @@
                 </div>
             </div>
         </header>
+
+        <header class="site__header header header--mobile">
+            <div class="_container">
+                <div class="header__body">
+                    <div class="header__menu">
+
+                        @@include('_location.html')
+
+                        <nav class="header__top-menu header-menu">
+                            <ul class="header-menu__list">
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Доставка</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Новости</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Сотрудничество</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Документы</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">О компании</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="header__main-contacts header__bottom-column">
+                            <a href="tel:88632042654" class="header__phone">8 (863) 204-26-54</a>
+                            <a href="mailto:info@melodylight.ru" class="header__mail">info@melodylight.ru</a>
+                        </div>
+
+                        <div class="header__menu-label">Меню</div>
+                    </div>
+
+                    <div class="header__burger header__column">
+                        <div class="header__burger-inner">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="header__logo logo header__column">
+                        @@include('_logo.html')
+                    </div>
+
+                    <div class="header__controls header__column">
+                        <div class="header__search"><a href=""><i class="icon-search"></i></a></div>
+                        <div class="header__user"><a href=""><i class="icon-user"></i></a></div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="bottom-menu">
+            <ul class="bottom-menu__list">
+                <li class="bottom-menu__item _active">
+                    <a href="/">
+                        <i class="icon-home"></i>
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="bottom-menu__item">
+                    <a href="/">
+                        <i class="icon-catalog2"></i>
+                        <span>Каталог</span>
+                    </a>
+                </li>
+                <li class="bottom-menu__item">
+                    <a href="/">
+                        <i class="icon-wishlist2"></i>
+                        <span>Избранное</span>
+                    </a>
+                </li>
+                <li class="bottom-menu__item basket">
+                    <a href="/" class="basket__link">
+                        <i class="icon-cart2"></i>
+                        <span class="basket__amount">4</span>
+                        <span>Корзина</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
