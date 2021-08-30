@@ -1,31 +1,97 @@
-// $('.gallery__main').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: '.gallery__thumbnails',
-// });
-// $('.gallery__thumbnails').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: '.gallery__main',
-//     arrows: false,
-//     focusOnSelect: true,
-//     vertical: true,
-//     verticalSwiping: true,
+if ($('.main-banners__swiper').length > 0) {
+    mainBanners = new Swiper('.main-banners__swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        watchOverflow: true,
+        autoHeight: true,
 
-//     responsive: [
-//         {
-//           breakpoint: 991,
-//           settings: {
-//             vertical: false,
-//             verticalSwiping: false,
-//           }
-//         },
-//       ]
-// });
+        pagination: {
+            el: '.main-banners__swiper .swiper-pagination',
+        },
 
-// $('#productGallery .tabs-triggers__item').click(function() {
-//     $('.gallery__main').slick('refresh');
-//     $('.gallery__thumbnails').slick('refresh');
-// })
+        mousewheel: {
+            sensitivity: 1,
+            eventsTarget: ".main-banners__swiper",
+        },
+
+        breakpoints: {
+            992: {
+                slidesPerView: 1.4,
+                spaceBetween: 20,
+                autoHeight: false,
+            }
+        },
+    });
+};
+
+if ($('.category-widget__swiper').length > 0) {
+    mainBanners = new Swiper('.category-widget__swiper', {
+        slidesPerView: 2.2,
+        spaceBetween: 8,
+        watchOverflow: true,
+
+        navigation: {
+            prevEl: '.category-widget__swiper .swiper-button-prev',
+            nextEl: '.category-widget__swiper .swiper-button-next',
+        },
+
+        breakpoints: {
+            575: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2.3,
+            },
+            1200: {
+                slidesPerView: 4.1,
+            },
+            1920: {
+                slidesPerView: 5,
+            },
+            2560: {
+                slidesPerView: 6,
+            },
+        },
+    });
+};
+
+if ($('.sale-widget__swiper').length > 0) {
+    mainBanners = new Swiper('.sale-widget__swiper', {
+        slidesPerView: 1.3,
+        spaceBetween: 12,
+        watchOverflow: true,
+
+        navigation: {
+            prevEl: '.sale-widget__swiper .swiper-button-prev',
+            nextEl: '.sale-widget__swiper .swiper-button-next',
+        },
+
+        breakpoints: {
+            450: {
+                slidesPerView: 1.7,
+            },
+            575: {
+                slidesPerView: 2.2,
+            },
+            768: {
+                slidesPerView: 1.7,
+            },
+            992: {
+                slidesPerView: 2.1,
+            },
+            1200: {
+                slidesPerView: 2.6,
+            },
+            1366: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1920: {
+                slidesPerView: 4,
+            },
+            2560: {
+                slidesPerView: 5,
+            },
+        },
+    });
+};

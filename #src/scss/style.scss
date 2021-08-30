@@ -113,10 +113,12 @@
 
 	&__row {
 		display: flex;
+		min-width: 1px;
 	}
 
 	&__sidebar {
 		flex: 0 0 280px;
+		@include adaptiv-value("flex-basis", 280, 150, 1);
 
 		@media screen and (max-width: 767px) {
 			display: none;
@@ -129,6 +131,7 @@
 
 	&__content {
 		flex: 1;
+		min-width: 0px;
 
 		section {
 			@include adaptiv-value("margin-bottom", 64, 50, 1);
@@ -144,6 +147,10 @@
 	font-size: 14px;
 	line-height: 20px;
 	@include adaptiv-value("padding-bottom", 25, 20, 1);
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
 
 	&__title {
 		font-weight: 600;
@@ -260,27 +267,26 @@
 
 // ====== MAIN-BANNERS START ======
 .main-banners {
-	display: flex;
+	&__swiper {
+		min-width: 0px;
+	}
 
-	@media screen and (max-width: 991px) {
-		display: block;
+	.swiper {
+		&-wrapper {
+			min-width: 0px;
+		}
+
+		&-pagination {
+			@media screen and (min-width: 992px) {
+				display: none;
+			}
+		}
 	}
 
 	&__item {
-		flex: 1;
-		display: flex;
-		min-height: 350px;
-
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
-
-		@media screen and (max-width: 991px) {
-			@include adaptiv-value("min-height", 350, 186, 1);
-
-			&:not(:last-child) {
-				margin: 0px 0px 20px 0px;
-			}
+		@media screen and (min-width: 992px) {
+			display: flex;
+			height: auto;
 		}
 	}
 
@@ -296,10 +302,14 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: 2px;
+		@include adaptiv-value("min-height", 350, 186, 1);
 	}
 
 	&__title {
 		flex: 1;
+		@include adaptiv-font(34, 37, 20, 1);
+		transition: $transition ease all 0s;
+
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
@@ -308,13 +318,15 @@
 	&__features {
 		display: flex;
 		flex-wrap: wrap;
+		margin: -5px;
 
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 		}
 	}
 
 	&__feature {
+		padding: 5px;
 	}
 
 	&__feature-wrapper {
@@ -323,29 +335,17 @@
 
 	&__feature-title {
 		font-weight: 700;
-		@include adaptiv-font(28, 31, 16, 1);
+		@include adaptiv-font(34, 37, 16, 1);
 
-		&:not(:last-child) {
-			margin-bottom: 5px;
+		@media screen and (min-width: 768px) {
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
 		}
 	}
 
 	&__feature-text {
-		font-size: 14px;
-		line-height: 20px;
-	}
-
-	&__item--big {
-		flex: 2;
-	}
-
-	&__item--small {
-		.main-banners__title {
-			@include adaptiv-font(28, 31, 16, 1);
-		}
-		.main-banners__feature-title {
-			@include adaptiv-font(22, 26, 16, 1);
-		}
+		@include adaptiv-font(14, 20, 12, 1);
 	}
 
 	&__link {
@@ -360,6 +360,9 @@
 			&:hover {
 				span {
 					text-decoration: underline $Orange;
+				}
+				i {
+					transform: translate(3px, 0);
 				}
 			}
 		}
@@ -376,6 +379,7 @@
 
 		i {
 			margin-left: 8px;
+			transition: $transition ease transform 0s;
 		}
 
 		&::before {
@@ -390,7 +394,503 @@
 }
 // ====== MAIN-BANNERS END ======
 
+// ====== ONLINE-FITTING START ======
+.online-fitting {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	&__wrapper {
+		border-radius: 2px;
+		color: $White;
+		position: relative;
+	}
+
+	&__content {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		padding: 13px 25px;
+		@include adaptiv-value("padding-left", 25, 15, 1);
+		@include adaptiv-value("padding-right", 25, 15, 1);
+
+		i {
+			font-size: 20px;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		@include adaptiv-font(18, 20, 14, 1);
+		color: $White;
+
+		&:not(:last-child) {
+			padding-right: 20px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+// ====== ONLINE-FITTING END ======
+
+// ====== CATEGORY-WIDGET START ======
+.category-widget {
+	@include adaptiv-value("margin-right", -45, -20, 0);
+
+	@media screen and (min-width: 1440px) {
+		@include adaptiv-value("margin-right", -80, -20, 0);
+	}
+	@media screen and (min-width: 1920px) {
+		@include adaptiv-value("margin-right", -120, -20, 0);
+	}
+	@media screen and (max-width: 767px) {
+		margin-right: -20px;
+	}
+
+	&__heading {
+		&:not(:last-child) {
+			@include adaptiv-value("margin-bottom", -40, -20, 1);
+			@include adaptiv-value("padding-right", 123, 103, 1);
+		}
+	}
+
+	&__title {
+	}
+
+	&__swiper {
+		@include adaptiv-value("padding-right", 45, 20, 0);
+
+		@media screen and (min-width: 1440px) {
+			@include adaptiv-value("padding-right", 80, 20, 0);
+		}
+		@media screen and (min-width: 1920px) {
+			@include adaptiv-value("padding-right", 120, 20, 0);
+		}
+		@media screen and (max-width: 767px) {
+			padding-right: 20px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		height: auto;
+	}
+
+	&__item-wrapper {
+		width: 100%;
+		background-color: $White;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		border-radius: 1px;
+		transition: $transition ease transform 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: translate(0, 3px);
+
+				.category-widget__item-title {
+					text-decoration: underline $fontColor from-font;
+				}
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__item-image {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item-title {
+		@include adaptiv-value("padding-top", 24, 14, 1);
+		@include adaptiv-value("padding-bottom", 24, 14, 1);
+		@include adaptiv-value("padding-left", 20, 15, 1);
+		@include adaptiv-value("padding-right", 20, 15, 1);
+		font-weight: 600;
+		@include adaptiv-font(18, 25, 12, 1);
+		text-align: center;
+		color: $fontColor;
+		text-decoration: underline transparent from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+	}
+}
+// ====== CATEGORY-WIDGET END ======
 // ====== FRONTPAGE END ======
+
+// ====== SALE-WIDGET START ======
+.sale-widget {
+	@media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+		@include adaptiv-value("margin-right", -45, -20, 0);
+	}
+	@media screen and (max-width: 767px) {
+		margin-right: -20px;
+	}
+
+	&__swiper {
+		@media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+			@include adaptiv-value("padding-right", 45, 20, 0);
+		}
+		@media screen and (max-width: 767px) {
+			padding-right: 20px;
+		}
+	}
+
+	.swiper {
+		@media (any-hover: hover) {
+			padding-bottom: 96px;
+		}
+	}
+}
+// ====== SALE-WIDGET END ======
+
+// ====== PRODUCT-ITEM START ======
+.product-item {
+	position: relative;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08);
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.product-item__controls {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+					transform: translate(0, 100%);
+				}
+			}
+		}
+	}
+
+	&__image {
+		@include adaptiv-value("min-height", 218, 156, 1);
+	}
+
+	&__labels {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 14px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 10px;
+
+		span {
+			display: none;
+			min-width: 52px;
+			padding: 10px;
+			background-color: $White;
+
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	&__label-sale {
+		color: $Red;
+	}
+
+	&__label-new {
+		color: $Blue;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		background-color: $White;
+		@include adaptiv-value("padding", 20, 16, 1);
+		flex: 1;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.product-item__name {
+					text-decoration: underline $fontColor from-font;
+				}
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+
+	&__article {
+		color: $Gray;
+		font-size: 12px;
+		line-height: 17px;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+
+	&__name {
+		font-size: 14px;
+		line-height: 20px;
+		color: $fontColor;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		flex: 1;
+		text-decoration: underline transparent from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__attributes {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		margin: -4px;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__attribute {
+		padding: 4px;
+	}
+
+	&__attribute-wrapper {
+		border-radius: 70px;
+		background-color: $LGray2;
+		padding: 2px 8px;
+		font-size: 14px;
+		line-height: 20px;
+		color: $Gray;
+		display: flex;
+		align-content: center;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 19px;
+			flex-basis: 19px;
+			height: 19px;
+			margin-right: 2px;
+		}
+	}
+
+	&__attribute--height {
+		.product-item__attribute-wrapper {
+			&::before {
+				background: url(../img/icons/product-height.svg) no-repeat center/contain;
+			}
+		}
+	}
+
+	&__attribute--diameter {
+		.product-item__attribute-wrapper {
+			&::before {
+				background: url(../img/icons/product-diameter.svg) no-repeat center/contain;
+			}
+		}
+	}
+
+	&__price {
+		font-weight: 600;
+		@include adaptiv-font(18, 25, 14, 1);
+		color: $fontColor;
+
+		.new-price {
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+
+		.old-price {
+			font-size: 12px;
+			line-height: 17px;
+		}
+	}
+
+	&__controls {
+		transition: $transition ease all 0s;
+
+		@media (any-hover: hover) {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			transform: translate(0, 50%);
+			pointer-events: none;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		button {
+			font-weight: 700;
+			@include adaptiv-font(14, 20, 12, 1);
+
+			i {
+				font-size: 18px;
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&__buy {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	&__controls-row {
+		display: flex;
+
+		button {
+			flex: 1;
+			@include adaptiv-value("padding-top", 15, 10, 1);
+			@include adaptiv-value("padding-bottom", 15, 10, 1);
+			@include adaptiv-value("padding-left", 20, 10, 1);
+			@include adaptiv-value("padding-right", 20, 10, 1);
+			background-color: $White;
+			border-radius: 0;
+
+			&:first-child {
+				border-right: 1px solid $LGray;
+			}
+		}
+	}
+
+	&__compare {
+	}
+
+	&__wishlist {
+	}
+
+	&--sale {
+		.product-item__label-sale {
+			display: inline-block;
+		}
+	}
+	&--new {
+		.product-item__label-new {
+			display: inline-block;
+		}
+	}
+}
+// ====== PRODUCT-ITEM END ======
+
+// ====== SEARCH START ======
+.news-sidebar {
+	background-color: $White;
+	border-radius: 2px;
+	@include adaptiv-value("padding", 25, 15, 1);
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiv-value("margin-bottom", 35, 20, 1);
+		}
+	}
+
+	&__items {
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item-date {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 20px;
+		color: $Gray;
+		text-decoration: underline transparent from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline $Gray from-font;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__item-title {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 25px;
+		color: $fontColor;
+		text-decoration: underline transparent from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline $fontColor from-font;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__item-excerpt {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
+		&:not(:last-child) {
+			@include adaptiv-value("margin-bottom", 24, 15, 1);
+		}
+	}
+
+	&__item-link {
+		&:not(:last-child) {
+			@include adaptiv-value("margin-bottom", 24, 15, 1);
+		}
+	}
+}
+// ====== SEARCH END ======
 
 // ====== SEARCH START ======
 

@@ -15,23 +15,54 @@
 .btn-bg {
     background-color: $Orange;
     color: $White;
-    transition: $transition ease opacity 0s;
+    transition: $transition ease background-color 0s;
 
     @media (any-hover: hover) {
         &:hover {
-            opacity: 0.8;
+            background-color: rgba($Orange, 0.8);
+        }
+    }
+}
+
+.btn-wh {
+    background-color: $White;
+    transition: $transition ease background-color 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba($White, 0.6);
         }
     }
 }
 
 .text-link {
-    text-decoration: underline transparent from-font;
-    text-underline-offset: 3px;
-    transition: $transition ease text-decoration 0s;
-    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-flex;
+    align-content: center;
+    color: $Orange;
+
+    span {
+        margin-right: 8px;
+        text-decoration: underline transparent from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration 0s;
+    }
+
+    i {
+        transition: $transition ease transform 0s;
+    }
+
     @media (any-hover: hover) {
         &:hover {
-            text-decoration: underline $fontColor from-font;
+            span {
+                text-decoration: underline $Orange from-font;
+            }
+
+            i {
+                transform: translate(5px, 0);
+            }
         }
     }
 }
