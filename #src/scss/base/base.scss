@@ -134,8 +134,7 @@ img {
 }
 
 p {
-    @include adaptiv-value("margin-top", 24, 16, 1);
-    @include adaptiv-value("margin-bottom", 24, 16, 1);
+    margin: 16px 0;
 }
 
 .mb-0 {
@@ -175,6 +174,10 @@ body {
 
     &__footer {
         margin-top: auto;
+        
+        @media screen and (max-width: 767px) {
+            padding-bottom: $size-header-height-mobile;
+        }
     }
 }
 
@@ -281,5 +284,14 @@ body {
                 }
             }
         }
+    }
+}
+
+._content {
+    :first-child {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
     }
 }

@@ -3,20 +3,9 @@
     &__title {
         width: 100%;
         position: relative;
-        cursor: pointer;
         background-color: transparent;
         padding: 5px 0;
-
-        &::after {
-            content: "";
-            display: block;
-            width: 18px;
-            height: 18px;
-            border-radius: 100%;
-            background: $LBlue2 url(../img/icons/accordion.svg) no-repeat center/contain;
-            padding: 8px;
-            transition: $transition ease transform 0s;
-        }
+        cursor: auto;
 
         &._active {
             &::after {
@@ -27,5 +16,22 @@
 
     // .accordion__text
     &__text {
+    }
+
+    &._init {
+        .accordion__title {
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+                background: $LBlue2 url(../img/icons/accordion.svg) no-repeat center/contain;
+                padding: 8px;
+                transition: $transition ease transform 0s;
+            }
+        }
     }
 }

@@ -1,0 +1,353 @@
+.footer {
+    &__full {
+        .footer__bottom {
+            border-top: 1px solid $LGray;
+        }
+    }
+
+    &__top {
+        @include adaptiv-value("padding-top", 72, 24, 1);
+        @include adaptiv-value("padding-bottom", 86, 32, 1);
+        display: flex;
+        justify-content: space-between;
+        @include adaptiv-value("margin-top", -20, -16, 1);
+        @include adaptiv-value("margin-bottom", -20, -16, 1);
+        @include adaptiv-value("margin-left", -40, -10, 1);
+        @include adaptiv-value("margin-right", -40, -10, 1);
+
+        @media screen and (max-width: 991px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        @include adaptiv-value("padding-top", 20, 16, 1);
+        @include adaptiv-value("padding-bottom", 20, 16, 1);
+        @include adaptiv-value("padding-left", 40, 10, 1);
+        @include adaptiv-value("padding-right", 40, 10, 1);
+    }
+
+    &__info {
+        @media screen and (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__logo {
+        @include adaptiv-value("max-width", 158, 134, 1);
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 26, 20, 1);
+
+            @media screen and (max-width: 767px) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 17px;
+        color: $Gray;
+        max-width: 249px;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 40, 20, 1);
+        }
+    }
+
+    &__contacts {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 40, 20, 1);
+        }
+
+        @media screen and (max-width: 767px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__contact-item {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            @include adaptiv-font(14, 20, 12, 1);
+            color: $fontColor;
+
+            i {
+                font-size: 16px;
+                color: $Gray;
+                margin-right: 8px;
+            }
+
+            span {
+                text-decoration: underline transparent from-font;
+                text-underline-offset: 3px;
+                transition: $transition ease text-decoration 0s;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    span {
+                        text-decoration: underline $fontColor from-font;
+                    }
+                    i {
+                        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu {
+        flex: 0 0 34%;
+
+        @media screen and (max-width: 1200px) {
+            flex: 0 0 40%;
+        }
+        @media screen and (max-width: 991px) {
+            order: 3;
+            flex: 0 0 100%;
+        }
+
+        .accordion {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            @include adaptiv-value("margin-left", -40, -10, 1);
+            @include adaptiv-value("margin-right", -40, -10, 1);
+
+            @media screen and (max-width: 991px) {
+                justify-content: flex-start;
+            }
+
+            &__item {
+                @include adaptiv-value("padding-left", 40, 10, 1);
+                @include adaptiv-value("padding-right", 40, 10, 1);
+
+                @media screen and (max-width: 767px) {
+                    width: 50%;
+                }
+            }
+
+            &__title {
+                @include adaptiv-font(16, 22, 12, 1);
+                text-align: left;
+                color: $Gray;
+
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    align-items: center;
+
+                    &::after {
+                        margin-left: 8px;
+                        width: 8px !important;
+                        height: 10px !important;
+                        padding: 0 !important;
+                        background: url(../img/icons/accordion-black.svg) no-repeat center/contain !important;
+                    }
+                }
+            }
+
+            &__text {
+                .menu {
+                    &__list {
+                        margin-top: 16px;
+                    }
+
+                    &__item {
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                    &__link {
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $Black;
+                        text-decoration: underline transparent from-font;
+                        text-underline-offset: 3px;
+                        transition: $transition ease text-decoration 0s;
+
+                        @media (any-hover: hover) {
+                            &:hover {
+                                text-decoration: underline $fontColor from-font;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__mailing {
+        flex: 0 0 30%;
+
+        @media screen and (max-width: 1200px) {
+            flex: 0 0 35%;
+        }
+        @media screen and (max-width: 991px) {
+            order: 2;
+            flex: 1;
+        }
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        padding: 35px 0;
+        color: $Gray;
+
+        @media screen and (max-width: 575px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__privacy {
+        font-size: 12px;
+        line-height: 17px;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        @media screen and (max-width: 575px) {
+            flex: 0 0 100%;
+
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+
+        & + .footer__link {
+            padding-right: 20px;
+        }
+    }
+
+    &__link {
+        color: $Gray;
+        font-size: 12px;
+        line-height: 17px;
+        text-decoration: underline $Gray from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration, $transition opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.6;
+                text-decoration: underline transparent from-font;
+            }
+        }
+    }
+
+    &__kan {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            display: inline-flex;
+            @include adaptiv-value("max-width", 75, 53, 1);
+            transition: $transition ease opacity 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-1.5px);
+    }
+    20%,
+    40%,
+    60% {
+        transform: translateX(1.5px);
+    }
+    80% {
+        transform: translateX(1px);
+    }
+    90% {
+        transform: translateX(-1px);
+    }
+}
+
+.subscribe {
+    &__title {
+        font-weight: 600;
+        @include adaptiv-font(18, 25, 14, 1);
+        max-width: 224px;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 24, 15, 1);
+        }
+    }
+
+    &__form {
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 24, 15, 1);
+        }
+    }
+
+    .form__input {
+        padding-right: 121px;
+        @include adaptiv-font(16, 22, 14, 1);
+    }
+
+    &__btn {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        bottom: 7px;
+        height: auto;
+        width: 114px;
+        padding: 5px 20px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    &__privacy {
+        font-size: 12px;
+        line-height: 17px;
+        color: $Gray;
+
+        a {
+            color: $Gray;
+            text-decoration: underline $Gray from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease text-decoration, $transition opacity 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline transparent from-font;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

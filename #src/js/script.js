@@ -27,4 +27,16 @@ $(document).ready(function () {
         }
         // SHOW LOCATION DROPDOWN END
     }
+
+    // === FORM PHONE MASK START ===
+    $('.form__input--phone').mask("+7 (999) 999-99-99");
+    // === FORM PHONE MASK END ===
+
+    // === FORM PHONE MASK START ===
+    $('.map__popup-close').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('_active');
+        $(this).closest('.map__popup-form').find('.form__row').slideToggle(300);
+    })
+    // === FORM PHONE MASK END ===
 })

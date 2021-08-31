@@ -3,6 +3,13 @@
         position: relative;
     }
 
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
     &__item {
         margin: 0px 0px 20px 0px;
     }
@@ -36,12 +43,83 @@
             box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.07);
         }
     }
+
+    &__checkbox {
+        input {
+            appearance: none;
+            position: absolute;
+
+            &:checked {
+                & + span {
+                    &::before {
+                        background-color: $Orange;
+                        border-color: $Orange;
+                    }
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        span {
+            display: block;
+            position: relative;
+            padding-left: 32px;
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                transition: $transition ease all 0s;
+            }
+            &::before {
+                width: 16px;
+                height: 16px;
+                border: 1px solid $Gray;
+                border-radius: 1px;
+                position: absolute;
+                top: 0px;
+                left: 0;
+            }
+            &::after {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 11px;
+                height: 11px;
+                background: url(../img/icons/accept-white.svg) no-repeat center/contain;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__privacy {
+        font-size: 12px;
+        line-height: 17px;
+        color: $Gray;
+
+        a {
+            color: $Gray;
+            text-decoration: underline $Gray from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease text-decoration, $transition opacity 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline transparent from-font;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
 }
 
 textarea.form__input {
     min-height: 120px;
     resize: vertical;
-    padding: 20px;
+    padding: 15px;
 }
 
 // .options {

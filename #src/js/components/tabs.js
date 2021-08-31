@@ -1,12 +1,14 @@
 $('.tabs__triggers-item').click(function (e) {
     e.preventDefault();
 
-    var tabsid = $(this).closest('.tabs').attr("id");
-    $('#' + tabsid + ' ' + '.tabs__triggers-item').removeClass('tabs__triggers-item--active');
-    $('#' + tabsid + ' ' + '.tabs__content-item').removeClass('tabs__content-item--active');
+    if (!$(this).hasClass('tabs__triggers-item--active')) {
+        var tabsid = $(this).closest('.tabs').attr("id");
+        $('#' + tabsid + ' ' + '.tabs__triggers-item').removeClass('tabs__triggers-item--active');
+        $('#' + tabsid + ' ' + '.tabs__content-item').removeClass('tabs__content-item--active').hide();
 
-    $(this).addClass('tabs__triggers-item--active');
-    $($(this).attr('href')).addClass('tabs__content-item--active');
+        $(this).addClass('tabs__triggers-item--active');
+        $($(this).attr('href')).addClass('tabs__content-item--active').fadeIn(300);
+    }
 });
 
 let tabsList = document.querySelectorAll('.tabs');

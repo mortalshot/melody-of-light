@@ -95,3 +95,30 @@ if ($('.sale-widget__swiper').length > 0) {
         },
     });
 };
+
+if ($('.reviews-widget__list').length > 0) {
+    mainBanners = new Swiper('.reviews-widget__list', {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        watchOverflow: true,
+
+        pagination: {
+            el: '.reviews-widget__list .swiper-pagination',
+        },
+
+        breakpoints: {
+            575: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+    });
+};
