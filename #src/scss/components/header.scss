@@ -957,6 +957,10 @@
 	}
 
 	&__product-btn {
+		button {
+			position: relative;
+			z-index: 2;
+		}
 	}
 
 	&._active {

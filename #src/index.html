@@ -1,173 +1,176 @@
 @@include('html-components/_header.html', {
-"title": "Front page"
+"title": "Главная страница",
+"class": "",
 })
 
 <main class="site__main">
 	@@include('html-components/_luminaire-types.html', { })
 
-	<div class="frontpage">
-		<div class="frontpage__row _container">
-			<aside class="frontpage__sidebar">
-				<div class="lamps-sidebar">
-					<div class="lamps-sidebar__title">Типы светильников</div>
-					<div data-spollers="" class="lamps-sidebar__accordion accordion">
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-1.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Люстры</span>
-							</button>
+	<div class="with-sidebar frontpage">
+		<div class="with-sidebar__row frontpage__row _container">
+			<aside class="with-sidebar__sidebar frontpage__sidebar">
+				<div class="with-sidebar__sidebar-sticky">
+					<div class="lamps-sidebar">
+						<div class="lamps-sidebar__title">Типы светильников</div>
+						<div data-spollers="" class="lamps-sidebar__accordion accordion">
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-1.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Люстры</span>
+								</button>
 
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
 
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-2.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Бра</span>
-							</button>
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-2.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Бра</span>
+								</button>
 
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
 
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-3.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Подвесные светильники</span>
-							</button>
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-3.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Подвесные светильники</span>
+								</button>
 
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
 
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-4.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Настольные лампы</span>
-							</button>
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-4.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Настольные лампы</span>
+								</button>
 
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
 
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-5.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Торшеры</span>
-							</button>
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-5.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Торшеры</span>
+								</button>
 
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
 
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<a href="/products.html" class="lamps-sidebar__button">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-6.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Настенно-потолочные</span>
-							</a>
-						</div>
-
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-7.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Уличное освещение</span>
-							</button>
-
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<a href="/category.html" class="lamps-sidebar__button">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-6.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Настенно-потолочные</span>
+								</a>
 							</div>
-						</div>
 
-						<div class="lamps-sidebar__accordion-item accordion__item">
-							<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
-								<span class="lamps-sidebar__button-image"> <img src="img/category/category-8.svg" alt="Люстры"> </span>
-								<span class="lamps-sidebar__button-title">Офисное освещение</span>
-							</button>
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-7.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Уличное освещение</span>
+								</button>
 
-							<div class="lamps-sidebar__text accordion__text">
-								<ul>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Гибкие бра</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
-									<li><a href="/products.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
-								</ul>
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="lamps-sidebar__accordion-item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="lamps-sidebar__button accordion__title">
+									<span class="lamps-sidebar__button-image"> <img src="img/category/category-8.svg" alt="Люстры"> </span>
+									<span class="lamps-sidebar__button-title">Офисное освещение</span>
+								</button>
+
+								<div class="lamps-sidebar__text accordion__text">
+									<ul>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 1 плафоном</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 2 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">C 3 плафонами</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Гибкие бра</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для зеркал</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветки для картин</a></li>
+										<li><a href="/category.html" class="lamps-sidebar__link">Подсветка для лестниц</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="news-sidebar">
-					<h3 class="news-sidebar__title">Новости</h3>
+					<div class="news-sidebar">
+						<h3 class="news-sidebar__title">Новости</h3>
 
-					<div class="news-sidebar__items">
-						<div class="news-sidebar__item">
-							<a href="" class="news-sidebar__item-date">10.08.2021 / 11:11</a>
-							<a href="" class="news-sidebar__item-title">MosBuild</a>
-							<div class="news-sidebar__item-excerpt">В России выставке строительных и отделочных материалов MosBuild Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Всеми реторический напоивший инициал подпоясал использовало, продолжил своих большого.</div>
-							<div class="news-sidebar__item-link"><a href="" class="text-link"> <span>Читать новость</span> <i class="icon-text-link"></i></a></div>
+						<div class="news-sidebar__items">
+							<div class="news-sidebar__item">
+								<a href="" class="news-sidebar__item-date">10.08.2021 / 11:11</a>
+								<a href="" class="news-sidebar__item-title">MosBuild</a>
+								<div class="news-sidebar__item-excerpt">В России выставке строительных и отделочных материалов MosBuild Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Всеми реторический напоивший инициал подпоясал использовало, продолжил своих большого.</div>
+								<div class="news-sidebar__item-link"><a href="" class="text-link"> <span>Читать новость</span> <i class="icon-text-link"></i></a></div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</aside>
 
-			<div class="frontpage__content">
+			<div class="with-sidebar__content frontpage__content">
 				@@include('html-components/_online-fitting.html', { })
 
 				<section class="main-banners">

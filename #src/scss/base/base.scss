@@ -174,7 +174,7 @@ body {
 
     &__footer {
         margin-top: auto;
-        
+
         @media screen and (max-width: 767px) {
             padding-bottom: $size-header-height-mobile;
         }
@@ -284,6 +284,59 @@ body {
                 }
             }
         }
+    }
+}
+
+.noUi {
+    &-target {
+        box-shadow: none;
+        border: 0;
+        border-radius: 0;
+        background: $LGray;
+    }
+
+    &-horizontal {
+        height: 2px;
+        margin-left: 5px;
+        margin-right: 16px;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 2px;
+            width: 16px;
+            background-color: $LGray;
+            position: absolute;
+            top: 0;
+        }
+        &::before {
+            left: -5px;
+        }
+        &::after {
+            right: -16px;
+        }
+
+        .noUi-handle {
+            width: 22px;
+            height: 22px;
+            border: 2px solid $Orange;
+            border-radius: 100%;
+            transform: translateY(-50%);
+            top: 0;
+            box-shadow: none;
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &-connect {
+        background: $Orange;
+        cursor: pointer;
     }
 }
 

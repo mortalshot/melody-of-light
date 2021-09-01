@@ -119,6 +119,10 @@ if ($('.reviews-widget__list').length > 0) {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
+            1920: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
         },
     });
 };

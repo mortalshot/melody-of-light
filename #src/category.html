@@ -1,0 +1,497 @@
+@@include('html-components/_header.html', {
+"title": "Категории",
+"class": "category-page",
+})
+
+<main class="site__main">
+	<div class="page-heading">
+		<div class="_container">
+			<div class="page-heading__back">
+				<a href="/catalog.html" class="btn">
+					<i class="icon-text-link"></i>
+					<span>Назад в каталог</span>
+				</a>
+			</div>
+
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__wrapper" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item">
+							<span itemprop="name">Главная</span>
+						</a>
+					</span>
+					<span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item">
+							<span itemprop="name">Каталог</span>
+						</a>
+					</span>
+					<span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__title">Бра</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="category with-sidebar">
+		<div class="with-sidebar__row _container">
+			<aside class="with-sidebar__sidebar">
+				<div class="with-sidebar__sidebar-sticky">
+					<form action="#" class="filter">
+						<div class="filter__heading">
+							<div class="filter__title">Фильтр</div>
+							<div class="filter__reset">
+								<a href="">
+									<i class="icon-reload"></i>
+									<span>Сбросить</span>
+								</a>
+							</div>
+						</div>
+						<div data-spollers="" class="filter__body accordion">
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title _active"><span>Цена</span></button>
+								<div class="accordion__text">
+									<div class="price-filter">
+										<div class="form__row price-filter__values">
+											<div class="form__item col-6 price-filter__values-input">
+												<input id="price-start" autocomplete="off" type="text" name="form[]" class="form__input">
+											</div>
+											<div class="form__item col-6 price-filter__values-input">
+												<input id="price-end" autocomplete="off" type="text" name="form[]" class="form__input">
+											</div>
+										</div>
+										<div class="price-filter__slider"></div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Форма светильников</span></button>
+								<div class="accordion__text">
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-bushe">
+										<span>Буше<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Квадратная<span class="filter__num">(189)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Клетка<span class="filter__num">(48)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Колесо<span class="filter__num">(9)</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Парметры плафонов</span></button>
+								<div class="accordion__text">
+									<label for="visota-ot" class="form__label">Высота, мм</label>
+									<div class="form__row">
+										<div class="form__item col-6">
+											<input id="visota-ot" type="text" class="form__input" name="visota-ot">
+										</div>
+										<div class="form__item col-6">
+											<input type="text" class="form__input" name="visota-do">
+										</div>
+									</div>
+									<label for="glybina-ot" class="form__label">Глубина, мм</label>
+									<div class="form__row">
+										<div class="form__item col-6">
+											<input id="glybina-ot" type="text" class="form__input" name="glybina-ot">
+										</div>
+										<div class="form__item col-6">
+											<input type="text" class="form__input" name="glybina-do">
+										</div>
+									</div>
+									<label for="diametr-ot" class="form__label">Диаметр, мм</label>
+									<div class="form__row">
+										<div class="form__item col-6">
+											<input id="diametr-ot" type="text" class="form__input" name="diametr-ot">
+										</div>
+										<div class="form__item col-6">
+											<input type="text" class="form__input" name="diametr-do">
+										</div>
+									</div>
+									<label for="shirina-ot" class="form__label">Ширина, мм</label>
+									<div class="form__row">
+										<div class="form__item col-6">
+											<input id="shirina-ot" type="text" class="form__input" name="shirina-ot">
+										</div>
+										<div class="form__item col-6">
+											<input type="text" class="form__input" name="shirina-do">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Стиль</span></button>
+								<div class="accordion__text">
+									<label class="form__radio">
+										<input type="radio" name="filter-style">
+										<span>Лофт<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__radio">
+										<input type="radio" name="filter-style">
+										<span>Хай-тек<span class="filter__num">(189)</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Тип лампочки</span></button>
+								<div class="accordion__text">
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-bushe">
+										<span>Буше<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Квадратная<span class="filter__num">(189)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Клетка<span class="filter__num">(48)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Колесо<span class="filter__num">(9)</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Место применения</span></button>
+								<div class="accordion__text">
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-bushe">
+										<span>Буше<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Квадратная<span class="filter__num">(189)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Клетка<span class="filter__num">(48)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Колесо<span class="filter__num">(9)</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Параметры плафонов</span></button>
+								<div class="accordion__text">
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-bushe">
+										<span>Буше<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Квадратная<span class="filter__num">(189)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Клетка<span class="filter__num">(48)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Колесо<span class="filter__num">(9)</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Выключатель</span></button>
+								<div class="accordion__text">
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-bushe">
+										<span>Буше<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Квадратная<span class="filter__num">(189)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Клетка<span class="filter__num">(48)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Колесо<span class="filter__num">(9)</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="accordion__item accordion__item">
+								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Степень защиты</span></button>
+								<div class="accordion__text">
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-bushe">
+										<span>Буше<span class="filter__num">(23)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Квадратная<span class="filter__num">(189)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Клетка<span class="filter__num">(48)</span></span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="form-kvadtarnaya">
+										<span>Колесо<span class="filter__num">(9)</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</aside>
+
+			<div class="category__content with-sidebar__content">
+				<h2 class="page-heading__title">Бра</h2>
+				<div class="category__tags">
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="C 1 плафоном" checked>
+							<span>C 1 плафоном <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="C 2 плафонами" checked>
+							<span>C 2 плафонами <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="C 3 плафонами">
+							<span>C 3 плафонами <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="Гибкие бра">
+							<span>Гибкие бра <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="C 1 плафоном">
+							<span>C 1 плафоном <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="C 1 плафоном">
+							<span>C 1 плафоном <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="C 1 плафоном">
+							<span>C 1 плафоном <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="Подсветки для зеркал">
+							<span>Подсветки для зеркал <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="Подсветки для картин">
+							<span>Подсветки для картин <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="Подсветка для лестниц">
+							<span>Подсветка для лестниц <i class="icon-close"></i></span>
+						</label>
+					</div>
+					<div class="category__tag">
+						<label class="category__tag-inner">
+							<input type="checkbox" name="Все">
+							<span>Все <i class="icon-close"></i></span>
+						</label>
+					</div>
+				</div>
+
+				<div class="category__list">
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "",
+						"oldprice": "",
+						"curprice": "1 580 ₽",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "1 750 ₽",
+						"oldprice": "2 480 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "",
+						"oldprice": "",
+						"curprice": "1 580 ₽",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "1 750 ₽",
+						"oldprice": "2 480 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--new",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "",
+						"oldprice": "",
+						"curprice": "1 580 ₽",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "product-item--sale",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "1 750 ₽",
+						"oldprice": "2 480 ₽",
+						"curprice": "",
+						})
+					</div>
+					<div class="category__item">
+						@@include('html-components/_product-item.html', {
+						"class": "",
+						"imagesrc": "img/category/lamp/lamp-1/lamp-1-1.jpg",
+						"vendor": "BS001024954",
+						"name": "Светильник потолочный ArtLAMP BL",
+						"newprice": "750 ₽",
+						"oldprice": "1 580 ₽",
+						"curprice": "",
+						})
+					</div>
+				</div>
+			</div>
+		</div>
+
+</main>
+
+@@include('html-components/_footer.html', {
+"class": "",
+})
