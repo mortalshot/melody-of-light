@@ -47,7 +47,14 @@
     &__checkbox {
         input {
             appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
             position: absolute;
+            width: 1px;
+            height: 1px;
+            left: 0;
+            top: 0;
+            z-index: -1;
 
             &:checked {
                 & + span {
@@ -86,7 +93,7 @@
             &::after {
                 position: absolute;
                 top: 2px;
-                left: 2px;
+                left: 3px;
                 width: 11px;
                 height: 11px;
                 background: url(../img/icons/accept-white.svg) no-repeat center/contain;
@@ -98,7 +105,14 @@
     &__radio {
         input {
             appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
             position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 1px;
+            z-index: -1;
 
             &:checked {
                 & + span {

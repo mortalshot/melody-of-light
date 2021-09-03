@@ -197,25 +197,25 @@
 	}
 
 	&__accordion-item {
-		&:not(:last-child) {
-			margin-bottom: 6px;
-		}
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 
 	&__button {
+		padding: 8px 10px;
 		display: flex;
 		align-items: center;
-		transition: $transition ease opacity 0s;
+		transition: $transition ease background-color 0s;
 
 		@media (any-hover: hover) {
 			&:hover {
-				opacity: 0.6;
+				background-color: rgba(3, 106, 155, 0.1);
 			}
 		}
 	}
 
 	a.lamps-sidebar__button {
-		padding: 5px 0;
+		padding: 5px 10px;
 		text-decoration: underline transparent from-font;
 		text-underline-offset: 3px;
 		transition: $transition ease text-decoration 0s;
@@ -257,11 +257,11 @@
 	}
 
 	&__text {
-		margin-top: 16px;
-		margin-bottom: 16px;
+		margin-top: 8px;
+		margin-bottom: 8px;
 		background-color: $LBlue2;
-		@include adaptiv-value("margin-left", -25, -15, 1);
-		@include adaptiv-value("margin-right", -25, -15, 1);
+		@include adaptiv-value("margin-left", -15, -5, 1);
+		@include adaptiv-value("margin-right", -15, -5, 1);
 
 		@include adaptiv-value("padding-top", 24, 20, 1);
 		@include adaptiv-value("padding-bottom", 24, 20, 1);
@@ -975,7 +975,7 @@
 			display: flex;
 			align-items: center;
 			position: relative;
-			z-index: 2;
+			z-index: 1;
 		}
 
 		&__triggers-item {
@@ -1284,7 +1284,7 @@
 }
 // ====== MAP END ======
 
-// ====== SEARCH START ======
+// ====== PAGE-HEADING START ======
 .page-heading {
 	@include adaptiv-value("padding-top", 40, 30, 1);
 	@include adaptiv-value("padding-bottom", 40, 30, 1);
@@ -1328,6 +1328,10 @@
 }
 
 .breadcrumbs {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	
 	&__wrapper {
 		display: flex;
 		align-items: center;
@@ -1364,7 +1368,7 @@
 		color: rgba($Gray, 0.6);
 	}
 }
-// ====== SEARCH END ======
+// ====== PAGE-HEADING END ======
 
 // ====== SEARCH START ======
 

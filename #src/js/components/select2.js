@@ -9,3 +9,35 @@ $('.location__dropdown-select').select2({
         },
     },
 });
+$('.location__dropdown-select').on('select2:select', function (e) {
+    $('.location').removeClass('_active');
+});
+
+
+
+$('#product-sorting').select2({
+    minimumResultsForSearch: -1,
+    width: '200px',
+});
+
+$('.category__sorting-label').click(function () {
+    $('#product-sorting').select2('open');
+})
+
+$('#product-results').select2({
+    minimumResultsForSearch: -1,
+    width: '84px',
+});
+
+$('.category__pagination-label').click(function () {
+    $('#product-results').select2('open');
+})
+
+$('#product-results2').select2({
+    minimumResultsForSearch: -1,
+    width: '84px',
+});
+
+$('#product-results-2').click(function () {
+    $('#product-results2').select2('open');
+})

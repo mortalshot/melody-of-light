@@ -287,6 +287,7 @@ body {
     }
 }
 
+// UIslider
 .noUi {
     &-target {
         box-shadow: none;
@@ -337,6 +338,22 @@ body {
     &-connect {
         background: $Orange;
         cursor: pointer;
+    }
+}
+
+// fancybox
+.fancybox {
+    &__backdrop {
+        background: rgba(33, 33, 35, 0.7);
+    }
+
+    &__slide {
+        padding: 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 }
 
