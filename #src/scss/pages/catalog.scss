@@ -417,6 +417,11 @@
 
     .fancybox__slide {
         justify-content: flex-end;
+
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 }
 

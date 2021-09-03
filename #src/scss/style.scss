@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -121,12 +123,20 @@
 		&:not(:last-child) {
 			margin-right: 20px;
 		}
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
 
 		&-sticky {
 			&._active {
 				position: sticky;
 				top: $size-header-height;
 			}
+		}
+
+		&--big {
+			flex: 0 0 380px;
+			@include adaptiv-value("flex-basis", 380, 150, 1);
 		}
 	}
 
@@ -815,6 +825,14 @@
 	&__buy {
 		width: 100%;
 		border-radius: 0;
+
+		@media (any-hover: hover) {
+			&:hover {
+				i {
+					animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+				}
+			}
+		}
 	}
 
 	&__controls-row {
@@ -836,9 +854,23 @@
 	}
 
 	&__compare {
+		@media (any-hover: hover) {
+			&:hover {
+				i {
+					animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+				}
+			}
+		}
 	}
 
 	&__wishlist {
+		@media (any-hover: hover) {
+			&:hover {
+				i {
+					animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+				}
+			}
+		}
 	}
 
 	&--sale {
@@ -1331,7 +1363,7 @@
 	@media screen and (max-width: 767px) {
 		display: none;
 	}
-	
+
 	&__wrapper {
 		display: flex;
 		align-items: center;

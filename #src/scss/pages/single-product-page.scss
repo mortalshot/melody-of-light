@@ -1,0 +1,259 @@
+.single-product {
+    &__content {
+    }
+
+    &__gallery {
+    }
+}
+
+// ====== PRODUCT-GALLERY START ======
+.product-gallery {
+    position: relative;
+    min-width: 0px;
+
+    &__main {
+    }
+
+    &__main-image {
+        display: block;
+        position: relative;
+        padding-bottom: math.div(600px, 780px) * 100%;
+        cursor: pointer;
+
+        @media screen and (min-width: $layoutDesktop + 0.02 + "px") {
+            padding-bottom: calc(100vh - #{$size-header-height} - 200px);
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__thumbnail {
+        @media screen and (min-width: 1200px) {
+            padding: 8px;
+            position: absolute;
+            left: 16px;
+            bottom: 24px;
+            max-width: 578px;
+        }
+    }
+
+    &__thumbnail-image {
+        display: block;
+        position: relative;
+        padding-bottom: math.div(90px, 120px) * 100%;
+        box-shadow: 2.75px 2.75px 5.3571px rgba(0, 0, 0, 0.08);
+        border-radius: 2px;
+        border: 1px solid transparent;
+        transition: $transition ease all 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                cursor: pointer;
+
+                &::before {
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: $White;
+            transition: $transition ease all 0s;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-slide-thumb-active {
+        .product-gallery__thumbnail-image {
+            border-color: $Orange;
+
+            &::before {
+                opacity: 0.4;
+            }
+        }
+    }
+}
+// ====== PRODUCT-GALLERY END ======
+
+// ====== PRODUCT-BUY START ======
+.product-buy {
+    box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    background-color: $White;
+    @include adaptiv-value("padding-top", 24, 20, 1);
+    padding-bottom: 15px;
+    @include adaptiv-value("padding-left", 30, 20, 1);
+    @include adaptiv-value("padding-right", 30, 20, 1);
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 20, 8, 1);
+    }
+
+    &__about {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .product-item {
+        &__article {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        &__name {
+            @include adaptiv-font(16, 22, 14, 1);
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        &__quantity {
+            display: inline-flex;
+            font-size: 12px;
+            line-height: 17px;
+            color: $Blue;
+            padding: 4px 12px;
+            background: rgba(3, 106, 155, 0.1);
+            border-radius: 19px;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        &__price {
+            font-weight: 700;
+            @include adaptiv-font(34, 37, 24, 1);
+            display: flex;
+            align-items: flex-start;
+
+            .old-price {
+                font-weight: 600;
+                @include adaptiv-font(18, 25, 14, 1);
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__controls {
+            @media (any-hover: hover) {
+                position: initial;
+                z-index: auto;
+                pointer-events: all;
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0);
+                box-shadow: none;
+            }
+        }
+
+        &__buy {
+            font-size: 14px;
+            line-height: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 13px;
+            }
+        }
+
+        &__controls-row {
+        }
+
+        &__compare {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        &__wishlist {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
+// ====== PRODUCT-BUY END ======
+
+// ====== PRODUCT-INFO START ======
+.product-info {
+    box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.08);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include adaptiv-value("padding-left", 30, 20, 1);
+    @include adaptiv-value("padding-right", 30, 20, 1);
+    border-radius: 2px;
+    background-color: $White;
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 20, 8, 1);
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        @include adaptiv-font(14, 20, 12, 1);
+
+        &:not(:last-child) {
+            @include adaptiv-value("padding-bottom", 24, 16, 1);
+            @include adaptiv-value("margin-bottom", 24, 16, 1);
+            border-bottom: 1px solid $LGray;
+        }
+
+        img {
+            max-width: 24px;
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        a {
+            color: $Orange;
+            text-decoration: underline $Orange from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease all 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    opacity: 0.6;
+                    text-decoration: underline transparent from-font;
+                }
+            }
+        }
+    }
+}
+
+// ====== PRODUCT-INFO END ======
+
+// ====== SEARCH START ======
+
+// ====== SEARCH END ======

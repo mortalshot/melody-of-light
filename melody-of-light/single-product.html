@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница продукта</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="site single-product-page">
+    <div class="site__wrap">
+        <header class="site__header header header--desktop">
+            <div class="header__wrapper">
+                <div class="header__top">
+                    <div class="header__row _container">
+                        <div class="header__location location">
+    <a href="" class="location__button">
+        <i class="icon-location"></i>
+        <span>Санкт-Петербург</span>
+        <i class="icon-toggle"></i>
+    </a>
+
+    <div class="location__dropdown">
+        <div class="location__dropdown-heading">
+            <div class="location__dropdown-info">Выберите город</div>
+            <a href="" class="location__dropdown-close"><i class="icon-close"></i></a>
+        </div>
+        <select class="location__dropdown-select" name="city">
+            <option></option>
+            <option value="SPB" selected>Санкт-Петербург</option>
+            <option value="MOS">Москва</option>
+            <option value="RND">Ростов-на-Дону</option>
+            <option value="KAL">Калининград</option>
+            <option value="VOL">Волгоград</option>
+        </select>
+        <div class="location__dropdown-popular">
+            <div class="location__dropdown-popular-label">Популярные города</div>
+            <ul class="location__dropdown-popular-list">
+                <li class="location__dropdown-popular-item"><a href="">Санкт-Петербург</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Москва</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Ростов-на-Дону</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Калининград</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Волгоград</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                        <nav class="header__top-menu header-menu">
+                            <ul class="header-menu__list">
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Доставка</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Новости</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Сотрудничество</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Документы</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">О компании</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="auth">
+                            <div class="auth__login">
+                                <a href="" class="auth__login-link">
+                                    <i class="icon-user"></i>
+                                    <span>Войти</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="header__row _container">
+                        <div class="header__logo logo header__bottom-column">
+                            <a href="/" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
+                        </div>
+
+                        <div class="header__main-contacts header__bottom-column">
+                            <a href="tel:88632042654" class="header__phone">8 (863) 204-26-54</a>
+                            <a href="mailto:info@melodylight.ru" class="header__mail">info@melodylight.ru</a>
+                        </div>
+
+                        <div class="header__search search header__bottom-column">
+                            <form action="#" class="search__form search-form">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Поиск" class="form__input search-form__input">
+                                <button type="submit" class="search-form__btn icon-search"></button>
+                            </form>
+                            <div class="search__results search-results">
+                                <div class="search-results__item search-results__category">
+                                    <div class="search-results__title">Категории</div>
+                                    <ul class="search-results__category-list">
+                                        <li class="search-results__category-item">
+                                            <a href="category.html" class="search-results__category-link">
+                                                <div class="search-results__category-item-image"><img src="./img/category/category-1.svg" alt=""></div>
+                                                <div class="search-results__category-item-title"><span>Люс</span>тры</div>
+                                            </a>
+                                        </li>
+                                        <li class="search-results__category-item">
+                                            <a href="category.html" class="search-results__category-link">
+                                                <div class="search-results__category-item-image"><img src="./img/category/category-1.svg" alt=""></div>
+                                                <div class="search-results__category-item-title"><span>Люс</span>тры2</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="search-results__item search-results__products">
+                                    <div class="search-results__title">Товары</div>
+                                    <ul class="search-results__products-list">
+                                        <li class="search-results__product">
+                                            <a href="/single-product.html" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-1.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра потолочныая ArtLAMP BL</div>
+                                                    <div class="search-results__product-category">Категория «Люстры»</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column">
+                                                    <div class="search-results__product-price-current">750 ₽</div>
+                                                    <div class="search-results__product-price-old">1 580 ₽</div>
+                                                </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg">В корзину</button></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="search-results__product">
+                                            <a href="/single-product.html" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-2.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра потолочная</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg">В корзину</button></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="search-results__product">
+                                            <a href="/single-product.html" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-3.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра BELLA PRO</div>
+                                                    <div class="search-results__product-category">Категория «Люстры»</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column">
+                                                    <div class="search-results__product-price search-results__product-column"> 5 990 ₽ </div>
+                                                </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg">В корзину</button></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="search-results__product">
+                                            <a href="https://www.google.com/" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-4.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра потолочныая для прихожей за словесными горами в стране гласных и согласных живут, рыбные тексты. Встретил рыбного большой о дороге жизни первую они сих вдали!</div>
+                                                    <div class="search-results__product-category">Категория «Люстры»</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column">
+                                                    <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+                                                </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg" type="button">В корзину</button></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="search-results__product">
+                                            <a href="/single-product.html" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-2.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра потолочная</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg">В корзину</button></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="search-results__product">
+                                            <a href="/single-product.html" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-3.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра BELLA PRO</div>
+                                                    <div class="search-results__product-category">Категория «Люстры»</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column">
+                                                    <div class="search-results__product-price search-results__product-column"> 5 990 ₽ </div>
+                                                </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg">В корзину</button></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="search-results__product">
+                                            <a href="https://www.google.com/" class="search-results__product-link">
+                                                <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-4.jpg" alt=""></div>
+
+                                                <div class="search-results__product-name search-results__product-column">
+                                                    <div class="search-results__product-title"><span>Люс</span>тра потолочныая для прихожей за словесными горами в стране гласных и согласных живут, рыбные тексты. Встретил рыбного большой о дороге жизни первую они сих вдали!</div>
+                                                    <div class="search-results__product-category">Категория «Люстры»</div>
+                                                </div>
+
+                                                <div class="search-results__product-price search-results__product-column">
+                                                    <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+                                                </div>
+
+                                                <div class="search-results__product-btn search-results__product-column"><button class="btn btn-bg" type="button">В корзину</button></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__controls header__bottom-column">
+                            <div class="header__controls-wrapper">
+                                <div class="header__control"><a href=""><i class="icon-compare"></i></a></div>
+                                <div class="header__control"><a href=""><i class="icon-exemplary"></i></a></div>
+                                <div class="header__control"><a href=""><i class="icon-wishlist"></i></a></div>
+                                <div class="header__control basket">
+                                    <a href="" class="basket__link">
+                                        <i class="icon-cart"></i>
+                                        <span class="basket__amount">4</span>
+                                    </a>
+
+                                    <div class="basket__preview small-basket">
+                                        <div class="small-basket__wrapper">
+                                            <div class="small-basket__list-wrapper">
+                                                <ul class="small-basket__list">
+                                                    <li class="small-basket__item">
+                                                        <a href="" class="small-basket__item-icon"><img src="img/search/search-product-1.jpg" alt=""></a>
+                                                        <div class="small-basket__item-content">
+                                                            <a href="" class="small-basket__item-name">Светильник потолочный ArtLAMP BL</a>
+                                                            <div class="small-basket__item-price">
+                                                                <span class="new-price">750 ₽</span>
+                                                                <span class="old-price">1 580 ₽</span>
+                                                            </div>
+                                                            <div class="small-basket__item-actions">
+                                                                <a href="" class="small-basket__item-remove"><i class="icon-close-circle"></i> <span>Удалить</span> </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="small-basket__item">
+                                                        <a href="" class="small-basket__item-icon"><img src="img/search/search-product-2.jpg" alt=""></a>
+                                                        <div class="small-basket__item-content">
+                                                            <a href="" class="small-basket__item-name">Светильник потолочный </a>
+                                                            <div class="small-basket__item-price">
+                                                                750 ₽
+                                                            </div>
+                                                            <div class="small-basket__item-actions">
+                                                                <a href="" class="small-basket__item-remove"><i class="icon-close-circle"></i> <span>Удалить</span> </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="small-basket__item">
+                                                        <a href="" class="small-basket__item-icon"><img src="img/search/search-product-3.jpg" alt=""></a>
+                                                        <div class="small-basket__item-content">
+                                                            <a href="" class="small-basket__item-name">Светильник потолочный ArtLAMP BL</a>
+                                                            <div class="small-basket__item-price">
+                                                                750 ₽
+                                                            </div>
+                                                            <div class="small-basket__item-actions">
+                                                                <a href="" class="small-basket__item-remove"><i class="icon-close-circle"></i> <span>Удалить</span> </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="small-basket__item">
+                                                        <a href="" class="small-basket__item-icon"><img src="img/search/search-product-4.jpg" alt=""></a>
+                                                        <div class="small-basket__item-content">
+                                                            <a href="" class="small-basket__item-name">Светильник потолочный ArtLAMP BL</a>
+                                                            <div class="small-basket__item-price">
+                                                                750 ₽
+                                                            </div>
+                                                            <div class="small-basket__item-actions">
+                                                                <a href="" class="small-basket__item-remove"><i class="icon-close-circle"></i> <span>Удалить</span> </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="small-basket__footer">
+                                                <div class="small-basket__total">
+                                                    <span class="small-basket__total-discounted new-price">5 890 ₽</span>
+                                                    <span class="small-basket__total-without-discounted old-price">6 900 ₽</span>
+                                                </div>
+                                                <div class="small-basket__btn"><a href="/cart" class="btn btn-bg">В корзину</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <header class="site__header header header--mobile lock-padding">
+            <div class="_container">
+                <div class="header__body">
+                    <div class="header__menu">
+
+                        <div class="header__location location">
+    <a href="" class="location__button">
+        <i class="icon-location"></i>
+        <span>Санкт-Петербург</span>
+        <i class="icon-toggle"></i>
+    </a>
+
+    <div class="location__dropdown">
+        <div class="location__dropdown-heading">
+            <div class="location__dropdown-info">Выберите город</div>
+            <a href="" class="location__dropdown-close"><i class="icon-close"></i></a>
+        </div>
+        <select class="location__dropdown-select" name="city">
+            <option></option>
+            <option value="SPB" selected>Санкт-Петербург</option>
+            <option value="MOS">Москва</option>
+            <option value="RND">Ростов-на-Дону</option>
+            <option value="KAL">Калининград</option>
+            <option value="VOL">Волгоград</option>
+        </select>
+        <div class="location__dropdown-popular">
+            <div class="location__dropdown-popular-label">Популярные города</div>
+            <ul class="location__dropdown-popular-list">
+                <li class="location__dropdown-popular-item"><a href="">Санкт-Петербург</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Москва</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Ростов-на-Дону</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Калининград</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Волгоград</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                        <nav class="header__top-menu header-menu">
+                            <ul class="header-menu__list">
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Доставка</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Новости</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Сотрудничество</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Документы</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">О компании</a></li>
+                                <li class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="header__main-contacts">
+                            <a href="tel:88632042654" class="header__phone">8 (863) 204-26-54</a>
+                            <a href="mailto:info@melodylight.ru" class="header__mail">info@melodylight.ru</a>
+                        </div>
+
+                        <div class="header__menu-label">Меню</div>
+                    </div>
+
+                    <div class="header__burger header__column">
+                        <div class="header__burger-inner">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="header__logo logo header__column">
+                        <a href="/" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
+                    </div>
+
+                    <div class="header__controls header__column">
+                        <div class="header__compare"><a href=""><i class="icon-compare"></i></a></div>
+                        <div class="header__search"><a href=""><i class="icon-search"></i></a></div>
+                        <div class="header__user"><a href=""><i class="icon-user"></i></a></div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="bottom-menu lock-padding">
+            <ul class="bottom-menu__list">
+                <li class="bottom-menu__item _active">
+                    <a href="/">
+                        <i class="icon-home"></i>
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="bottom-menu__item">
+                    <a href="/catalog.html">
+                        <i class="icon-catalog2"></i>
+                        <span>Каталог</span>
+                    </a>
+                </li>
+                <li class="bottom-menu__item">
+                    <a href="/">
+                        <i class="icon-wishlist2"></i>
+                        <span>Избранное</span>
+                    </a>
+                </li>
+                <li class="bottom-menu__item basket">
+                    <a href="/" class="basket__link">
+                        <i class="icon-cart2"></i>
+                        <span class="basket__amount">4</span>
+                        <span>Корзина</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+<main class="site__main">
+	<div class="page-heading">
+		<div class="_container">
+			<div class="page-heading__back">
+				<a href="/catalog.html" class="btn">
+					<i class="icon-text-link"></i>
+					<span>Назад в каталог</span>
+				</a>
+			</div>
+
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__wrapper" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item">
+							<span itemprop="name">Главная</span>
+						</a>
+					</span>
+					<span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item">
+							<span itemprop="name">Каталог</span>
+						</a>
+					</span>
+                    <span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item">
+							<span itemprop="name">Бра</span>
+						</a>
+					</span>
+					<span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__title">Бра 6424/1W (2)</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="single-product with-sidebar">
+		<div class="with-sidebar__row _container">
+			<div class="single-product__content with-sidebar__content">
+                <div class="single-product__gallery product-gallery">
+                    <div class="product-gallery__main swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a 
+                                data-fancybox
+                                data-src="img/category/lamp/lamp-1/lamp-1-1.jpg"
+                                data-caption="image caption"
+                                class="product-gallery__main-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt="" class="swiper-lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a 
+                                data-fancybox
+                                data-src="img/category/lamp/lamp-1/lamp-1-2.jpg"
+                                data-caption="image caption"
+                                class="product-gallery__main-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt="" class="swiper-lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a 
+                                data-fancybox
+                                data-src="img/category/lamp/lamp-1/lamp-1-3.jpg"
+                                data-caption="image caption"
+                                class="product-gallery__main-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt="" class="swiper-lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a 
+                                data-fancybox
+                                data-src="img/category/lamp/lamp-1/lamp-1-1.jpg"
+                                data-caption="image caption"
+                                class="product-gallery__main-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt="" class="swiper-lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a 
+                                data-fancybox
+                                data-src="img/category/lamp/lamp-1/lamp-1-2.jpg"
+                                data-caption="image caption"
+                                class="product-gallery__main-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt="" class="swiper-lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a 
+                                data-fancybox
+                                data-src="img/category/lamp/lamp-1/lamp-1-3.jpg"
+                                data-caption="image caption"
+                                class="product-gallery__main-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt="" class="swiper-lazy">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-gallery__thumbnail swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-gallery__thumbnail-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt="" class="swiper-lazy">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-gallery__thumbnail-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt="" class="swiper-lazy">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-gallery__thumbnail-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt="" class="swiper-lazy">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-gallery__thumbnail-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt="" class="swiper-lazy">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-gallery__thumbnail-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt="" class="swiper-lazy">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-gallery__thumbnail-image">
+                                    <img data-src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt="" class="swiper-lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+            <aside class="with-sidebar__sidebar with-sidebar__sidebar--big">
+				<div class="with-sidebar__sidebar-sticky">
+					<div class="product-buy">
+                        <div class="product-buy__about">
+                            <div class="product-item__article">BS001024954</div>
+                            <div class="product-item__name">Светильник потолочный ArtLAMP BL</div>
+                            <div class="product-item__quantity">На складе 9</div>
+                        </div>
+                        <div class="product-item__price">
+                            <span class="new-price">6 990 ₽</span>
+                            <span class="old-price">8 450 ₽</span>
+                        </div>
+                        <div class="product-item__controls">
+                            <button class="product-item__buy buy-btn btn btn-bg"><i class="icon-cart"></i> Добавить в корзину</button>
+                            <div class="product-item__controls-row">
+                                <button class="product-item__compare compare-btn btn btn-wh"><i class="icon-compare"></i> Сравнить</button>
+                                <button class="product-item__wishlist wishlist-btn btn btn-wh"><i class="icon-wishlist"></i> В избранное</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info__item">
+                            <img src="img/icons/product-item-1.svg" alt="">
+                            <span><a href="">Бесплатная</a> доставка по Ростов-на-Дону </span>
+                        </div>
+                        <div class="product-info__item">
+                            <img src="img/icons/product-item-2.svg" alt="">
+                            <span>Этот товар можно купить <a href="">в рассрочку!</a> </span>
+                        </div>
+                        <div class="product-info__item">
+                            <img src="img/icons/product-item-2.svg" alt="">
+                            <span>Гарантия <b>1,5 года</b> </span>
+                        </div>
+                    </div>
+				</div>
+			</aside>
+		</div>
+	</div>
+
+	<!-- filter mobile start -->
+	<div id="filter-mobile" class="fancybox__popup" style="display:none;">
+		<form action="#" class="filter">
+			<div class="filter__heading">
+				<a href="" class="fancybox__close">Скрыть</a>
+				<div class="filter__title">Фильтр</div>
+				<div class="filter__reset">
+					<a href="">
+						<i class="icon-reload"></i>
+						<span>Сбросить</span>
+					</a>
+				</div>
+			</div>
+			<div data-spollers="" class="filter__body accordion">
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title _active"><span>Цена</span></button>
+					<div class="accordion__text">
+						<div class="price-filter">
+							<div class="form__row price-filter__values">
+								<div class="form__item col-6 price-filter__values-input">
+									<input id="price-start2" autocomplete="off" type="text" name="form[]" class="form__input">
+								</div>
+								<div class="form__item col-6 price-filter__values-input">
+									<input id="price-end2" autocomplete="off" type="text" name="form[]" class="form__input">
+								</div>
+							</div>
+							<div class="price-filter__slider2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Форма светильников</span></button>
+					<div class="accordion__text">
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-bushe">
+							<span>Буше<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Квадратная<span class="filter__num">(189)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Клетка<span class="filter__num">(48)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Колесо<span class="filter__num">(9)</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Парметры плафонов</span></button>
+					<div class="accordion__text">
+						<label for="visota-ot" class="form__label">Высота, мм</label>
+						<div class="form__row">
+							<div class="form__item col-6">
+								<input id="visota-ot" type="text" class="form__input" name="visota-ot">
+							</div>
+							<div class="form__item col-6">
+								<input type="text" class="form__input" name="visota-do">
+							</div>
+						</div>
+						<label for="glybina-ot" class="form__label">Глубина, мм</label>
+						<div class="form__row">
+							<div class="form__item col-6">
+								<input id="glybina-ot" type="text" class="form__input" name="glybina-ot">
+							</div>
+							<div class="form__item col-6">
+								<input type="text" class="form__input" name="glybina-do">
+							</div>
+						</div>
+						<label for="diametr-ot" class="form__label">Диаметр, мм</label>
+						<div class="form__row">
+							<div class="form__item col-6">
+								<input id="diametr-ot" type="text" class="form__input" name="diametr-ot">
+							</div>
+							<div class="form__item col-6">
+								<input type="text" class="form__input" name="diametr-do">
+							</div>
+						</div>
+						<label for="shirina-ot" class="form__label">Ширина, мм</label>
+						<div class="form__row">
+							<div class="form__item col-6">
+								<input id="shirina-ot" type="text" class="form__input" name="shirina-ot">
+							</div>
+							<div class="form__item col-6">
+								<input type="text" class="form__input" name="shirina-do">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Стиль</span></button>
+					<div class="accordion__text">
+						<label class="form__radio">
+							<input type="radio" name="filter-style">
+							<span>Лофт<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__radio">
+							<input type="radio" name="filter-style">
+							<span>Хай-тек<span class="filter__num">(189)</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Тип лампочки</span></button>
+					<div class="accordion__text">
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-bushe">
+							<span>Буше<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Квадратная<span class="filter__num">(189)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Клетка<span class="filter__num">(48)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Колесо<span class="filter__num">(9)</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Место применения</span></button>
+					<div class="accordion__text">
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-bushe">
+							<span>Буше<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Квадратная<span class="filter__num">(189)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Клетка<span class="filter__num">(48)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Колесо<span class="filter__num">(9)</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Параметры плафонов</span></button>
+					<div class="accordion__text">
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-bushe">
+							<span>Буше<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Квадратная<span class="filter__num">(189)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Клетка<span class="filter__num">(48)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Колесо<span class="filter__num">(9)</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Выключатель</span></button>
+					<div class="accordion__text">
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-bushe">
+							<span>Буше<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Квадратная<span class="filter__num">(189)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Клетка<span class="filter__num">(48)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Колесо<span class="filter__num">(9)</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="accordion__item accordion__item">
+					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Степень защиты</span></button>
+					<div class="accordion__text">
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-bushe">
+							<span>Буше<span class="filter__num">(23)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Квадратная<span class="filter__num">(189)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Клетка<span class="filter__num">(48)</span></span>
+						</label>
+						<label class="form__checkbox">
+							<input type="checkbox" name="form-kvadtarnaya">
+							<span>Колесо<span class="filter__num">(9)</span></span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="filter__accept"><button class="btn btn-bg">Применить</button></div>
+		</form>
+	</div>
+	<!-- filter mobile end -->
+</main>
+
+<footer class="site__footer footer ">
+    <div class="_container">
+        <div class="footer__full">
+            <div class="footer__top">
+                <div class="footer__column footer__info">
+                    <div class="footer__logo">
+                        <a href="/" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
+                    </div>
+                    <div class="footer__description _content">Оптовая продажа светотехнической продукции бытового назначения с 1995 года</div>
+
+                    <div class="footer__contacts">
+                        <div class="footer__contact-item">
+                            <a href="mailto:info@melodylight.ru">
+                                <i class="icon-mail"></i>
+                                <span>info@melodylight.ru</span>
+                            </a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <a href="tel:88632042654">
+                                <i class="icon-phone"></i>
+                                <span>8 (863) 204-26-54</span>
+                            </a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <a href="https://goo.gl/maps/2o8kqsuJbiX2Dtbo6" target="_blank">
+                                <i class="icon-location"></i>
+                                <span>г. Ростов-на-Дону, пр. Шолохова, 270/3, 2 эт.</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__column footer__menu">
+                    <div data-spollers="767,max" class="accordion">
+                        <div class="accordion__item">
+                            <button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Каталог</span></button>
+                            <div class="accordion__text">
+                                <ul class="menu__list">
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Люстры</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Бра</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Подвесные светильники</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Настольные лампы</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Торшеры</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Настольно-потолочные</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Уличное освещение</a></li>
+                                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Офисное освещение</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Компания</span></button>
+                            <div class="accordion__text">
+                                <ul class="menu__list">
+                                    <li class="menu__item"><a href="" class="menu__link">Доставка</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Сотрудничество</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Документы</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__column footer__mailing subscribe">
+                    <h4 class="subscribe__title">Хотите быть в курсе новых акций?</h4>
+                    <form action="" class="subscribe__form">
+                        <div class="subscribe__wrapper">
+                            <input id="subscribe-email" type="email" class="form__input" name="email" placeholder="Ваш Email" required>
+                            <button class="subscribe__btn btn btn-bg">Подписаться</button>
+                        </div>
+                        <label class="form__checkbox subscribe__privacy">
+                            <input id="subscribe-accept" type="checkbox" name="privacy" required checked>
+                            <span>Я ознакомился и принимаю условия <br>
+                                <a href="/privacy.html">Политики конфиденциальности</a> и <a href="/privacy.html">Информированного согласия</a></span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__privacy">Интернет-магазин МАГИЯ СВЕТА <br>
+                    © 2009-2021. Все права защищены </div>
+                <a href="/privacy.html" class="footer__link">Пользовательское соглашение</a>
+                <div class="footer__kan"><a href="https://thekan.ru/"><img src="./img/icons/kan.svg" alt=""></a></div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>

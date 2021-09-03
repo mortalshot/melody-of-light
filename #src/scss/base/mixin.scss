@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
     $addSize: $startSize - $minSize;
 

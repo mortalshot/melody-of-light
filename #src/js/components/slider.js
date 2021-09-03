@@ -126,3 +126,36 @@ if ($('.reviews-widget__list').length > 0) {
         },
     });
 };
+
+if ($('.product-gallery__main').length > 0) {
+    mainBanners = new Swiper('.product-gallery__main', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        watchOverflow: true,
+        lazy: {
+            loadOnTransitionStart: true,
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+
+        thumbs: {
+            swiper: {
+                el: `.product-gallery__thumbnail`,
+                slidesPerView: 4,
+                spaceBetween: 16,
+                lazy: {
+                    loadOnTransitionStart: true,
+                    loadPrevNext: true,
+                },
+                preloadImages: true,
+
+                // breakpoints: {
+                //     1200: {
+                //         slidesPerView: 4,
+                //         spaceBetween: 16,
+                //     },
+                // },
+            }
+        },
+    });
+};

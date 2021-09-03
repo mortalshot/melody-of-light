@@ -193,8 +193,8 @@ body {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    @include adaptiv-value("padding-left", 45, 20, 0);
-    @include adaptiv-value("padding-right", 45, 20, 0);
+    @include adaptiv-value("padding-left", 50, 20, 0);
+    @include adaptiv-value("padding-right", 50, 20, 0);
 
     @media screen and (min-width: 1440px) {
         @include adaptiv-value("padding-left", 80, 20, 0);
@@ -349,11 +349,6 @@ body {
 
     &__slide {
         padding: 0;
-
-        &::before,
-        &::after {
-            display: none;
-        }
     }
 }
 
