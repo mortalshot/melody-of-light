@@ -147,6 +147,8 @@ body {
     font-size: #{$fontSize}px;
     line-height: #{$lineHeight}px;
     color: $fontColor;
+    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
 
     @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
@@ -348,15 +350,180 @@ body {
     }
 
     &__slide {
-        padding: 0;
+        padding: 0 10px;
+    }
+
+    &__content {
+        & > .carousel__button.is-close {
+            font-size: 32px;
+            display: inline-flex;
+            align-items: center;
+            color: $Gray;
+            top: 20px;
+            right: 20px;
+            width: 24px;
+            height: 24px;
+            transition: $transition ease opacity 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
     }
 }
 
 ._content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
     :first-child {
         margin-top: 0;
     }
     :last-child {
         margin-bottom: 0;
+    }
+
+    .table {
+        &__wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            width: 100%;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+
+                tr {
+                    &:nth-child(2n-1) {
+                        background-color: $LBlue2;
+                    }
+                }
+
+                td {
+                    @include adaptiv-value("padding-top", 16, 12, 1);
+                    @include adaptiv-value("padding-bottom", 16, 12, 1);
+                    @include adaptiv-value("padding-left", 24, 12, 1);
+                    @include adaptiv-value("padding-right", 24, 12, 1);
+                    font-weight: 700;
+                    @include adaptiv-font(14, 20, 12, 1);
+
+                    &:first-child {
+                        font-weight: 400;
+                        width: 38%;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                color: $Orange;
+
+                span {
+                    &:not(:last-child) {
+                        margin-right: 8px;
+                    }
+
+                    &.table__btn-hide {
+                        display: block;
+                    }
+
+                    &.table__btn-show {
+                        display: none;
+                    }
+                }
+
+                i {
+                    transform: rotate(-90deg);
+                    transition: $transition ease transform 0s;
+                }
+            }
+        }
+
+        &._active {
+            .table__wrapper {
+            }
+
+            .table__btn {
+                i {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .table__btn-show {
+                display: block;
+            }
+
+            .table__btn-hide {
+                display: none;
+            }
+        }
+    }
+}
+
+// tooltip
+.tooltip {
+    &__btn {
+        background: transparent;
+        -webkit-appearance: none;
+        font-size: 18px;
+        line-height: 1;
+        color: $Gray;
+        border-radius: 50%;
+        background: rgba(33, 33, 35, 0.1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 9px;
+    }
+
+    &__body {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        width: 100%;
+        max-width: 380px;
+
+        @media screen and (max-width: 575px) {
+            max-width: calc(100vw - 40px);
+        }
+
+        &[data-show] {
+            display: block;
+            opacity: 1;
+            pointer-events: all;
+            visibility: visible;
+        }
+    }
+
+    &__body-wrapper {
+        border-radius: 2px;
+        background-color: $White;
+        box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.08);
+        padding: 10px;
+        font-size: 12px;
+        line-height: 14px;
     }
 }

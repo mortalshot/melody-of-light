@@ -9,4 +9,5 @@
 @@include('components/select2.js')
 @@include('components/slider.js')
 @@include('components/tabs.js')
+@@include('components/tooltip.js')
 

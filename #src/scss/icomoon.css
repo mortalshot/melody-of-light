@@ -27,6 +27,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-image:before {
+  content: "\e91d";
+}
+.icon-hide-pass:before {
+  content: "\e91b";
+}
+.icon-show-pass:before {
+  content: "\e91c";
+}
+.icon-info:before {
+  content: "\e91a";
+}
+.icon-close-popup:before {
+  content: "\e919";
+}
 .icon-plus:before {
   content: "\e90e";
 }

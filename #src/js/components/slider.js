@@ -149,13 +149,52 @@ if ($('.product-gallery__main').length > 0) {
                 },
                 preloadImages: true,
 
-                // breakpoints: {
-                //     1200: {
-                //         slidesPerView: 4,
-                //         spaceBetween: 16,
-                //     },
-                // },
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 16,
+                    },
+                },
             }
+        },
+    });
+};
+
+if ($('.recently-widget__swiper').length > 0) {
+    mainBanners = new Swiper('.recently-widget__swiper', {
+        slidesPerView: 1.3,
+        spaceBetween: 12,
+        watchOverflow: true,
+
+        navigation: {
+            prevEl: '.recently-widget__swiper .swiper-button-prev',
+            nextEl: '.recently-widget__swiper .swiper-button-next',
+        },
+
+        breakpoints: {
+            575: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 16,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1280: {
+                slidesPerView: 4,
+            },
+            1366: {
+                slidesPerView: 4,
+            },
+            1920: {
+                slidesPerView: 5,
+            },
+            2560: {
+                slidesPerView: 6,
+            },
         },
     });
 };

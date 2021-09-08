@@ -108,24 +108,24 @@ $(document).ready(function () {
 
         const priceStart2 = document.getElementById('price-start2');
         const priceEnd2 = document.getElementById('price-end2');
-        var inputs = [priceStart2, priceEnd2]
-        priceStart2.addEventListener('change', setPriceValues);
-        priceEnd2.addEventListener('change', setPriceValues);
+        var inputs2 = [priceStart2, priceEnd2]
+        priceStart2.addEventListener('change', setPriceValues2);
+        priceEnd2.addEventListener('change', setPriceValues2);
 
-        function setPriceValues() {
-            let priceStartValue;
-            let priceEndValue;
+        function setPriceValues2() {
+            let priceStartValue2;
+            let priceEndValue2;
             if (priceStart2.value != '') {
-                priceStartValue = priceStart2.value;
+                priceStartValue2 = priceStart2.value;
             }
-            if (priceEnd.value != '') {
-                priceEndValue = priceEnd2.value;
+            if (priceEnd2.value != '') {
+                priceEndValue2 = priceEnd2.value;
             }
-            priceSlider2.noUiSlider.set([priceStartValue, priceEndValue]);
+            priceSlider2.noUiSlider.set([priceStartValue2, priceEndValue2]);
         }
 
         priceSlider2.noUiSlider.on('update', function (values, handle) {
-            inputs[handle].value = values[handle];
+            inputs2[handle].value = values[handle];
         });
     }
     // === FILTER PRICE END ===
@@ -154,6 +154,10 @@ $(document).ready(function () {
     }
 
     Fancybox.bind("[data-fancybox]", {
+        template: {
+            closeButton: '<i class="icon-close"></i>',
+            main: null,
+        },
         on: {
             reveal: () => {
                 bodyLock();
@@ -162,6 +166,7 @@ $(document).ready(function () {
                 bodyUnLock();
             },
         },
+        dragToClose: false,
     });
 
     $(window).scroll(function () {
@@ -188,6 +193,10 @@ $(document).ready(function () {
         }
 
         Fancybox.bind("[data-fancybox]", {
+            template: {
+                closeButton: '<i class="icon-close"></i>',
+                main: null,
+            },
             on: {
                 reveal: () => {
                     bodyLock();
@@ -196,12 +205,45 @@ $(document).ready(function () {
                     bodyUnLock();
                 },
             },
+            dragToClose: false,
         });
     });
 
     $('.fancybox__close').click(function (e) {
         e.preventDefault();
         Fancybox.close();
-    })
+    });
     // === FANCYBOX END ===
+
+    // === TABLE RESIZE END ===
+    if ($('.table--resizable').length > 0) {
+        for (let index = 0; index < $('.table--resizable').length; index++) {
+            const element = $('.table--resizable')[index];
+            const tableRow1Height = $(element).find('table tr:nth-child(1)').innerHeight();
+            const tableRow2Height = $(element).find('table tr:nth-child(2)').innerHeight();
+            const tableRow3Height = $(element).find('table tr:nth-child(3)').innerHeight();
+
+            if ($(element).hasClass('_active')) {
+                $(element).find('.table__wrapper').css({ height: tableRow1Height + tableRow2Height + tableRow3Height });
+            }
+        }
+    }
+
+
+    $(".table__btn a").click(function (e) {
+        e.preventDefault();
+        const tableHeight = $(this).closest('.table--resizable').find('table').innerHeight();
+        const tableRow1Height = $(this).closest('.table--resizable').find('table tr:nth-child(1)').innerHeight();
+        const tableRow2Height = $(this).closest('.table--resizable').find('table tr:nth-child(2)').innerHeight();
+        const tableRow3Height = $(this).closest('.table--resizable').find('table tr:nth-child(3)').innerHeight();
+
+        if ($(this).closest('.table--resizable').hasClass('_active')) {
+            $(this).closest('.table--resizable').removeClass('_active');
+            $(this).closest('.table--resizable').find('.table__wrapper').animate({ height: tableHeight });
+        } else {
+            $(this).closest('.table--resizable').addClass('_active');
+            $(this).closest('.table--resizable').find('.table__wrapper').animate({ height: (tableRow1Height + tableRow2Height + tableRow3Height) });
+        }
+    })
+    // === TABLE RESIZE START ===
 })
