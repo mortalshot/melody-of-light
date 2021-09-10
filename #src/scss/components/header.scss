@@ -194,6 +194,10 @@
 		}
 	}
 
+	&__main-contacts-btn {
+		display: none;
+	}
+
 	&__phone {
 		color: $fontColor;
 
@@ -450,6 +454,25 @@
 				line-height: 22px;
 				transition: $transition ease top 0s;
 			}
+		}
+	}
+
+	&--small {
+		.header__top {
+			display: none;
+		}
+
+		.header__bottom {
+			box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+			height: calc(#{$size-header-bottom} - 6px);
+		}
+
+		.header__main-contacts-wrapper {
+			display: none;
+		}
+
+		.header__main-contacts-btn {
+			display: block;
 		}
 	}
 }

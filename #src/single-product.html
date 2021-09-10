@@ -1,6 +1,7 @@
 @@include('html-components/_header.html', {
 "title": "Страница продукта",
 "class": "single-product-page",
+"headerClass": "header--small",
 })
 
 <main class="site__main">
@@ -130,6 +131,11 @@
 								<button class="product-item__compare compare-btn btn btn-wh"><i class="icon-compare"></i> Сравнить</button>
 								<button class="product-item__wishlist wishlist-btn btn btn-wh"><i class="icon-wishlist"></i> В избранное</button>
 							</div>
+						</div>
+
+						<!-- show on mobile device if scroll >= main btn offset top -->
+						<div class="product-item__buy--fixed">
+							<button class="product-item__buy buy-btn btn btn-bg">Добавить в корзину 6 990 ₽</button>
 						</div>
 					</div>
 

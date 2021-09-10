@@ -215,7 +215,7 @@ $(document).ready(function () {
     });
     // === FANCYBOX END ===
 
-    // === TABLE RESIZE END ===
+    // === TABLE RESIZE START ===
     if ($('.table--resizable').length > 0) {
         for (let index = 0; index < $('.table--resizable').length; index++) {
             const element = $('.table--resizable')[index];
@@ -245,5 +245,62 @@ $(document).ready(function () {
             $(this).closest('.table--resizable').find('.table__wrapper').animate({ height: (tableRow1Height + tableRow2Height + tableRow3Height) });
         }
     })
-    // === TABLE RESIZE START ===
+    // === TABLE RESIZE END ===
+
+    // === SINGLE-PRODUCT-PAGE BTN FIXED START ===
+    if ($('body').hasClass('single-product-page')) {
+        singleProductMediaMdMax = window.matchMedia('(max-width: 767px)');
+
+        if (singleProductMediaMdMax.matches) {
+            const buyBtn = $('.product-item__buy');
+            const btnOffset = $(buyBtn).offset().top;
+            const headerHeight = $('.site__header').innerHeight();
+            const footerOffset = $('.footer').offset().top;
+            const windowHeight = $(window).innerHeight();
+
+            if (scrolled > btnOffset && scrolled < footerOffset - windowHeight + headerHeight) {
+                $('.product-item__buy--fixed').addClass('_btn-fixed');
+            } else if (scrolled < btnOffset || scrolled > footerOffset - windowHeight + headerHeight) {
+                $('.product-item__buy--fixed').removeClass('_btn-fixed');
+            }
+
+            $(window).scroll(function () {
+                let scrolled = $(this).scrollTop();
+
+                if (scrolled > btnOffset && scrolled < footerOffset - windowHeight + headerHeight) {
+                    $('.product-item__buy--fixed').addClass('_btn-fixed');
+                } else if (scrolled < btnOffset || scrolled > footerOffset - windowHeight + headerHeight) {
+                    $('.product-item__buy--fixed').removeClass('_btn-fixed');
+                }
+            });
+        }
+    }
+    // === SINGLE-PRODUCT-PAGE BTN FIXED END ===
+
+    // === CART PAGE BTN FIXED  START ===
+    if ($('body').hasClass('cart-page')) {
+        cartPageMediaMdMax = window.matchMedia('(max-width: 767px)');
+
+        if (cartPageMediaMdMax.matches) {
+            const total = $('.cart-resume__total-outer');
+            const totalOffset = $(total).offset().top;
+            const resumeMargin = $('.cart--tablet .cart-resume__list').outerHeight(true) - $('.cart--tablet .cart-resume__list').innerHeight();
+            const headerHeight = $('.header--mobile').innerHeight();
+            const totalHeight = $(total).innerHeight();
+
+
+            $(window).scroll(function () {
+                let scrolled = $(this).scrollTop();
+
+                if (scrolled + headerHeight > totalOffset - 20) {
+                    $('.site__main').addClass('_fixed-total');
+                    $('.cart-basket__products').css({ "padding-top": totalHeight + resumeMargin });
+                } else {
+                    $('.site__main').removeClass('_fixed-total');
+                    $('.cart-basket__products').css({ "padding-top": 0 });
+                }
+            });
+        }
+    }
+    // === CART PAGE BTN FIXED  END ===
 })

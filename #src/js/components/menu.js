@@ -117,7 +117,7 @@ function removeActive() {
 
 // === HEADER FIXED START ===
 const navOffset = $('.header__bottom').offset().top;
-const scrolled = $(this).scrollTop();
+let scrolled = $(this).scrollTop();
 
 if (scrolled > navOffset) {
     $('.site__wrap').addClass('nav-fixed');
@@ -128,7 +128,7 @@ if (scrolled > navOffset) {
 }
 
 $(window).scroll(function () {
-    const scrolled = $(this).scrollTop();
+    let scrolled = $(this).scrollTop();
 
     if (scrolled > navOffset) {
         $('.site__wrap').addClass('nav-fixed');

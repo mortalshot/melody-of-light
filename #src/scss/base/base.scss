@@ -416,13 +416,7 @@ body {
                     @include adaptiv-value("padding-bottom", 16, 12, 1);
                     @include adaptiv-value("padding-left", 24, 12, 1);
                     @include adaptiv-value("padding-right", 24, 12, 1);
-                    font-weight: 700;
                     @include adaptiv-font(14, 20, 12, 1);
-
-                    &:first-child {
-                        font-weight: 400;
-                        width: 38%;
-                    }
                 }
             }
         }

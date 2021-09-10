@@ -1,3 +1,7 @@
+.single-product-page {
+    background-color: $LBlue3;
+}
+
 .single-product {
     @include adaptiv-value("margin-bottom", 100, 50, 1);
 
@@ -55,6 +59,19 @@
     }
 
     &__text {
+        .table {
+            td {
+                font-weight: 700;
+
+                &:first-child {
+                    font-weight: 400;
+
+                    @media screen and (min-width: 768px) {
+                        width: 38%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -271,6 +288,32 @@
             &:not(:last-child) {
                 margin-bottom: 13px;
             }
+
+            &--fixed {
+                position: fixed;
+                bottom: calc(#{$size-header-height-mobile} - 12px);
+                left: 0;
+                right: 0;
+                padding: 12px 20px;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: $transition ease all 0s;
+                z-index: 2;
+                background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+
+                i {
+                    font-size: 18px;
+                    margin-right: 8px;
+                }
+
+                &._btn-fixed {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                    bottom: $size-header-height-mobile;
+                }
+            }
         }
 
         &__controls-row {
@@ -355,9 +398,18 @@
     &__title {
         font-size: 14px;
         line-height: 20px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
 
     &__btn {
+        @media screen and (max-width: 450px) {
+            .btn {
+                padding: 10px 20px;
+            }
+        }
     }
 }
 
@@ -412,6 +464,12 @@
         color: $Gray;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
     }
 
     &__total-stars {
@@ -430,6 +488,9 @@
             position: absolute;
             @include adaptiv-value("right", 30, 20, 1);
             @include adaptiv-value("top", 30, 24, 1);
+        }
+        @media screen and (max-width: 450px) {
+            width: 100%;
         }
     }
 

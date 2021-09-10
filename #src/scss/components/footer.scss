@@ -1,4 +1,6 @@
 .footer {
+    background-color: $White;
+    
     &__full {
         .footer__bottom {
             border-top: 1px solid $LGray;
@@ -262,6 +264,96 @@
                     opacity: 0.8;
                 }
             }
+        }
+    }
+
+    &__small {
+        display: none;
+
+        @media screen and (min-width: 992px) {
+            .footer__bottom {
+                justify-content: space-between;
+            }
+
+            .footer__privacy {
+                flex: 1;
+            }
+
+            .logo__link {
+                flex: 1;
+            }
+
+            .footer__link {
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-right", 70, 20, 1);
+                }
+            }
+
+            .footer__kan {
+                flex: initial;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            .footer__bottom {
+                flex-wrap: wrap;
+            }
+
+            .logo__link {
+                order: 1;
+                flex: 0 0 50%;
+
+                &:not(:last-child) {
+                    margin-bottom: 23px;
+                }
+
+                img {
+                    @include adaptiv-value("max-width", 200, 128, 1);
+                }
+            }
+
+            .footer__privacy {
+                order: 2;
+                flex: 0 0 50%;
+                text-align: right;
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 23px;
+                }
+            }
+
+            .footer__link {
+                order: 3;
+                flex: 0 0 50%;
+            }
+
+            .footer__kan {
+                order: 4;
+                flex: 0 0 50%;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .logo__link {
+                flex: 0 0 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer__privacy {
+                flex: 0 0 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    &--small {
+        .footer__full {
+            display: none;
+        }
+
+        .footer__small {
+            display: block;
         }
     }
 }

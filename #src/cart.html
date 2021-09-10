@@ -1,0 +1,273 @@
+@@include('html-components/_header.html', {
+"title": "Корзина",
+"class": "cart-page",
+"headerClass": "header--small",
+})
+
+<main class="site__main">
+	<div class="page-heading">
+		<div class="_container">
+			<h2 class="page-heading__title">Корзина</h2>
+
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__wrapper" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="/" itemprop="item">
+							<span itemprop="name">Главная</span>
+						</a>
+					</span>
+					<span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__title">Корзина</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="cart cart--desktop with-sidebar">
+		<div class="with-sidebar__row _container">
+			<div class="cart__content with-sidebar__content">
+				<div class="cart-basket">
+					<table class="cart-basket__table">
+						<thead>
+							<tr class="cart-basket__heading">
+								<th class="cart-basket__table-image">Товар</th>
+								<th class="cart-basket__table-name"></th>
+								<th>Количество</th>
+								<th class="cart-basket__heading-price">Цена</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="cart-basket__product">
+								<td class="cart-basket__table-image">
+									<div class="cart-basket__product-image">
+										<a href="" class="cart-basket__product-image-link"><img src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt=""></a>
+									</div>
+								</td>
+								<td class="cart-basket__table-name">
+									<div class="cart-basket__product-body">
+										<div class="cart-basket__product-name"><a href="single-product.html">Люстра потолочная</a></div>
+										<div class="cart-basket__product-category"><a href="category.html">Категория «Люстры»</a></div>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-count product-count">
+										<label class="product-count__label">
+											<input type="number" class="product-count__field" value="1">
+											<span>шт</span>
+										</label>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-price">
+										<span class="new-price">1 250 ₽</span>
+										<span class="old-price">1 580 ₽</span>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-remove"><a href=""><i class="icon-close-circle"></i></a></div>
+								</td>
+							</tr>
+							<tr class="cart-basket__product">
+								<td class="cart-basket__table-image">
+									<div class="cart-basket__product-image">
+										<a href="" class="cart-basket__product-image-link"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+									</div>
+								</td>
+								<td class="cart-basket__table-name">
+									<div class="cart-basket__product-body">
+										<div class="cart-basket__product-name"><a href="single-product.html">Люстра потолочная ELLA PRO 212</a></div>
+										<div class="cart-basket__product-category"><a href="category.html">Категория «Люстры»</a></div>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-count product-count">
+										<label class="product-count__label">
+											<input type="number" class="product-count__field" value="1">
+											<span>шт</span>
+										</label>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-price">
+										<span>1 250 ₽</span>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-remove"><a href=""><i class="icon-close-circle"></i></a></div>
+								</td>
+							</tr>
+							<tr class="cart-basket__product">
+								<td class="cart-basket__table-image">
+									<div class="cart-basket__product-image">
+										<a href="" class="cart-basket__product-image-link"><img src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt=""></a>
+									</div>
+								</td>
+								<td class="cart-basket__table-name">
+									<div class="cart-basket__product-body">
+										<div class="cart-basket__product-name"><a href="single-product.html">Люстра</a></div>
+										<div class="cart-basket__product-category"><a href="category.html">Категория «Люстры»</a></div>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-count product-count">
+										<label class="product-count__label">
+											<input type="number" class="product-count__field" value="1">
+											<span>шт</span>
+										</label>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-price">
+										<span class="new-price">1 250 ₽</span>
+										<span class="old-price">1 580 ₽</span>
+									</div>
+								</td>
+								<td>
+									<div class="cart-basket__product-remove"><a href=""><i class="icon-close-circle"></i></a></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<aside class="with-sidebar__sidebar with-sidebar__sidebar--big">
+				<div class="with-sidebar__sidebar-sticky">
+					<div class="cart-resume">
+						<ul class="cart-resume__list">
+							<li class="cart-resume__item">
+								<span>Количество товаров</span>
+								<span>3</span>
+							</li>
+							<li class="cart-resume__item">
+								<span>Скидка</span>
+								<span>- 978 ₽</span>
+							</li>
+							<li class="cart-resume__item">
+								<span>Стоимость доставки</span>
+								<span>0 ₽</span>
+							</li>
+						</ul>
+
+						<div class="cart-resume__promocode">
+							<input id="subscribe-email" type="email" class="form__input" name="email" placeholder="Промокод" required>
+							<button class="cart-resume__promocode-btn btn btn-bg">Применить</button>
+						</div>
+
+						<div class="cart-resume__total">
+							<span class="cart-resume__total-label">Итого к оплате:</span>
+							<span class="cart-resume__total-price">13 982 ₽</span>
+						</div>
+
+						<div class="cart-resume__btn">
+							<button class="btn btn-bg">Перейти к оформлению</button>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</div>
+
+	<div class="cart cart--tablet">
+		<div class="_container">
+			<div class="cart-resume">
+				<ul class="cart-resume__list">
+					<li class="cart-resume__item">
+						<span>Количество товаров</span>
+						<span>3</span>
+					</li>
+					<li class="cart-resume__item">
+						<span>Скидка</span>
+						<span>- 978 ₽</span>
+					</li>
+					<li class="cart-resume__item">
+						<span>Стоимость доставки</span>
+						<span>0 ₽</span>
+					</li>
+				</ul>
+
+				<div class="cart-resume__total-outer">
+					<div class="cart-resume__total">
+						<span class="cart-resume__total-label">Итого к оплате:</span>
+						<span class="cart-resume__total-price">13 982 ₽</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="cart-basket__products">
+				<div class="cart-basket__product">
+					<div class="cart-basket__product-image cart-basket__product-column">
+						<a href="" class="cart-basket__product-image-link"><img src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt=""></a>
+					</div>
+					<div class="cart-basket__product-body cart-basket__product-column">
+						<div class="cart-basket__product-name"><a href="single-product.html">Люстра потолочная</a></div>
+						<div class="cart-basket__product-category"><a href="category.html">Категория «Люстры»</a></div>
+
+						<div class="cart-basket__product-price">
+							<span class="new-price">1 250 ₽</span>
+							<span class="old-price">1 580 ₽</span>
+						</div>
+					</div>
+					<div class="cart-basket__product-count product-count cart-basket__product-column">
+						<label class="product-count__label">
+							<input type="number" class="product-count__field" value="1">
+							<span>шт</span>
+						</label>
+					</div>	
+				</div>
+				<div class="cart-basket__product">
+					<div class="cart-basket__product-image cart-basket__product-column">
+						<a href="" class="cart-basket__product-image-link"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+					</div>
+					<div class="cart-basket__product-body cart-basket__product-column">
+						<div class="cart-basket__product-name"><a href="single-product.html">Люстра потолочная ART2831 Золотая</a></div>
+						<div class="cart-basket__product-category"><a href="category.html">Категория «Люстры»</a></div>
+
+						<div class="cart-basket__product-price">
+							<span>1 250 ₽</span>
+						</div>
+					</div>
+					<div class="cart-basket__product-count product-count cart-basket__product-column">
+						<label class="product-count__label">
+							<input type="number" class="product-count__field" value="1">
+							<span>шт</span>
+						</label>
+					</div>	
+				</div>
+				<div class="cart-basket__product">
+					<div class="cart-basket__product-image cart-basket__product-column">
+						<a href="" class="cart-basket__product-image-link"><img src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt=""></a>
+					</div>
+					<div class="cart-basket__product-body cart-basket__product-column">
+						<div class="cart-basket__product-name"><a href="single-product.html">Люстра потолочная ART2831 Золотая</a></div>
+						<div class="cart-basket__product-category"><a href="category.html">Категория «Люстры»</a></div>
+
+						<div class="cart-basket__product-price">
+							<span>1 250 ₽</span>
+						</div>
+					</div>
+					<div class="cart-basket__product-count product-count cart-basket__product-column">
+						<label class="product-count__label">
+							<input type="number" class="product-count__field" value="1">
+							<span>шт</span>
+						</label>
+					</div>	
+				</div>
+			</div>
+
+			<div class="cart-resume__promocode">
+				<input id="subscribe-email" type="email" class="form__input" name="email" placeholder="Промокод" required>
+				<button class="cart-resume__promocode-btn btn btn-bg">Применить</button>
+			</div>
+
+			<div class="cart-resume__btn">
+				<button class="btn btn-bg">Перейти к оформлению</button>
+			</div>
+		</div>
+	</div>
+</main>
+
+@@include('html-components/_footer.html', {
+"class": "footer--small",
+})
