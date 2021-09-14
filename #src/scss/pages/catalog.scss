@@ -1,4 +1,10 @@
 // ====== CATALOG START ======
+.catalog-page {
+    .site__main {
+        background-color: $White;
+    }
+}
+
 .catalog {
     @include adaptiv-value("margin-bottom", 80, 40, 1);
 

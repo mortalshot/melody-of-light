@@ -41,3 +41,28 @@ $('#product-results2').select2({
 $('#product-results-2').click(function () {
     $('#product-results2').select2('open');
 })
+
+// checkout
+$('.checkout__select-city').select2({
+    width: '100%',
+    placeholder: "Введите название города",
+    allowClear: true,
+
+    language: {
+        noResults: function () {
+            return "Результатов не найдено"
+        },
+    },
+});
+
+$('.checkout__select-point').select2({
+    width: '100%',
+    placeholder: "Выберите пункт выдачи",
+    allowClear: false,
+
+    language: {
+        noResults: function () {
+            return "Результатов не найдено"
+        },
+    },
+});

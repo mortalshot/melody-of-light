@@ -119,17 +119,7 @@ function removeActive() {
 const navOffset = $('.header__bottom').offset().top;
 let scrolled = $(this).scrollTop();
 
-if (scrolled > navOffset) {
-    $('.site__wrap').addClass('nav-fixed');
-    $('.header__bottom').addClass('lock-padding');
-} else if (scrolled < navOffset) {
-    $('.site__wrap').removeClass('nav-fixed');
-    $('.header__bottom').removeClass('lock-padding');
-}
-
-$(window).scroll(function () {
-    let scrolled = $(this).scrollTop();
-
+if (!$('body').hasClass('checkout-page')) {
     if (scrolled > navOffset) {
         $('.site__wrap').addClass('nav-fixed');
         $('.header__bottom').addClass('lock-padding');
@@ -137,7 +127,20 @@ $(window).scroll(function () {
         $('.site__wrap').removeClass('nav-fixed');
         $('.header__bottom').removeClass('lock-padding');
     }
-});
+
+    $(window).scroll(function () {
+        let scrolled = $(this).scrollTop();
+
+        if (scrolled > navOffset) {
+            $('.site__wrap').addClass('nav-fixed');
+            $('.header__bottom').addClass('lock-padding');
+        } else if (scrolled < navOffset) {
+            $('.site__wrap').removeClass('nav-fixed');
+            $('.header__bottom').removeClass('lock-padding');
+        }
+    });
+}
+
 // === HEADER FIXED END ===
 
 // === SHOW SUB-MENU START ===

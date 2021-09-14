@@ -1,0 +1,69 @@
+@@include('html-components/_header.html', {
+"title": "Контакты",
+"class": "contacts-page",
+"headerClass": "header--small",
+})
+<main class="site__main">
+    <div class="page-heading">
+		<div class="_container">
+            <h1 class="page-heading__title">Контакты</h1>
+
+            <div class="breadcrumbs">
+				<div class="breadcrumbs__wrapper" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<span class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a href="index.html" itemprop="item">
+							<span itemprop="name">Главная</span>
+						</a>
+					</span>
+					<span class="breadcrumbs__separator"></span>
+					<span class="breadcrumbs__title">Контакты</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="contacts">
+		<div class="_container">
+			<div class="contacts__row">
+				<div class="contacts__frame">
+					<div class="contacts__frame-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.802457350178!2d39.805252315618546!3d47.25956597916318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b748746f7f6b%3A0xe98f3088042ea50f!2z0L_RgC4g0KjQvtC70L7RhdC-0LLQsCwgMjcwLzMsIDIg0Y3RgtCw0LYsINCg0L7RgdGC0L7Qsi3QvdCwLdCU0L7QvdGDLCDQoNC-0YHRgtC-0LLRgdC60LDRjyDQvtCx0LsuLCAzNDQwMDk!5e0!3m2!1sru!2sru!4v1631534223498!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+				</div>
+				<div class="contacts__info">
+					<div class="contacts__list">
+						<div class="contacts__item">
+							<div class="contacts__item-label">Телефон</div>
+							<div class="contacts__item-link"><a href="tel:+78632042654">+7 (863) 204-26-54</a></div>
+							<div class="contacts__item-link"><a href="tel:+78005006279">+7 (800) 500-62-79</a></div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-label">email</div>
+							<div class="contacts__item-link"><a href="mailto:info@melodylight.ru">info@melodylight.ru</a></div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-label">Адрес</div>
+							<div class="contacts__item-link">г. Ростов-на-Дону, пр. Шолохова 270/3, 2 этаж</div>
+						</div>
+					</div>
+					<div class="contacts__list">
+						<div class="contacts__item">
+							<div class="contacts__item-label">Бухгалтерия</div>
+							<div class="contacts__item-link"><a href="mailto:salon@bestlight-rnd.ru">salon@bestlight-rnd.ru</a></div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-label">Отдел качества</div>
+							<div class="contacts__item-link"><a href="mailto:melody161office@gmail.com">melody161office@gmail.com</a></div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-label">Отдел логистики</div>
+							<div class="contacts__item-link"><a href="mailto:logist.melodylight@gmail.com">logist.melodylight@gmail.com</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('html-components/_footer.html', {
+"class": "footer--small",
+})

@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
@@ -1401,6 +1401,106 @@
 	}
 }
 // ====== PAGE-HEADING END ======
+
+// ====== INFORMATION START ======
+.information {
+	@include adaptiv-value("margin-bottom", 150, 50, 1);
+
+	&__wrapper {
+		background: $White;
+		box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.08);
+		border-radius: 2px;
+	}
+
+	.tabs {
+		&__triggers {
+			@include adaptiv-value("padding-top", 8, 0, 1);
+			@include adaptiv-value("padding-left", 56, 20, 1);
+			@include adaptiv-value("padding-right", 56, 20, 1);
+			scrollbar-width: thin;
+			overflow-x: auto;
+			overflow-y: hidden;
+			position: relative;
+			padding-bottom: 1px;
+			
+			&::after {
+				content: '';
+				display: block;
+				height: 1px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: $LGray;
+			}
+
+			&::-webkit-scrollbar {
+				height: 0px;
+			}
+		}
+
+		&__triggers-item {
+			@include adaptiv-value("padding-top", 32, 24, 1);
+			@include adaptiv-value("padding-bottom", 32, 24, 1);
+			font-weight: 700;
+			@include adaptiv-font(14, 20, 12, 1);
+			color: $fontColor;
+			text-align: center;
+			position: relative;
+			transition: $transition ease all 0s;
+
+			&::before {
+				content: "";
+				display: block;
+				height: 1px;
+				background: $Orange;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				// transform: translateY(100%);
+				opacity: 0;
+				width: 0;
+				transition: $transition ease all 0s;
+			}
+
+			&:not(:last-child) {
+				@include adaptiv-value("margin-right", 80, 16, 1);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+
+			&--active {
+				color: $Orange;
+
+				&::before {
+					content: "";
+					width: 100%;
+					opacity: 1;
+				}
+			}
+		}
+
+		&__content {
+			@include adaptiv-value("padding-left", 56, 20, 1);
+			@include adaptiv-value("padding-right", 56, 20, 1);
+			@include adaptiv-value("padding-bottom", 8, 2, 1);
+			max-width: 816px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&__content-item {
+			@include adaptiv-value("padding-top", 48, 22, 1);
+			@include adaptiv-value("padding-bottom", 48, 22, 1);
+		}
+	}
+}
+
+// ====== INFORMATION END ======
 
 // ====== SEARCH START ======
 

@@ -1,0 +1,247 @@
+@@include('html-components/_header.html', {
+"title": "Оформление заказа",
+"class": "checkout-page",
+"headerClass": "",
+})
+
+<main class="site__main">
+	<div class="page-heading">
+		<div class="_container">
+			<div class="checkout-page__logo">
+				@@include('html-components/_logo.html')
+			</div>
+
+			<h1 class="page-heading__title">Оформление заказа</h1>
+
+			<div class="page-heading__back">
+				<a href="/cart.html" class="btn">
+					<i class="icon-text-link"></i>
+					<span>В корзину</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="with-sidebar">
+		<div class="with-sidebar__row _container">
+			<div class="with-sidebar__content">
+				<div class="checkout">
+					<form action="" class="checkout__form">
+						<div class="checkout__steps">
+							<div class="checkout__step checkout__step--radio">
+								<h3 class="checkout__step-title">1. Как вам удобнее получить заказ?</h3>
+								<div class="form__row">
+									<div class="form__item mb-0 col-12 col-lg-4">
+										<label class="form__radio form__radio--box">
+											<input type="radio" name="delivery">
+											<div class="form__radio-wrapper">
+												<div class="form__radio-icon"><img src="img/icons/checkout-icon-1.svg" alt="Самовывоз"></div>
+												<div class="form__radio-body">
+													<div class="form__radio-title">Самовывоз</div>
+													<div class="form__radio-note">Бесплатно</div>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="form__item mb-0 col-12 col-lg-4">
+										<label class="form__radio form__radio--box">
+											<input type="radio" name="delivery">
+											<div class="form__radio-wrapper">
+												<div class="form__radio-icon"><img src="img/icons/checkout-icon-2.svg" alt="Доставка ТК"></div>
+												<div class="form__radio-body">
+													<div class="form__radio-title">Доставка ТК</div>
+													<div class="form__radio-note"><span>от 500 ₽</span> <span>7 - 14 дней</span></div>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="form__item mb-0 col-12 col-lg-4">
+										<label class="form__radio form__radio--box">
+											<input type="radio" name="delivery">
+											<div class="form__radio-wrapper">
+												<div class="form__radio-icon"><img src="img/icons/checkout-icon-3.svg" alt="Курьером"></div>
+												<div class="form__radio-body">
+													<div class="form__radio-title">Курьером</div>
+													<div class="form__radio-note"><span>от 1000 ₽</span> <span>3 дня</span></div>
+												</div>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__step checkout__step--radio">
+								<h3 class="checkout__step-title">2. Как вам будет удобнее оплатить заказ?</h3>
+								<div class="form__row">
+									<div class="form__item mb-0 col-12 col-lg-4">
+										<label class="form__radio form__radio--box">
+											<input type="radio" name="payment">
+											<div class="form__radio-wrapper">
+												<div class="form__radio-body">
+													<div class="form__radio-title">Картой на сайте</div>
+													<div class="form__radio-note">Картами Visa, MasterCard, Мир</div>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="form__item mb-0 col-12 col-lg-4">
+										<label class="form__radio form__radio--box">
+											<input type="radio" name="payment">
+											<div class="form__radio-wrapper">
+												<div class="form__radio-body">
+													<div class="form__radio-title">При получении</div>
+													<div class="form__radio-note">Наличными или картой при получении</div>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="form__item mb-0 col-12 col-lg-4">
+										<label class="form__radio form__radio--box">
+											<input type="radio" name="payment">
+											<div class="form__radio-wrapper">
+												<div class="form__radio-body">
+													<div class="form__radio-title">Безналичный расчёт</div>
+													<div class="form__radio-note">Оплата по реквизитам, для ИИ и ООО</div>
+												</div>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__step">
+								<h3 class="checkout__step-title">3. Город и адрес для доставки</h3>
+								<div class="checkout__select-wrapper checkout__select-wrapper--city">
+									<select class="checkout__select-city" name="city">
+										<option></option>
+										<option value="SPB">Санкт-Петербург</option>
+										<option value="MOS">Москва</option>
+										<option value="RND" selected>Ростов-на-Дону</option>
+										<option value="KAL">Калининград</option>
+										<option value="VOL">Волгоград</option>
+									</select>
+								</div>
+
+								<div class="checkout__select-wrapper checkout__select-wrapper--point">
+									<div class="checkout__select-label">Выберите пункт выдачи ТК</div>
+									<select class="checkout__select-point" name="point">
+										<option></option>
+										<option value="SPB">Санкт-Петербург</option>
+										<option value="MOS">Москва</option>
+										<option value="RND" selected>Ростов-на-Дону</option>
+										<option value="KAL">Калининград</option>
+										<option value="VOL">Волгоград</option>
+									</select>
+									<div class="checkout__select-note">Стоимость доставки <b>700 ₽</b></div>
+								</div>
+							</div>
+							<div class="checkout__step">
+								<h3 class="checkout__step-title">4. Данные получателя</h3>
+
+								<div class="form__row">
+									<div class="form__item col-12 col-lg-6">
+										<input type="text" class="form__input" placeholder="Ваше имя">
+									</div>
+									<div class="form__item col-12 col-lg-6">
+										<input type="text" class="form__input form__input--phone" placeholder="+7 (___) ___-__-__">
+									</div>
+									<div class="form__item col-12 col-lg-6 mb-0">
+										<input type="email" class="form__input" placeholder="Email">
+										<span class="form__input-note">Отправим письмо для оповещения о статусе заказа</span>
+									</div>
+								</div>
+
+								<div class="form__row">
+									<div class="form__item col-12 col-lg-6 mb-0">
+										<div class="form__input-note-important">Для того чтобы получить вашу посылку в транспортной компании, вам надо будет указать ФИО полность. Убедитись, что данные введены верно!</div>
+										<input type="text" class="form__input" placeholder="ФИО">
+									</div>
+								</div>
+							</div>
+							<div class="checkout__step">
+								<h3 class="checkout__step-title">5. Скидка к заказу</h3>
+								<div class="form__row">
+									<div class="form__item col-12 col-lg-6 mb-0">
+										<div class="cart-resume__promocode">
+											<input id="subscribe-email" type="email" class="form__input" name="email" placeholder="Промокод">
+											<button class="cart-resume__promocode-btn btn btn-bg">Применить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="checkout__total">
+							<div class="checkout__total-rows">
+								<div class="checkout__total-row">
+									<div class="checkout__total-title">Товары</div>
+									<div class="checkout__total-space"></div>
+									<div class="checkout__total-value">7 890 ₽</div>
+								</div>
+								<div class="checkout__total-row">
+									<div class="checkout__total-title">Скидка</div>
+									<div class="checkout__total-space"></div>
+									<div class="checkout__total-value _green">- 1 000 ₽</div>
+								</div>
+								<div class="checkout__total-row">
+									<div class="checkout__total-title">Доставка</div>
+									<div class="checkout__total-space"></div>
+									<div class="checkout__total-value">750 ₽</div>
+								</div>
+								<div class="checkout__total-row checkout__total-row--result">
+									<div class="checkout__total-title">Итого к оплате</div>
+									<div class="checkout__total-space"></div>
+									<div class="checkout__total-value">7 400 ₽</div>
+								</div>
+							</div>
+							<div class="checkout__total-footer">
+								<div class="checkout__total-privacy _content">
+									<p>Завершая оформление заказа, я даю своё согласие на обработку персональных данных и подтверждаю ознакомление со сроками хранения товара в соответствии с указанными здесь условиями. В соответствии с ФЗ №54-ФЗ кассовый чек при онлайн-оплате на сайте будет предоставлен в электронном виде на указанный при оформлении заказа номер телефона.</p>
+								</div>
+								<button type="submit" class="btn btn-bg">Сделать заказ</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<aside class="checkout-page__sidebar with-sidebar__sidebar with-sidebar__sidebar--big">
+				<div class="with-sidebar__sidebar-sticky">
+					<div data-spollers="767,max" class="checkout-resume accordion">
+						<div class="accordion__item">
+							<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>В корзине 3&nbsp;товара на&nbsp;сумму 7&nbsp;890&nbsp;₽</span></button>
+
+							<div class="accordion__text">
+								<ul class="small-basket__list">
+									<li class="small-basket__item">
+										<a href="single-product.html" class="small-basket__item-icon"><img src="img/search/search-product-1.jpg" alt=""></a>
+										<div class="small-basket__item-content">
+											<a href="single-product.html" class="small-basket__item-name">Светильник потолочный ArtLAMP BL</a>
+											<div class="small-basket__total"> <span>1 x 2 500 ₽</span> </div>
+										</div>
+									</li>
+									<li class="small-basket__item">
+										<a href="single-product.html" class="small-basket__item-icon"><img src="img/search/search-product-2.jpg" alt=""></a>
+										<div class="small-basket__item-content">
+											<a href="single-product.html" class="small-basket__item-name">Светильник потолочный ArtLAMP BLСветильник потолочный ArtLAMP BLСветильник потолочный ArtLAMP BLСветильник потолочный ArtLAMP BLСветильник потолочный ArtLAMP BL</a>
+											<div class="small-basket__total"> <span>1 x 2 500 ₽</span> </div>
+										</div>
+									</li>
+									<li class="small-basket__item">
+										<a href="single-product.html" class="small-basket__item-icon"><img src="img/search/search-product-3.jpg" alt=""></a>
+										<div class="small-basket__item-content">
+											<a href="single-product.html" class="small-basket__item-name">Светильник потолочный ArtLAMP BL</a>
+											<div class="small-basket__total"> <span>1 x 2 500 ₽</span> </div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</div>
+</main>
+
+@@include('html-components/_footer.html', {
+"class": "footer--small",
+})

@@ -4,20 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@@title</title>
+    <title>Сравнение товаров</title>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="site @@class">
+<body class="site ">
     <div class="site__wrap">
-        <header class="site__header header header--main header--desktop @@headerClass">
+        <header class="site__header header header--main header--desktop header--small">
             <div class="header__wrapper">
                 <div class="header__top">
                     <div class="header__row _container">
-                        @@include('_location.html')
+                        <div class="header__location location">
+    <a href="" class="location__button">
+        <i class="icon-location"></i>
+        <span>Санкт-Петербург</span>
+        <i class="icon-toggle"></i>
+    </a>
+
+    <div class="location__dropdown">
+        <div class="location__dropdown-heading">
+            <div class="location__dropdown-info">Выберите город</div>
+            <a href="" class="location__dropdown-close"><i class="icon-close"></i></a>
+        </div>
+        <select class="location__dropdown-select" name="city">
+            <option></option>
+            <option value="SPB" selected>Санкт-Петербург</option>
+            <option value="MOS">Москва</option>
+            <option value="RND">Ростов-на-Дону</option>
+            <option value="KAL">Калининград</option>
+            <option value="VOL">Волгоград</option>
+        </select>
+        <div class="location__dropdown-popular">
+            <div class="location__dropdown-popular-label">Популярные города</div>
+            <ul class="location__dropdown-popular-list">
+                <li class="location__dropdown-popular-item"><a href="">Санкт-Петербург</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Москва</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Ростов-на-Дону</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Калининград</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Волгоград</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
                         <nav class="header__top-menu header-menu">
                             <ul class="header-menu__list">
@@ -43,7 +74,9 @@
                 <div class="header__bottom">
                     <div class="header__row _container">
                         <div class="header__logo logo header__bottom-column">
-                            @@include('_logo.html')
+                            <a href="index.html" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
                         </div>
 
                         <div class="header__main-contacts header__bottom-column">
@@ -52,9 +85,10 @@
                                 <a href="mailto:info@melodylight.ru" class="header__mail">info@melodylight.ru</a>
                             </div>
                             <div class="header__main-contacts-btn">
-                                @@include('_catalog-btn.html', {
-                                "btnTitle": "Каталог"
-                                })
+                                <a href="/catalog.html" class="catalog-btn btn btn-bg">
+    <i class="icon-catalog"></i>
+    <span>Каталог</span>
+</a>
                             </div>
                         </div>
 
@@ -290,7 +324,38 @@
                 <div class="header__body">
                     <div class="header__menu">
 
-                        @@include('_location.html')
+                        <div class="header__location location">
+    <a href="" class="location__button">
+        <i class="icon-location"></i>
+        <span>Санкт-Петербург</span>
+        <i class="icon-toggle"></i>
+    </a>
+
+    <div class="location__dropdown">
+        <div class="location__dropdown-heading">
+            <div class="location__dropdown-info">Выберите город</div>
+            <a href="" class="location__dropdown-close"><i class="icon-close"></i></a>
+        </div>
+        <select class="location__dropdown-select" name="city">
+            <option></option>
+            <option value="SPB" selected>Санкт-Петербург</option>
+            <option value="MOS">Москва</option>
+            <option value="RND">Ростов-на-Дону</option>
+            <option value="KAL">Калининград</option>
+            <option value="VOL">Волгоград</option>
+        </select>
+        <div class="location__dropdown-popular">
+            <div class="location__dropdown-popular-label">Популярные города</div>
+            <ul class="location__dropdown-popular-list">
+                <li class="location__dropdown-popular-item"><a href="">Санкт-Петербург</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Москва</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Ростов-на-Дону</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Калининград</a></li>
+                <li class="location__dropdown-popular-item"><a href="">Волгоград</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
                         <nav class="header__top-menu header-menu">
                             <ul class="header-menu__list">
@@ -318,7 +383,9 @@
                     </div>
 
                     <div class="header__logo logo header__column">
-                        @@include('_logo.html')
+                        <a href="index.html" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
                     </div>
 
                     <div class="header__controls header__column">
@@ -360,3 +427,170 @@
                 </li>
             </ul>
         </nav>
+<main class="site__main">
+    <div class="page-heading">
+		<div class="_container">
+            <h1 class="page-heading__title">Сравнение товаров</h1>
+		</div>
+	</div>
+
+	<section class="information">
+		<div class="_container">
+			<div class="information__wrapper">
+				<div id="informationTabs" class="tabs">
+					<div class="tabs__triggers">
+						<a href="#informationTab-1" class="tabs__triggers-item">Доставка транспортной компанией</a>
+						<a href="#informationTab-2" class="tabs__triggers-item">Самовывоз</a>
+					</div>
+					<div class="tabs__content">
+						<div id="informationTab-1" class="tabs__content-item _content">
+							<p>Для заключения договора поставки необходимо подать заявку, <a href="">заполнив форму регистрации</a> на сайте и прикрепить заверенные копии документов.</p>
+						</div>
+						<div id="informationTab-2" class="tabs__content-item">
+							Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Своих необходимыми, жаренные предупредила если предложения скатился реторический, ручеек текстов строчка от всех предупреждал наш текста жизни, деревни то не океана над диких. Маленький над залетают наш мир семь которой путь прямо власти, это себя сбить даль от всех. Решила, дороге назад.
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рыбными безопасную меня своего прямо, заманивший осталось залетают жизни языкового путь предложения коварных строчка свой единственное образ власти выйти, снова переписали семь, грамматики своих безорфографичный большого ipsum океана решила. Реторический, решила собрал. Дал составитель продолжил инициал все журчит свой пустился, языком не о скатился, выйти одна переписывается залетают раз ее рыбного осталось диких за. Вопроса букв пустился последний ipsum, рукопись переулка? Даль даже диких моей, толку но которой вопрос всеми рукописи вдали подпоясал наш реторический они предложения эта себя букв по всей знаках выйти пустился возвращайся. Пунктуация, силуэт возвращайся залетают что свое, своих строчка ты, проектах ведущими снова пояс? Букв если предупреждал необходимыми грустный власти родного имени он диких заголовок запятой.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="site__footer footer footer--small">
+    <div class="_container">
+        <div class="footer__full">
+            <div class="footer__top">
+                <div class="footer__column footer__info">
+                    <div class="footer__logo">
+                        <a href="index.html" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
+                    </div>
+                    <div class="footer__description _content">Оптовая продажа светотехнической продукции бытового назначения с 1995 года</div>
+
+                    <div class="footer__contacts">
+                        <div class="footer__contact-item">
+                            <a href="mailto:info@melodylight.ru">
+                                <i class="icon-mail"></i>
+                                <span>info@melodylight.ru</span>
+                            </a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <a href="tel:88632042654">
+                                <i class="icon-phone"></i>
+                                <span>8 (863) 204-26-54</span>
+                            </a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <a href="https://goo.gl/maps/2o8kqsuJbiX2Dtbo6" target="_blank">
+                                <i class="icon-location"></i>
+                                <span>г. Ростов-на-Дону, пр. Шолохова, 270/3, 2 эт.</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__column footer__menu">
+                    <div data-spollers="767,max" class="accordion">
+                        <div class="accordion__item">
+                            <button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Каталог</span></button>
+                            <div class="accordion__text">
+                                <ul class="menu__list">
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Люстры</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Бра</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Подвесные светильники</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Настольные лампы</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Торшеры</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Настольно-потолочные</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Уличное освещение</a></li>
+                                    <li class="menu__item"><a href="catalog.html" class="menu__link">Офисное освещение</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Компания</span></button>
+                            <div class="accordion__text">
+                                <ul class="menu__list">
+                                    <li class="menu__item"><a href="cooperation.html" class="menu__link">Доставка</a></li>
+                                    <li class="menu__item"><a href="cooperation.html" class="menu__link">Сотрудничество</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Документы</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
+                                    <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+                                    <li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__column footer__mailing subscribe">
+                    <h4 class="subscribe__title">Хотите быть в курсе новых акций?</h4>
+                    <form action="" class="subscribe__form">
+                        <div class="subscribe__wrapper">
+                            <input id="subscribe-email" type="email" class="form__input" name="email" placeholder="Ваш Email" required>
+                            <button class="subscribe__btn btn btn-bg">Подписаться</button>
+                        </div>
+                        <label class="form__checkbox subscribe__privacy">
+                            <input id="subscribe-accept" type="checkbox" name="privacy" required checked>
+                            <span>Я ознакомился и принимаю условия <br>
+                                <a href="privacy.html">Политики конфиденциальности</a> и <a href="privacy.html">Информированного согласия</a></span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__privacy">Интернет-магазин МАГИЯ СВЕТА <br>
+                    © 2009-2021. Все права защищены </div>
+                <a href="privacy.html" class="footer__link">Пользовательское соглашение</a>
+                <div class="footer__kan"><a href="https://thekan.ru/"><img src="./img/icons/kan.svg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="footer__small">
+            <div class="footer__bottom">
+                <div class="footer__privacy">Интернет-магазин МАГИЯ СВЕТА <br> © 2009-2021. Все права защищены </div>
+                <a href="index.html" class="logo__link">
+    <img src="./img/logo.svg" alt="logo">
+</a>
+                <a href="privacy.html" class="footer__link">Пользовательское соглашение</a>
+                <div class="footer__kan"><a href="https://thekan.ru/"><img src="./img/icons/kan.svg" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modals">
+    <div id="questions" class="questions fancybox__popup" style="display:none;">
+        <form action="#" id="questionsForm" class="form">
+            <h4 class="questions__title">Остались вопросы?</h4>
+
+            <div class="form__row">
+                <div class="form__item col-12">
+                    <input id="questionsFormPhone" type="text" name="phone" class="form__input form__input--phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form__item col-12">
+                    <input id="questionsFormName" type="text" name="name" class="form__input" placeholder="Ваше имя">
+                </div>
+                <div class="form__item col-12">
+                    <textarea name="" id="questionsFormArea" class="form__input" placeholder="Вопрос"></textarea>
+                </div>
+                <div class="form__item col-12">
+                    <button type="submit" class="form__button btn btn-bg">Задать вопрос</button>
+                </div>
+                <div class="form__item col-12 mb-0">
+                    <div class="form__privacy">Нажимая на кнопку вы даёте согласие на обработку <a href="">персональных данных</a></div>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>
