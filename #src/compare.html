@@ -1,30 +1,375 @@
 @@include('html-components/_header.html', {
 "title": "Сравнение товаров",
-"class": "",
+"class": "compare-page",
 "headerClass": "header--small",
 })
 <main class="site__main">
-    <div class="page-heading">
+	<div class="page-heading">
 		<div class="_container">
-            <h1 class="page-heading__title">Сравнение товаров</h1>
+			<h1 class="page-heading__title">Сравнение товаров</h1>
 		</div>
 	</div>
 
-	<section class="information">
+	<section class="compare">
 		<div class="_container">
-			<div class="information__wrapper">
-				<div id="informationTabs" class="tabs">
-					<div class="tabs__triggers">
-						<a href="#informationTab-1" class="tabs__triggers-item">Доставка транспортной компанией</a>
-						<a href="#informationTab-2" class="tabs__triggers-item">Самовывоз</a>
-					</div>
-					<div class="tabs__content">
-						<div id="informationTab-1" class="tabs__content-item _content">
-							<p>Для заключения договора поставки необходимо подать заявку, <a href="">заполнив форму регистрации</a> на сайте и прикрепить заверенные копии документов.</p>
+			<div class="compare__desktop">
+				<div class="compare__row">
+					<div class="compare__heading">
+						<div class="compare-product__item""></div>
+						<div class=" compare-product__attributes">
+							<div class="compare-product__attribute compare-product__attribute--height">Высота</div>
+							<div class="compare-product__attribute compare-product__attribute--diameter">Диаметр</div>
+							<div class="compare-product__attribute compare-product__attribute--plinth">Тип цоколя</div>
+							<div class="compare-product__attribute compare-product__attribute--bulb">Тип лампочки</div>
+							<div class="compare-product__attribute compare-product__attribute--bulb-number">Количество ламп</div>
+							<div class="compare-product__attribute compare-product__attribute--power">Общая мощность</div>
 						</div>
-						<div id="informationTab-2" class="tabs__content-item">
-							Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Своих необходимыми, жаренные предупредила если предложения скатился реторический, ручеек текстов строчка от всех предупреждал наш текста жизни, деревни то не океана над диких. Маленький над залетают наш мир семь которой путь прямо власти, это себя сбить даль от всех. Решила, дороге назад.
-							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рыбными безопасную меня своего прямо, заманивший осталось залетают жизни языкового путь предложения коварных строчка свой единственное образ власти выйти, снова переписали семь, грамматики своих безорфографичный большого ipsum океана решила. Реторический, решила собрал. Дал составитель продолжил инициал все журчит свой пустился, языком не о скатился, выйти одна переписывается залетают раз ее рыбного осталось диких за. Вопроса букв пустился последний ipsum, рукопись переулка? Даль даже диких моей, толку но которой вопрос всеми рукописи вдали подпоясал наш реторический они предложения эта себя букв по всей знаках выйти пустился возвращайся. Пунктуация, силуэт возвращайся залетают что свое, своих строчка ты, проектах ведущими снова пояс? Букв если предупреждал необходимыми грустный власти родного имени он диких заголовок запятой.</p>
+					</div>
+					<div class="compare__items swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide compare-product">
+								<div class="compare-product__wrapper">
+									<div class="compare-product__item">
+										<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-1.jpg" alt=""></a>
+										<a href="single-product.html" class="compare-product__title">Люстра потолочная</a>
+										<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+									</div>
+									<div class="compare-product__attributes">
+										<div class="compare-product__attribute compare-product__attribute--height">300</div>
+										<div class="compare-product__attribute compare-product__attribute--diameter">200</div>
+										<div class="compare-product__attribute compare-product__attribute--plinth">E27</div>
+										<div class="compare-product__attribute compare-product__attribute--bulb">Накаливания</div>
+										<div class="compare-product__attribute compare-product__attribute--bulb-number">1</div>
+										<div class="compare-product__attribute compare-product__attribute--power">240 W</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide compare-product">
+								<div class="compare-product__wrapper">
+									<div class="compare-product__item">
+										<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+										<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+										<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+									</div>
+									<div class="compare-product__attributes">
+										<div class="compare-product__attribute compare-product__attribute--height">200</div>
+										<div class="compare-product__attribute compare-product__attribute--diameter">200</div>
+										<div class="compare-product__attribute compare-product__attribute--plinth">E27</div>
+										<div class="compare-product__attribute compare-product__attribute--bulb">Накаливания</div>
+										<div class="compare-product__attribute compare-product__attribute--bulb-number">1</div>
+										<div class="compare-product__attribute compare-product__attribute--power">240 W</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide compare-product">
+								<div class="compare-product__wrapper">
+									<div class="compare-product__item">
+										<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+										<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. C креплением</a>
+										<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+									</div>
+									<div class="compare-product__attributes">
+										<div class="compare-product__attribute compare-product__attribute--height">100</div>
+										<div class="compare-product__attribute compare-product__attribute--diameter">200</div>
+										<div class="compare-product__attribute compare-product__attribute--plinth">E27</div>
+										<div class="compare-product__attribute compare-product__attribute--bulb">Накаливания</div>
+										<div class="compare-product__attribute compare-product__attribute--bulb-number">1</div>
+										<div class="compare-product__attribute compare-product__attribute--power">240 W</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="compare__mobile">
+				<div class="compare__mobile-sliders">
+					<div class="compare__mobile-slider compare__mobile-slider--left">
+						<div class="swiper">
+							<div class="swiper__pagination">
+								<div class="swiper__fraction">
+									<span class="swiper__fraction-current">1</span>
+									<span class="swiper__fraction-label">из</span>
+									<span class="swiper__fraction-total"></span>
+								</div>
+								<div class="swiper__bullets"></div>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="compare__mobile-slider compare__mobile-slider--right">
+						<div class="swiper">
+							<div class="swiper__pagination">
+								<div class="swiper__fraction">
+									<span class="swiper__fraction-current">2</span>
+									<span class="swiper__fraction-label">из</span>
+									<span class="swiper__fraction-total"></span>
+								</div>
+								<div class="swiper__bullets"></div>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-2.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide compare-product">
+									<div class="compare-product__wrapper">
+										<div class="compare-product__item">
+											<a href="single-product.html" class="compare-product__image"><img src="img/category/lamp/lamp-1/lamp-1-3.jpg" alt=""></a>
+											<a href="single-product.html" class="compare-product__title">Люстра потолочная A4827 Золотая. Без крепления</a>
+											<div class="compare-product__item-controls">
+												<a href="" class="compare-product__item-add"><i class="icon-cart"></i></a>
+												<a href="" class="compare-product__item-remove"><i class="icon-close-circle"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-spollers="" class="compare__mobile-attributes accordion">
+					<div class="accordion__item">
+						<button tabindex="-1" type="button" data-spoller class="compare-product__attribute compare-product__attribute--height accordion__title"><span>Высота</span></button>
+						<div class="accordion__text">
+							<div class="compare__attributes-sliders">
+								<div class="compare__attributes-slider compare__attributes-slider--left">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">300</div>
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+								<div class="compare__attributes-slider compare__attributes-slider--right">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">300</div>
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<button tabindex="-1" type="button" data-spoller class="compare-product__attribute compare-product__attribute--height accordion__title"><span>Диаметр</span></button>
+						<div class="accordion__text">
+							<div class="compare__attributes-sliders">
+								<div class="compare__attributes-slider compare__attributes-slider--left">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+								<div class="compare__attributes-slider compare__attributes-slider--right">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<button tabindex="-1" type="button" data-spoller class="compare-product__attribute compare-product__attribute--height accordion__title"><span>Тип цоколя</span></button>
+						<div class="accordion__text">
+							<div class="compare__attributes-sliders">
+								<div class="compare__attributes-slider compare__attributes-slider--left">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+								<div class="compare__attributes-slider compare__attributes-slider--right">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<button tabindex="-1" type="button" data-spoller class="compare-product__attribute compare-product__attribute--height accordion__title"><span>Тип лампочки</span></button>
+						<div class="accordion__text">
+							<div class="compare__attributes-sliders">
+								<div class="compare__attributes-slider compare__attributes-slider--left">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+								<div class="compare__attributes-slider compare__attributes-slider--right">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<button tabindex="-1" type="button" data-spoller class="compare-product__attribute compare-product__attribute--height accordion__title"><span>Количество ламп</span></button>
+						<div class="accordion__text">
+							<div class="compare__attributes-sliders">
+								<div class="compare__attributes-slider compare__attributes-slider--left">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+								<div class="compare__attributes-slider compare__attributes-slider--right">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<button tabindex="-1" type="button" data-spoller class="compare-product__attribute compare-product__attribute--height accordion__title"><span>Общая мощность</span></button>
+						<div class="accordion__text">
+							<div class="compare__attributes-sliders">
+								<div class="compare__attributes-slider compare__attributes-slider--left">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+								<div class="compare__attributes-slider compare__attributes-slider--right">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">200</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">150</div>
+											<div class="swiper-slide">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,354 @@
+.compare-page {
+    .page-heading {
+        @include adaptiv-value("margin-top", 30, 2, 1);
+        @include adaptiv-value("margin-bottom", 13, 0, 1);
+
+        ._container {
+            display: block;
+        }
+    }
+
+    .page-heading__title {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+        }
+    }
+}
+
+.compare {
+    &__desktop {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+        .compare {
+            &__row {
+                display: flex;
+                min-width: 0px;
+                align-items: flex-start;
+            }
+
+            &__heading {
+                flex: 1;
+                margin-right: 20px;
+
+                .compare-product__attribute {
+                    justify-content: flex-start;
+                    @include adaptiv-value("padding-left", 35, 15, 1);
+                    @include adaptiv-value("padding-right", 35, 15, 1);
+                    color: $Gray;
+                }
+            }
+
+            &__spacing {
+            }
+
+            &__items {
+                flex: 0 0 76%;
+                min-width: 0px;
+            }
+        }
+
+        .compare-product {
+            height: auto;
+
+            &__wrapper {
+                text-align: center;
+                height: 100%;
+                width: 100%;
+            }
+
+            &__item {
+            }
+
+            &__item-remove {
+                position: absolute;
+                top: 14px;
+                right: 14px;
+                font-size: 16px;
+                transition: $transition ease transform 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            &__image {
+                transition: $transition ease opacity 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            &__title {
+            }
+
+            &__attributes {
+            }
+
+            &__attribute {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+
+                &:nth-child(2n + 1) {
+                    background-color: #f4f4f8;
+                }
+            }
+        }
+    }
+
+    &__mobile {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+        @media screen and (max-width: 767px) {
+            margin-bottom: 70px;
+        }
+
+        &-sliders {
+            display: flex;
+            min-width: 0px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        &-slider {
+            flex: 0 0 50%;
+            min-width: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .swiper {
+                padding-bottom: 0;
+
+                &__pagination {
+                    text-align: center;
+                    color: $Gray;
+                    @include adaptiv-font(14, 20, 12, 1);
+
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__fraction {
+                    margin-bottom: 4px;
+                }
+
+                &__fraction-current {
+                }
+
+                &__fraction-label {
+                }
+
+                &__fraction-total {
+                }
+
+                &__bullets {
+                    .swiper-pagination-bullet {
+                        background-color: $LGray4;
+                        opacity: 1;
+
+                        &-active {
+                            background-color: $Gray;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-attributes {
+            margin-top: 40px;
+            
+            .accordion {
+                &__item {
+                    &:not(:last-child) {
+                        padding-bottom: 24px;
+                        margin-bottom: 24px;
+                        border-bottom: 1px solid $LGray;
+                    }
+                }
+
+                &__text {
+                    margin-top: 16px;
+                    min-width: 0px;
+                }
+            }
+        }
+
+        .compare {
+            &__attributes-sliders {
+                display: flex;
+                min-width: 0px;
+                margin-left: -10px;
+                margin-right: -10px;
+                min-width: 0px;
+            }
+
+            &__attributes-slider {
+                flex: 0 0 50%;
+                padding-left: 10px;
+                padding-right: 10px;
+                min-width: 0px;
+
+                .swiper {
+                    padding-bottom: 0;
+                }
+
+                .swiper-slide {
+                    background-color: $White;
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 10px 13px;
+                }
+            }
+        }
+
+        &__row {
+        }
+
+        &__heading {
+        }
+
+        &__spacing {
+        }
+
+        &__items {
+        }
+
+        .compare-product {
+            &__wrapper {
+            }
+
+            &__item {
+                padding-bottom: 0;
+            }
+
+            &__image {
+            }
+
+            &__title {
+            }
+
+            &__attributes {
+            }
+
+            &__attribute {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                line-height: 22px;
+
+                &::after {
+                    width: 24px !important;
+                    height: 24px !important;
+                    background: url(../img/icons/compare-accordion.svg) no-repeat center/contain !important;
+                }
+            }
+
+            &__item-controls {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 18px;
+                margin-top: 12px;
+            }
+
+            &__item-add {
+                padding: 8px 14px;
+                color: $White;
+                background-color: $Orange;
+                border-radius: 4px;
+            }
+
+            &__item-remove {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.compare-product {
+    height: auto;
+
+    &__wrapper {
+        @include adaptiv-value("padding-bottom", 26, 10, 1);
+        @include adaptiv-value("padding-left", 20, 10, 1);
+        @include adaptiv-value("padding-right", 20, 10, 1);
+        background: $White;
+        border-radius: 10px;
+    }
+
+    &__item {
+        @include adaptiv-value("padding-top", 32, 10, 1);
+        @include adaptiv-value("padding-bottom", 32, 10, 1);
+    }
+
+    &__item-remove {
+        color: $Gray;
+        display: inline-flex;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        max-width: 144px;
+        margin: 0 auto;
+        position: relative;
+        @include adaptiv-value("padding-bottom", 144, 86, 1);
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 15, 12, 1);
+        }
+    }
+
+    &__title {
+        @include adaptiv-font(14, 20, 12, 1);
+        color: $fontColor;
+        text-decoration: underline transparent from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline $fontColor from-font;
+            }
+        }
+    }
+
+    &__attributes {
+    }
+
+    &__attribute {
+    }
+}
+
+._compare-fixed {
+    .compare__mobile-sliders {
+        position: fixed;
+        left: 20px;
+        right: 20px;
+        top: $size-header-height-mobile;
+        z-index: 2;
+    }
+}

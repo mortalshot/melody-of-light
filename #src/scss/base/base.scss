@@ -227,8 +227,6 @@ body {
     padding-bottom: 22px;
 
     &-pagination {
-        bottom: 0px !important;
-
         &-bullet {
             background-color: rgba(33, 33, 35, 0.3);
             transition: $transition ease all 0s;

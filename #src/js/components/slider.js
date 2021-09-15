@@ -198,3 +198,103 @@ if ($('.recently-widget__swiper').length > 0) {
         },
     });
 };
+
+if ($('.compare__items').length > 0) {
+    mainBanners = new Swiper('.compare__items', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        watchOverflow: true,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1920: {
+                slidesPerView: 4,
+            },
+        },
+    });
+};
+
+// COMPARE PAGE START
+comparePageMediaMax767 = window.matchMedia('(max-width: 767px)');
+
+if (comparePageMediaMax767.matches) {
+    if ($('.compare__mobile-slider').length > 0) {
+        let compareAttributesLeft = new Swiper('.compare__attributes-slider--left .swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            watchOverflow: true,
+            obeserver: true,
+            obeserveParents: true,
+            observeSlideChildren: true,
+            allowTouchMove: false,
+        });
+        let compareAttributesRight = new Swiper('.compare__attributes-slider--right .swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            watchOverflow: true,
+            obeserver: true,
+            obeserveParents: true,
+            observeSlideChildren: true,
+            allowTouchMove: false,
+            initialSlide: 1,
+        });
+
+        let compareProductsLeft = new Swiper('.compare__mobile-slider--left .swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            watchOverflow: true,
+
+            pagination: {
+                el: ".compare__mobile-slider--left .swiper__bullets",
+                type: "bullets",
+            },
+
+            controller: {
+                control: compareAttributesLeft,
+            },
+        });
+
+        let leftTotalFraction = $('.compare__mobile-slider--left .swiper__fraction-total');
+        let leftCurrentFraction = $('.compare__mobile-slider--left .swiper__fraction-current');
+        $(leftTotalFraction)[0].innerHTML = compareProductsLeft.slides.length;
+
+        compareProductsLeft.on('slideChange', function () {
+            let currentSlide = ++compareProductsLeft.realIndex;
+            $(leftCurrentFraction)[0].innerHTML = currentSlide;
+        })
+
+
+        let compareProductsRight = new Swiper('.compare__mobile-slider--right .swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            watchOverflow: true,
+            initialSlide: 1,
+
+            pagination: {
+                el: ".compare__mobile-slider--right .swiper__bullets",
+                type: "bullets",
+            },
+
+            controller: {
+                control: compareAttributesRight,
+            },
+        });
+
+        let rightTotalFraction = $('.compare__mobile-slider--right .swiper__fraction-total');
+        let rightCurrentFraction = $('.compare__mobile-slider--right .swiper__fraction-current');
+        $(rightTotalFraction)[0].innerHTML = compareProductsRight.slides.length;
+
+        compareProductsRight.on('slideChange', function () {
+            let currentSlide = ++compareProductsRight.realIndex;
+            $(rightCurrentFraction)[0].innerHTML = currentSlide;
+        })
+    };
+}
+
+// COMPARE PAGE END
