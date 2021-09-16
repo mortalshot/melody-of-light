@@ -1,0 +1,122 @@
+.regulations-page {
+    .fancybox__content {
+        max-width: 560px;
+    }
+}
+
+.regulations {
+    @include adaptiv-value("margin-bottom", 130, 50, 1);
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiv-value("margin", -10, -8, 1);
+    }
+
+    &__item {
+        @include adaptiv-value("padding", 10, 8, 1);
+        flex: 0 0 25%;
+
+        @media screen and (min-width: 1920px) {
+            flex: 0 0 20%;
+        }
+        @media screen and (max-width: 1050px) {
+            flex: 0 0 33.333%;
+        }
+        @media screen and (max-width: 767px) {
+            flex: 0 0 50%;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__item-wrapper {
+        position: relative;
+        box-shadow: 10px 10px 34px rgba(0, 0, 0, 0.06);
+        min-height: 350px;
+        display: flex;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(33, 33, 35, 0.8);
+            opacity: 0;
+            transition: $transition ease opacity 0s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+
+                .regulations__item-back {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+
+    &__item-back {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: $White;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: $transition ease all 0s;
+    }
+
+    &__back-zoom {
+        font-size: 46px;
+        color: $White;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__back-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 211px;
+        text-align: center;
+        margin: 0 auto;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__back-controls {
+    }
+
+    &__back-control {
+        position: relative;
+        z-index: 1;
+    }
+}

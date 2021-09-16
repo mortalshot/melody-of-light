@@ -27,6 +27,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-zoom-in:before {
+  content: "\e91e";
+}
+.icon-print:before {
+  content: "\e91f";
+}
+.icon-download:before {
+  content: "\e920";
+}
 .icon-image:before {
   content: "\e91d";
 }

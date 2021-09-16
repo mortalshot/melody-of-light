@@ -315,6 +315,9 @@
 			@media screen and (min-width: 992px) {
 				display: none;
 			}
+			@media screen and (max-width: 991px) {
+				bottom: 0px;
+			}
 		}
 	}
 
@@ -1333,6 +1336,19 @@
 		}
 	}
 
+	&__title-wrapper {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		.page-heading__title {
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
 	&__back {
 		a {
 			color: $Orange;
@@ -1422,9 +1438,9 @@
 			overflow-y: hidden;
 			position: relative;
 			padding-bottom: 1px;
-			
+
 			&::after {
-				content: '';
+				content: "";
 				display: block;
 				height: 1px;
 				position: absolute;

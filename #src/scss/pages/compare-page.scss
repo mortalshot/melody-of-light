@@ -16,6 +16,8 @@
 }
 
 .compare {
+    @include adaptiv-value("margin-bottom", 130, 50, 1);
+
     &__desktop {
         @media screen and (max-width: 767px) {
             display: none;
@@ -167,7 +169,7 @@
 
         &-attributes {
             margin-top: 40px;
-            
+
             .accordion {
                 &__item {
                     &:not(:last-child) {
@@ -348,7 +350,60 @@
         position: fixed;
         left: 20px;
         right: 20px;
-        top: $size-header-height-mobile;
+        top: calc(#{$size-header-height-mobile} + 10px);
         z-index: 2;
+    }
+}
+
+.compare-empty {
+    @include adaptiv-value("margin-bottom", 130, 50, 1);
+
+    ._container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: $Orange;
+        @include adaptiv-value("padding-top", 150, 50, 1);
+        @include adaptiv-value("padding-bottom", 150, 50, 1);
+        @include adaptiv-value("padding-left", 85, 20, 1);
+        @include adaptiv-value("padding-right", 85, 20, 1);
+        border: 1px solid $Orange;
+        border-radius: 10px;
+        transition: $transition ease background-color 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba($color: $Orange, $alpha: 0.3);
+            }
+        }
+
+        &-icon {
+            width: 18px;
+            height: 18px;
+            border: 2px solid $Orange;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            margin-bottom: 9px;
+
+            i {
+                font-size: 14px;
+            }
+        }
+
+        span {
+            max-width: 109px;
+            text-align: center;
+        }
     }
 }

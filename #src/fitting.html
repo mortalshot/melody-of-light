@@ -1,0 +1,94 @@
+@@include('html-components/_header.html', {
+"title": "Онлайн примерка товара",
+"class": "fitting-page",
+"headerClass": "header--small",
+})
+<main class="site__main">
+    <div class="page-heading">
+        <div class="_container">
+            <div class="page-heading__title-wrapper">
+                <h1 class="page-heading__title">Онлайн примерка товара</h1>
+                <div class="page-heading__description _content">
+                    <p>Для примерки вам потребуется</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="fitting">
+        <div class="_container">
+            <div class="fitting__row">
+                <div class="fitting__main">
+                    <div class="fitting__main-bg">
+                        <img src="img/online-fitting/fitting-bg-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="fitting__sidebar">
+                    <div class="fitting__sidebar-heading">
+                        <h3 class="fitting__sidebar-title">Выберите светильник</h3>
+                        <a href="#" class="fitting__sidebar-close">Свернуть</a>
+                    </div>
+                    <div class="fitting__sidebar-body">
+                        <div id="fittingTabs" class="tabs">
+                            <div class="tabs__triggers">
+                                <a href="#fittingTab-1" class="tabs__triggers-item">Из корзины</a>
+                                <a href="#fittingTab-2" class="tabs__triggers-item">Выбрать из каталога</a>
+                            </div>
+                            <div class="tabs__content">
+                                <div id="fittingTab-1" class="tabs__content-item">
+                                    <ul class="small-basket__list">
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-1.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">Светильник потолочный ArtLAMP BL</div>
+                                            </div>
+                                        </li>
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-2.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">Люстра потолочная A4827 Золотая. Без крепления</div>
+                                            </div>
+                                        </li>
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-3.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">Светильник потолочный</div>
+                                            </div>
+                                        </li>
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-1.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">Люстра потолочная A4827 Золотая</div>
+                                            </div>
+                                        </li>
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-3.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">A4827 Золотая</div>
+                                            </div>
+                                        </li>
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-2.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">ArtLAMP BL</div>
+                                            </div>
+                                        </li>
+                                        <li class="small-basket__item">
+                                            <div class="small-basket__item-icon"><img src="img/search/search-product-1.jpg" alt=""></div>
+                                            <div class="small-basket__item-content">
+                                                <div class="small-basket__item-name">Светильник потолочный ArtLAMP BL</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('html-components/_footer.html', {
+"class": "footer--small",
+})

@@ -1,0 +1,25 @@
+@@include('html-components/_header.html', {
+"title": "Сравнение (нет товаров)",
+"class": "compare-page",
+"headerClass": "header--small",
+})
+<main class="site__main">
+	<div class="page-heading">
+		<div class="_container">
+			<h1 class="page-heading__title">Сравнение товаров</h1>
+		</div>
+	</div>
+
+	<section class="compare-empty">
+		<div class="_container">
+            <a href="catalog.html" class="compare-empty__link">
+                <span class="compare-empty__link-icon"><i class="icon-plus"></i></span>
+                <span>Добавить товар к сравнению</span>
+            </a>
+		</div>
+	</section>
+</main>
+
+@@include('html-components/_footer.html', {
+"class": "footer--small",
+})

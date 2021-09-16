@@ -349,8 +349,10 @@ $(document).ready(function () {
         if ($(compareSliders).length > 0) {
             const headerHeight = $('.header--mobile').innerHeight();
             const compareItemsOffset = $(compareSliders).offset().top;
-            const compareItemImageHeight = $('.compare-product__image').innerHeight();
+            const compareItemImageHeight = $('.compare__mobile-sliders .compare-product__image').innerHeight();
             const compareSlidersHeight = $(compareSliders).innerHeight() - compareItemImageHeight;
+
+            console.log(compareItemImageHeight);
 
             $(window).scroll(function () {
                 let scrolled = $(this).scrollTop();
@@ -368,6 +370,5 @@ $(document).ready(function () {
             });
         }
     }
-
     // === COMPARE PAGE END ===
 })

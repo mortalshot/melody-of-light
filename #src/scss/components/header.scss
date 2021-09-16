@@ -1108,7 +1108,6 @@
 		flex: 0 0 60px;
 		padding-bottom: 60px;
 		margin-right: 24px;
-		transition: $transition ease opacity 0s;
 
 		img {
 			position: absolute;
@@ -1118,6 +1117,10 @@
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+
+	a.small-basket__item-icon {
+		transition: $transition ease opacity 0s;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -1134,7 +1137,13 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: $fontColor;
-		margin-bottom: 8px;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	a.small-basket__item-name {
 		text-decoration: underline transparent from-font;
 		text-underline-offset: 3px;
 		transition: $transition ease text-decoration 0s;
