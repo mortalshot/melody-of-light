@@ -381,9 +381,11 @@ $(document).ready(function () {
         $('.fitting__main-bg').css({ 'background-image': 'url(' + imageSrc + ')' })
     })
 
-    formImage.addEventListener('change', () => {
-        uploadFile(formImage.files[0]);
-    });
+    if ($(formImage).length > 0) {
+        formImage.addEventListener('change', () => {
+            uploadFile(formImage.files[0]);
+        });
+    }
 
     function uploadFile(file) {
         // провераяем тип файла
@@ -415,14 +417,16 @@ $(document).ready(function () {
         $(target).toggleClass('_active');
     })
 
-    $('._draggable').draggable();
+    if ($('._draggable').length > 0) {
+        $('._draggable').draggable();
+    }
 
     $('.fitting__sidebar-close').click(function (e) {
         e.preventDefault();
         $('.fitting__sidebar').addClass('_active');
     })
 
-    $('.fitting__sidebar-back').click(function(e) {
+    $('.fitting__sidebar-back').click(function (e) {
         e.preventDefault();
         $('.fitting__sidebar').removeClass('_active');
     })
