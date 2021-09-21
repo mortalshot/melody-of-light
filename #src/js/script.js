@@ -371,4 +371,60 @@ $(document).ready(function () {
         }
     }
     // === COMPARE PAGE END ===
+
+    // === ONLINE-FITTING PAGE END ===
+    const formBg = document.getElementById('fitting-bg');
+    const formImage = document.getElementById('fitting-upload');
+
+    $('.fitting__slider-image').click(function () {
+        const imageSrc = $(this).find('img').attr('src');
+        $('.fitting__main-bg').css({ 'background-image': 'url(' + imageSrc + ')' })
+    })
+
+    formImage.addEventListener('change', () => {
+        uploadFile(formImage.files[0]);
+    });
+
+    function uploadFile(file) {
+        // провераяем тип файла
+        if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+            alert('Разрешены только изображения.');
+            formImage.value = '';
+            return;
+        }
+        // проверим размер файла (<2 Мб)
+        if (file.size > 2 * 1024 * 1024) {
+            alert('Файл должен быть менее 2 МБ.');
+            return;
+        }
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            formBg.style.backgroundImage = `url(${e.target.result})`;
+        };
+
+        reader.onerror = function (e) {
+            alert('Ошибка');
+        };
+        reader.readAsDataURL(file);
+    }
+
+    $('.small-basket__item').click(function () {
+        $(this).toggleClass('_active');
+        let target = $(this).data('target');
+        $(target).toggleClass('_active');
+    })
+
+    $('._draggable').draggable();
+
+    $('.fitting__sidebar-close').click(function (e) {
+        e.preventDefault();
+        $('.fitting__sidebar').addClass('_active');
+    })
+
+    $('.fitting__sidebar-back').click(function(e) {
+        e.preventDefault();
+        $('.fitting__sidebar').removeClass('_active');
+    })
+    // === ONLINE-FITTING PAGE END ===
 })

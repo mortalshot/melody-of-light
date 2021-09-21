@@ -2,17 +2,28 @@
     @include adaptiv-value("margin-bottom", 130, 50, 1);
 
     &__row {
-        display: flex;
+        @media screen and (min-width: 1151px) {
+            display: flex;
+        }
     }
 
     &__main {
         flex: 1;
+        position: relative;
+        overflow: hidden;
     }
 
     &__main-bg {
         position: relative;
         height: 100%;
         min-height: 560px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media screen and (max-width: 575px) {
+            min-height: 400px;
+        }
 
         img {
             position: absolute;
@@ -24,14 +35,294 @@
         }
     }
 
+    &__main-controls {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 20px 20px 112px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @media screen and (max-width: 767px) {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+
+    &__main-control {
+        background-color: $White;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+
+        @media screen and (max-width: 767px) {
+            max-width: 26px;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                animation: wobble-hor-bottom 0.8s both;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__main-bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 0px;
+        position: absolute;
+        bottom: 0;
+        padding: 16px 20px;
+
+        @media screen and (min-width: 1150px) {
+            max-width: 684px;
+        }
+        @media screen and (max-width: 575px) {
+            justify-content: flex-end;
+            padding: 16px;
+            padding-left: 58px;
+        }
+    }
+
+    &__main-slider {
+        min-width: 0px;
+        width: 100%;
+        max-width: 248px;
+        min-width: 0px;
+
+        @media screen and (max-width: 575px) {
+            display: none;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .swiper {
+            padding-bottom: 0;
+        }
+
+        .swiper-wrapper {
+        }
+    }
+
+    &__main-add {
+        background-color: $White;
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        color: $Orange;
+        transition: $transition ease background-color 0s;
+
+        label {
+            padding: 8px 16px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+        }
+
+        i {
+            font-size: 16px;
+            margin-right: 10px;
+            line-height: 14px;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #eaebeb;
+            }
+        }
+    }
+
+    &__main-items {
+    }
+
+    &__main-item {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        border-radius: 2px;
+        width: 100%;
+        max-width: 153px;
+        height: 119px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        cursor: pointer;
+        border: 3px dashed $Orange;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: $transition ease opacity 0s;
+
+        &._active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        @media (any-hover: hover) {
+            border-color: transparent;
+
+            &:hover {
+                border-color: $Orange;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "";
+            flex: 0 0 36px;
+            width: 36px;
+            height: 36px;
+            background: url(../img/icons/move.svg) no-repeat center/contain;
+            border-radius: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: $transition ease opacity 0s;
+
+            @media (any-hover: hover) {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__slider-image {
+        cursor: pointer;
+        position: relative;
+        padding-bottom: math.div(80px, 120px) * 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: $White, $alpha: 0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition ease opacity 0s;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     &__sidebar {
         background: $White;
         box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.25);
         flex: 0 0 432px;
+        overflow: hidden;
+        position: relative;
+        transition: $transition ease all 0s;
+
+        @media screen and (max-width: 1150px) {
+            margin-top: 24px;
+        }
+
+        &._active {
+            width: 57px;
+            flex: 0 0 57px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .fitting__sidebar-wrapper {
+                width: 0;
+                flex: 0 0 0px;
+                padding-left: 0;
+                padding-right: 0;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .fitting__sidebar-back {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+
+    &__sidebar-wrapper {
+        background-color: $White;
         padding-top: 24px;
         padding-bottom: 41px;
         @include adaptiv-value("padding-left", 30, 20, 1);
         @include adaptiv-value("padding-right", 30, 20, 1);
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transition: $transition ease all 0s;
+    }
+
+    &__sidebar-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        background-color: $Orange;
+        color: $White;
+        font-size: 14px;
+        line-height: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: $transition ease all 0s;
     }
 
     &__sidebar-heading {
@@ -70,6 +361,10 @@
                 opacity: 0.6;
             }
         }
+
+        @media screen and (max-width: 1150px) {
+            display: none;
+        }
     }
 
     &__sidebar-body {
@@ -91,6 +386,9 @@
                 padding: 10px;
                 background-color: $LGBlue;
                 transition: $transition ease all 0s;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
 
                 &:first-child {
                     border-radius: 51px 0 0 51px;
@@ -124,9 +422,20 @@
                 border: 1px solid #eaeaef;
                 align-items: center;
                 cursor: pointer;
+                transition: $transition ease background-color 0s;
 
                 &:not(:last-child) {
                     margin-bottom: 8px;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        background-color: #eaebeb;
+                    }
+                }
+
+                &._active {
+                    background-color: #eaebeb;
                 }
             }
 
@@ -153,5 +462,28 @@
                 max-width: 215px;
             }
         }
+    }
+}
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+    15% {
+        transform: translateX(-3.5px) rotate(-3deg);
+    }
+    30% {
+        transform: translateX(3.5px) rotate(1.5deg);
+    }
+    45% {
+        transform: translateX(-3.5px) rotate(-3.6deg);
+    }
+    60% {
+        transform: translateX(2px) rotate(2.4deg);
+    }
+    75% {
+        transform: translateX(-1.5px) rotate(-1.2deg);
     }
 }

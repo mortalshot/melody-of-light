@@ -1,6 +1,8 @@
 @@include('libs/maskedinput.js')
 @@include('libs/wNumb.js') //need for nouislider formatting
 @@include('libs/nouislider.js')
+@@include('libs/jquery-ui.js')
+@@include('libs/jquery.ui.touch-punch.js')
 
 @@include('components/webp.js')
 @@include('components/ibg.js')

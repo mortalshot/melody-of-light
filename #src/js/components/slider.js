@@ -296,5 +296,21 @@ if (comparePageMediaMax767.matches) {
         })
     };
 }
-
 // COMPARE PAGE END
+
+// ONLINE-FITTING PAGE START
+if ($('.fitting__main-slider').length > 0) {
+    fittingThumbnails = new Swiper('.fitting__main-slider .swiper', {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        watchOverflow: true,
+        lazy: true,
+        preloadImages: true,
+
+        mousewheel: {
+            sensitivity: 1,
+            eventsTarget: ".fitting__main-slider",
+        },
+    });
+};
+// ONLINE-FITTING PAGE END

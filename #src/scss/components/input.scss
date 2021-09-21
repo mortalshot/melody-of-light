@@ -240,6 +240,21 @@
         }
     }
 
+    &__file {
+        position: relative;
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
     &__privacy {
         font-size: 12px;
         line-height: 17px;
@@ -266,138 +281,3 @@ textarea.form__input {
     resize: vertical;
     padding: 15px;
 }
-
-// .options {
-//     padding: 10px 0px 0px 0px;
-
-//     &__item {
-//         margin: 0px 0px 10px 0px;
-//     }
-
-//     &__input {
-//         display: none;
-
-//         &:checked + .options__label::after {
-//             transform: scale(1);
-//         }
-//     }
-
-//     &__label {
-//         display: inline-flex;
-//         align-items: center;
-//         position: relative;
-//         cursor: pointer;
-
-//         &::before {
-//             content: "";
-//             align-self: flex-start;
-//             flex: 0 0 24px;
-//             height: 24px;
-//             background-color: #fff;
-//             border-radius: 50%;
-//             margin: 0px 10px 0px 0px;
-//         }
-
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             top: 4px;
-//             left: 4px;
-//             width: 16px;
-//             height: 16px;
-//             background-color: #7a956b;
-//             border-radius: 50%;
-//             transform: scale(0);
-//             transition: transform 0.5s ease 0s;
-//         }
-//     }
-// }
-
-// .file {
-//     &__item {
-//         position: relative;
-//     }
-
-//     &__input {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         opacity: 0;
-//         font-size: 0;
-//         cursor: pointer;
-//     }
-
-//     &__button {
-//         display: inline-flex;
-//         min-height: 40px;
-//         border-radius: 30px;
-//         justify-content: center;
-//         align-items: center;
-//         background-color: #77608d;
-//         padding: 0px 20px;
-//     }
-
-//     &__preview {
-//         display: inline-block;
-//         max-width: 100px;
-//         padding: 10px 0px 0px 0px;
-
-//         img {
-//             max-width: 100%;
-//         }
-//     }
-// }
-
-// .checkbox {
-//     &._error {
-//         .checkbox__label::before {
-//             box-shadow: 0 0 15px red;
-//         }
-//     }
-
-//     &__input {
-//         display: none;
-//     }
-
-//     &__label {
-//         font-size: 16px;
-//         line-height: 140%;
-//         display: inline-flex;
-//         align-items: center;
-//         position: relative;
-//         cursor: pointer;
-
-//         &::before {
-//             content: "";
-//             align-self: flex-start;
-//             flex: 0 0 24px;
-//             height: 24px;
-//             background-color: #fff;
-//             border-radius: 4px;
-//             margin: 0px 10px 0px 0px;
-//         }
-
-//         &::after {
-//             content: "";
-//             width: 16px;
-//             height: 16px;
-//             position: absolute;
-//             top: 4px;
-//             left: 4px;
-//             background-color: #7a956b;
-//             border-radius: 4px;
-//             transform: scale(0);
-//             transition: transform 0.5s ease 0s;
-//         }
-
-//         a {
-//             color: #7a956b;
-//         }
-//     }
-
-//     &__input:checked + .checkbox__label::after {
-//         transform: scale(1);
-//     }
-// }
