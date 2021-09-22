@@ -63,7 +63,7 @@
 
                         <div class="auth">
                             <div class="auth__login">
-                                <a href="" class="auth__login-link">
+                                <a href="" class="auth__login-link" data-fancybox data-src="#auth">
                                     <i class="icon-user"></i>
                                     <span>Войти</span>
                                 </a>
@@ -242,7 +242,7 @@
                                 <div class="header__control"><a href="fitting.html"><i class="icon-exemplary"></i></a></div>
                                 <div class="header__control"><a href=""><i class="icon-wishlist"></i></a></div>
                                 <div class="header__control basket">
-                                    <a href="" class="basket__link">
+                                    <a href="cart.html" class="basket__link">
                                         <i class="icon-cart"></i>
                                         <span class="basket__amount">4</span>
                                     </a>
@@ -561,8 +561,8 @@
                             <input id="subscribe-email" type="email" class="form__input" name="email" placeholder="Ваш Email" required>
                             <button class="subscribe__btn btn btn-bg">Подписаться</button>
                         </div>
-                        <label id="subscribe-accept" class="form__checkbox subscribe__privacy">
-                            <input id="subscribe-accept" type="checkbox" name="privacy" required checked>
+                        <label class="form__checkbox subscribe__privacy">
+                            <input type="checkbox" name="privacy" required checked>
                             <span>Я ознакомился и принимаю условия <br>
                                 <a href="privacy.html">Политики конфиденциальности</a> и <a href="privacy.html">Информированного согласия</a></span>
                         </label>
@@ -612,6 +612,91 @@
                 </div>
             </div>
         </form>
+	</div>
+
+    <div id="auth" class="auth fancybox__popup" style="display:none;">
+        <form action="#" id="authForm" class="form">
+            <h4 class="auth__title fancybox__popup-title">Вход</h4>
+
+            <div class="form__row">
+                <div class="form__item col-12">
+                    <input id="authFormEmail" type="email" name="Email" class="form__input" placeholder="Email">
+                </div>
+                <div class="form__item col-12">
+                    <div class="form__password">
+                        <div class="form__password-input">
+                            <input id="authFormPassword" type="password" name="Password" class="form__input form__input--password" placeholder="Пароль">
+                            <label class="form__password-show">
+                                <input type="checkbox" name="show password">
+                                <span><i class="icon-show-pass"></i></span>
+                            </label>
+                        </div>
+                        <div class="form__password-controls">
+                            <label class="form__password-save form__checkbox">
+                                <input type="checkbox" name="save password">
+                                <span>Запомнить пароль?</span>
+                            </label>
+                            <div class="form__password-reset"><a href="">Забыл пароль</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item col-12 mb-0 auth__submit">
+                    <button type="submit" class="form__button btn btn-bg">Войти</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="auth__footer fancybox__popup-footer">
+            <div class="auth__footer-label">У вас нет аккаунта?</div>
+            <a href="" class="auth__footer-link" data-fancybox data-src="#regestration" onclick="Fancybox.close();">Зарегистрироваться</a>
+        </div>
+	</div>
+
+    <div id="regestration" class="auth regestration fancybox__popup" style="display:none;">
+        <form action="#" id="regestrationForm" class="form">
+            <h4 class="auth__title fancybox__popup-title">Вход</h4>
+
+            <div class="form__row">
+                <div class="form__item col-12">
+                    <input id="regestrationFormEmail" type="text" name="Email" class="form__input form__input--phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form__item col-12">
+                    <input id="regestrationFormEmail" type="email" name="Email" class="form__input" placeholder="Email">
+                </div>
+                <div class="form__item col-12">
+                    <div class="form__password">
+                        <div class="form__password-input">
+                            <input id="regestrationFormPassword" type="password" name="Password" class="form__input form__input--password" placeholder="Пароль">
+                            <label class="form__password-show">
+                                <input type="checkbox" name="show password">
+                                <span><i class="icon-show-pass"></i></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__item col-12">
+                    <div class="form__password">
+                        <div class="form__password-input">
+                            <input id="regestrationFormPasswordRepeat" type="password" name="Password repeat" class="form__input form__input--password" placeholder="Пароль">
+                            <label class="form__password-show">
+                                <input type="checkbox" name="show password">
+                                <span><i class="icon-show-pass"></i></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item col-12 mb-0 auth__submit">
+                    <button type="submit" class="form__button btn btn-bg">Зарегистрироваться</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="auth__footer fancybox__popup-footer">
+            <div class="auth__footer-label">У вас уже есть аккаунт?</div>
+            <a href="" class="auth__footer-link" data-fancybox data-src="#auth" onclick="Fancybox.close();">Войти</a>
+        </div>
 	</div>
 </div>
 

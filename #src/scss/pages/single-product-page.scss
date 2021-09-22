@@ -474,7 +474,7 @@
 
     &__total-stars {
         @include adaptiv-font(25, 25, 16, 1);
-        color: $LGray4;
+        color: $LGray;
         display: flex;
         align-items: center;
 
@@ -504,10 +504,10 @@
         align-items: flex-start;
 
         &:first-child {
-            border-top: 1px solid $LGray4;
+            border-top: 1px solid $LGray;
         }
         &:not(:last-child) {
-            border-bottom: 1px solid $LGray4;
+            border-bottom: 1px solid $LGray;
         }
     }
 
@@ -546,7 +546,9 @@
 
     &__person {
         &:not(:last-child) {
-            margin-right: 10px;
+            @media screen and (min-width: 451px) {
+                margin-right: 10px;
+            }
         }
     }
 
@@ -577,8 +579,12 @@
     &__item-rating {
         font-size: 19px;
         line-height: 1;
-        color: $LGray4;
+        color: $LGray;
         display: flex;
+
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
     }
 
     &__item-content {

@@ -39,6 +39,10 @@
                     @include adaptiv-value("padding-left", 35, 15, 1);
                     @include adaptiv-value("padding-right", 35, 15, 1);
                     color: $Gray;
+
+                    &:nth-child(2n + 1) {
+                        background-color: #eeeef1;
+                    }
                 }
             }
 
@@ -65,9 +69,10 @@
 
             &__item-remove {
                 position: absolute;
-                top: 14px;
-                right: 14px;
+                top: 9px;
+                right: 9px;
                 font-size: 16px;
+                padding: 5px;
                 transition: $transition ease transform 0s;
 
                 @media (any-hover: hover) {
@@ -145,18 +150,9 @@
                     margin-bottom: 4px;
                 }
 
-                &__fraction-current {
-                }
-
-                &__fraction-label {
-                }
-
-                &__fraction-total {
-                }
-
                 &__bullets {
                     .swiper-pagination-bullet {
-                        background-color: $LGray4;
+                        background-color: $LGray;
                         opacity: 1;
 
                         &-active {

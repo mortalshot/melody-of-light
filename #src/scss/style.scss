@@ -822,6 +822,21 @@
 				font-size: 18px;
 				margin-right: 8px;
 			}
+
+			&.btn-bg {
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: $Orange;
+					}
+				}
+			}
+			&.btn-wh {
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: $White;
+					}
+				}
+			}
 		}
 	}
 

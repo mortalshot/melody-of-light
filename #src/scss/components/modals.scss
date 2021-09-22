@@ -1,64 +1,58 @@
-// !Popup
-.popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(11, 11, 11, 0.8);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 6;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: 0.8s ease all 0s;
+.fancybox {
+    &__popup {
+        max-width: 400px;
+        @include adaptiv-value("padding-top", 50, 30, 1);
+        @include adaptiv-value("padding-bottom", 50, 30, 1);
+        @include adaptiv-value("padding-left", 50, 15, 1);
+        @include adaptiv-value("padding-right", 50, 15, 1);
 
-    &.open {
-        opacity: 1;
-        visibility: visible;
-
-        .popup__content {
-            transform: perspective(600px) translate(0, 0) rotateX(0deg);
-            opacity: 1;
+        .form__button {
+            width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+            min-height: 54px;
         }
     }
 
-    &__body {
-        min-height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 10px;
+    &__popup-title {
+        font-weight: 700;
+        @include adaptiv-font(28, 31, 16, 1);
+        color: $fontColor;
 
-        @media screen and (max-width: 450px) {
-            padding: 30px 0;
+        &:not(:last-child) {
+            margin-bottom: 40px;
         }
     }
 
-    &__content {
-        // background: $card-color;
-        color: #fff;
-        padding: 60px 40px 64px;
-        width: 100%;
-        max-width: 950px;
-        position: relative;
-        opacity: 0;
-        transform: translate(0, -100%);
-        transition: 0.8s ease all 0s;
+    &__popup-footer {
+        @include adaptiv-value("margin-top", 40, 24, 1);
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $Gray;
 
-        @media screen and (max-width: 767px) {
-            padding: 25px 10px 60px;
+        a {
+            font-weight: 700;
+            color: $Orange;
+            text-decoration: underline transparent from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease text-decoration 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline $Orange from-font;
+                }
+            }
         }
     }
+}
 
-    &__close {
-        position: absolute;
-        top: 25px;
-        right: 27px;
+.auth {
+    &__submit {
+        @include adaptiv-value("margin-top", 20, 10, 1);
+    }
 
-        @media screen and (max-width: 767px) {
-            top: 15px;
-            right: 7px;
-        }
+    .form__input {
+        @include adaptiv-font(16, 22, 14, 1);
     }
 }

@@ -1780,6 +1780,12 @@ p {
   margin: 16px 0;
 }
 
+.mt-2 {
+  margin-top: 20px !important;
+}
+.mt-4 {
+  margin-top: 40px !important;
+}
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -2470,11 +2476,16 @@ h3 {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  transition: 0.3s ease border-color 0s;
+  transition: 0.3s ease border-color, 0.3s background-color 0s;
 }
 @media (max-width: 1280px) {
   .form__radio--box .form__radio-wrapper {
     padding: calc(13px + 7 * ((100vw - 320px) / (960)));
+  }
+}
+@media (any-hover: hover) {
+  .form__radio--box .form__radio-wrapper:hover {
+    background-color: #f5f5f5;
   }
 }
 .form__radio--box .form__radio-wrapper img {
@@ -2534,6 +2545,105 @@ h3 {
     opacity: 0.6;
   }
 }
+.form__password-input {
+  position: relative;
+}
+.form__password-input a {
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 18px;
+  color: #93939f;
+  transition: 0.3s ease opacity 0s;
+}
+@media (any-hover: hover) {
+  .form__password-input a:hover {
+    opacity: 0.6;
+  }
+}
+.form__password-show {
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #93939f;
+  transition: 0.3s ease opacity 0s;
+}
+@media (any-hover: hover) {
+  .form__password-show:hover {
+    opacity: 0.6;
+  }
+}
+.form__password-show input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.form__password-show span {
+  display: inline-flex;
+}
+.form__password-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 20px;
+  margin: -5px;
+  margin-top: 8px;
+}
+.form__password-save {
+  display: block;
+  padding: 5px;
+}
+.form__password-save span {
+  padding-left: 24px;
+}
+.form__password-save span::before {
+  background-color: #e1e1e3;
+  border-color: #e1e1e3;
+}
+.form__password-reset {
+  padding: 5px;
+  text-align: right;
+}
+.form__password-reset a {
+  display: inline-flex;
+  position: relative;
+  color: #ec863d;
+  transition: 0.3s ease opacity 0s;
+}
+@media (any-hover: hover) {
+  .form__password-reset a:hover {
+    opacity: 0.6;
+  }
+}
+.form__password-reset a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  border-bottom: 1px dashed #ec863d;
+}
+.form__password._active .icon-show-pass::before {
+  content: "\e91b";
+}
 
 textarea.form__input {
   min-height: 120px;
@@ -2572,6 +2682,98 @@ textarea.form__input {
 .tabs__content-item {
   display: none;
 }
+.fancybox__popup {
+  max-width: 400px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (max-width: 1280px) {
+  .fancybox__popup {
+    padding-top: calc(30px + 20 * ((100vw - 320px) / (960)));
+  }
+}
+@media (max-width: 1280px) {
+  .fancybox__popup {
+    padding-bottom: calc(30px + 20 * ((100vw - 320px) / (960)));
+  }
+}
+@media (max-width: 1280px) {
+  .fancybox__popup {
+    padding-left: calc(15px + 35 * ((100vw - 320px) / (960)));
+  }
+}
+@media (max-width: 1280px) {
+  .fancybox__popup {
+    padding-right: calc(15px + 35 * ((100vw - 320px) / (960)));
+  }
+}
+.fancybox__popup .form__button {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  min-height: 54px;
+}
+.fancybox__popup-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 31px;
+  color: #212123;
+}
+@media (max-width: 1280px) {
+  .fancybox__popup-title {
+    font-size: calc(16px + 12 * ((100vw - 320px) / (960)));
+    line-height: 110.7142857143%;
+  }
+}
+.fancybox__popup-title:not(:last-child) {
+  margin-bottom: 40px;
+}
+.fancybox__popup-footer {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #93939f;
+}
+@media (max-width: 1280px) {
+  .fancybox__popup-footer {
+    margin-top: calc(24px + 16 * ((100vw - 320px) / (960)));
+  }
+}
+.fancybox__popup-footer a {
+  font-weight: 700;
+  color: #ec863d;
+  text-decoration: underline transparent from-font;
+  text-underline-offset: 3px;
+  transition: 0.3s ease text-decoration 0s;
+}
+@media (any-hover: hover) {
+  .fancybox__popup-footer a:hover {
+    text-decoration: underline #ec863d from-font;
+  }
+}
+
+.auth__submit {
+  margin-top: 20px;
+}
+@media (max-width: 1280px) {
+  .auth__submit {
+    margin-top: calc(10px + 10 * ((100vw - 320px) / (960)));
+  }
+}
+.auth .form__input {
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (max-width: 1280px) {
+  .auth .form__input {
+    font-size: calc(14px + 2 * ((100vw - 320px) / (960)));
+    line-height: 137.5%;
+  }
+}
+
 .header {
   width: 100%;
 }
@@ -5978,8 +6180,10 @@ textarea.form__input {
 .product-reviews__item-person:not(:last-child) {
   margin-bottom: 16px;
 }
-.product-reviews__person:not(:last-child) {
-  margin-right: 10px;
+@media screen and (min-width: 451px) {
+  .product-reviews__person:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 .product-reviews__item-name {
   display: inline-block;
@@ -6013,6 +6217,11 @@ textarea.form__input {
   line-height: 1;
   color: #e1e1e3;
   display: flex;
+}
+@media screen and (max-width: 450px) {
+  .product-reviews__item-rating {
+    display: none;
+  }
 }
 .product-reviews__more {
   margin-top: 30px;
@@ -7214,6 +7423,9 @@ textarea.form__input {
     padding-right: calc(15px + 20 * ((100vw - 320px) / (960)));
   }
 }
+.compare__desktop .compare__heading .compare-product__attribute:nth-child(2n+1) {
+  background-color: #eeeef1;
+}
 .compare__desktop .compare__items {
   flex: 0 0 76%;
   min-width: 0px;
@@ -7228,9 +7440,10 @@ textarea.form__input {
 }
 .compare__desktop .compare-product__item-remove {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 9px;
+  right: 9px;
   font-size: 16px;
+  padding: 5px;
   transition: 0.3s ease transform 0s;
 }
 @media (any-hover: hover) {
@@ -9013,6 +9226,16 @@ textarea.form__input {
 .product-item__controls button i {
   font-size: 18px;
   margin-right: 8px;
+}
+@media (any-hover: hover) {
+  .product-item__controls button.btn-bg:hover {
+    background-color: #ec863d;
+  }
+}
+@media (any-hover: hover) {
+  .product-item__controls button.btn-wh:hover {
+    background-color: #fff;
+  }
 }
 .product-item__buy {
   width: 100%;

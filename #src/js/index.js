@@ -12,4 +12,5 @@
 @@include('components/slider.js')
 @@include('components/tabs.js')
 @@include('components/tooltip.js')
+@@include('components/form.js')
 
