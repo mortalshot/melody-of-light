@@ -494,8 +494,22 @@ body {
                 font-size: 14px;
                 line-height: 20px;
                 color: $Orange;
+                text-decoration: none !important;
+
+                @media (any-hover: hover) {
+                    &:hover {
+
+                        span {
+                            text-decoration: underline $Orange from-font;
+                        }
+                    }
+                }
 
                 span {
+                    text-decoration: underline transparent from-font;
+                    text-underline-offset: 3px;
+                    transition: $transition ease text-decoration 0s;
+
                     &:not(:last-child) {
                         margin-right: 8px;
                     }

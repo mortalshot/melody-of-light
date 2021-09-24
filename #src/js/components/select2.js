@@ -1,7 +1,8 @@
-$('.location__dropdown-select').select2({
+$('.header--desktop .location__dropdown-select').select2({
     width: '100%',
     placeholder: "Введите название города",
     allowClear: false,
+    dropdownParent: $('.header--desktop .location__dropdown-select2'),
 
     language: {
         noResults: function () {
@@ -9,8 +10,30 @@ $('.location__dropdown-select').select2({
         },
     },
 });
-$('.location__dropdown-select').on('select2:select', function (e) {
+$('.header--desktop .location__dropdown-select').on('select2:select', function (e) {
     $('.location').removeClass('_active');
+    var data = e.params.data;
+    const text = data.text;
+    $('.location__button span').html(text);
+});
+
+$('.header--mobile .location__dropdown-select').select2({
+    width: '100%',
+    placeholder: "Введите название города",
+    allowClear: false,
+    dropdownParent: $('.header--mobile .location__dropdown-select2'),
+
+    language: {
+        noResults: function () {
+            return "Результатов не найдено"
+        },
+    },
+});
+$('.header--mobile .location__dropdown-select').on('select2:select', function (e) {
+    $('.location').removeClass('_active');
+    var data = e.params.data;
+    const text = data.text;
+    $('.location__button span').html(text);
 });
 
 

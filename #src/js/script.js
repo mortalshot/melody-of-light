@@ -431,4 +431,29 @@ $(document).ready(function () {
         $('.fitting__sidebar').removeClass('_active');
     })
     // === ONLINE-FITTING PAGE END ===
+
+    $('.header--mobile .header__search').on('click', function (e) {
+        e.preventDefault();
+        $('body').addClass('lock');
+        bodyLock();
+        $('.header--mobile .search-results').addClass('_active');
+    })
+
+    $('.search-results__close').on('click', function (e) {
+        e.preventDefault();
+        $('body').removeClass('lock');
+        bodyUnLock();
+        $('.header--mobile .search-results').removeClass('_active');
+    })
+
+    $('.header--mobile .location__button').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.location').addClass('_active');
+        $('.header__burger').hide();
+    })
+    $('.header--mobile .location__dropdown-close').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.location').removeClass('_active');
+        $('.header__burger').show();
+    })
 })

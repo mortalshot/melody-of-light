@@ -171,6 +171,10 @@
 	}
 
 	&__main-contacts {
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
 		a {
 			display: block;
 			text-decoration: underline transparent from-font;
@@ -186,12 +190,20 @@
 			}
 		}
 
+		.catalog-btn {
+			min-width: 161px;
+		}
+
 		@media screen and (max-width: 767px) {
 			padding: 40px 40px 0;
 			width: 100%;
 			text-align: center;
 			border-top: 1px solid $LGray;
 		}
+	}
+
+	&__main-contacts-wrapper {
+		@include adaptiv-value("margin-right", 45, 0, 1);
 	}
 
 	&__main-contacts-btn {
@@ -386,7 +398,7 @@
 				position: relative;
 				z-index: 3;
 
-				div {
+				& > div {
 					display: flex;
 					font-size: 20px;
 					line-height: 1;
@@ -408,7 +420,8 @@
 				left: 0%;
 				width: 100%;
 				height: 100%;
-				overflow: auto;
+				overflow-y: auto;
+				overflow-x: hidden;
 				background-color: $White;
 				padding: #{$size-header-height-mobile} 0 40px;
 				z-index: 4;
@@ -537,31 +550,51 @@
 	}
 
 	&__dropdown {
-		position: absolute;
-		bottom: 5px;
-		transform: translate(0, 100%);
-		left: 0;
 		opacity: 0;
 		pointer-events: none;
 		visibility: hidden;
 		z-index: 3;
 		background-color: $White;
-		box-shadow: 10px 10px 44px rgba(0, 0, 0, 0.25);
-		border-radius: 2px;
 		transition: $transition ease all 0s;
 		padding: 16px 20px;
 
 		@media screen and (min-width: 768px) {
 			min-width: 328px;
+			position: absolute;
+			bottom: 5px;
+			transform: translate(0, 100%);
+			left: 0;
+			box-shadow: 10px 10px 44px rgba(0, 0, 0, 0.25);
+			border-radius: 2px;
+		}
+		@media screen and (max-width: 767px) {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transform: translateX(100%);
+			overflow-y: auto;
+			overflow-x: hidden;
 		}
 	}
 
 	&._active {
+		@media screen and (max-width: 767px) {
+			z-index: 6;
+		}
+
 		.location__dropdown {
 			opacity: 1;
 			pointer-events: all;
 			visibility: visible;
 			bottom: -5px;
+
+			@media screen and (max-width: 767px) {
+				bottom: 0;
+				right: 0;
+				transform: translateX(0);
+			}
 		}
 	}
 
@@ -575,6 +608,10 @@
 		font-weight: 700;
 		font-size: 14px;
 		line-height: 20px;
+
+		@media screen and (max-width: 767px) {
+			justify-content: center;
+		}
 	}
 
 	&__dropdown-close {
@@ -587,6 +624,15 @@
 			&:hover {
 				opacity: 0.8;
 				transform: rotate(90deg);
+			}
+		}
+		@media screen and (max-width: 767px) {
+			position: absolute;
+			left: 20px;
+
+			i.icon-close::before {
+				content: "\e908";
+				transform: rotate(-180deg);
 			}
 		}
 	}
@@ -721,10 +767,22 @@
 .search-form {
 	position: relative;
 
+	@media screen and (max-width: 767px) {
+		@include adaptiv-value("margin-top", -30, -15, 1);
+		@include adaptiv-value("margin-left", -32, -15, 1);
+		@include adaptiv-value("margin-right", -32, -15, 1);
+		margin-bottom: 14px;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+	}
+
 	&__input {
 		font-size: 14px;
 		line-height: 20px;
 		padding-right: 50px;
+
+		@media screen and (max-width: 767px) {
+			padding-left: 66px;
+		}
 	}
 
 	&__btn {
@@ -744,6 +802,11 @@
 			&:hover {
 				opacity: 0.6;
 			}
+		}
+		@media screen and (max-width: 767px) {
+			font-size: 22px;
+			right: initial;
+			left: 0;
 		}
 	}
 }
@@ -772,6 +835,34 @@
 		transform: translate(-50%, 100%);
 		min-width: 500px;
 	}
+	@media screen and (max-width: 767px) {
+		position: fixed;
+		left: 0;
+		right: 0;
+		min-width: initial;
+		top: -100%;
+		bottom: -10px;
+		transform: translate(0);
+		z-index: 5;
+		overflow-x: hidden;
+		overflow-y: auto;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+	}
+
+	&__close {
+		@media screen and (max-width: 767px) {
+			position: absolute;
+			top: 50%;
+			right: 13px;
+			transform: translateY(-50%);
+			font-size: 28px;
+			color: $Gray;
+			padding: 5px;
+			display: inline-flex;
+		}
+	}
 
 	&__item {
 		&:not(:last-child) {
@@ -796,6 +887,10 @@
 
 		@media screen and (min-width: $layoutDesktop + 0.02 + "px") {
 			@include adaptiv-font(14, 20, 12, 0);
+		}
+		@media screen and (max-width: 767px) {
+			font-size: 12px;
+			line-height: 17px;
 		}
 	}
 
@@ -845,6 +940,7 @@
 	}
 
 	&__category-item-title {
+		font-weight: 600;
 		color: $fontColor;
 		text-decoration: underline transparent from-font;
 		text-underline-offset: 2px;
@@ -897,6 +993,9 @@
 			&:hover {
 				background: rgba(236, 134, 61, 0.08);
 			}
+		}
+		@media screen and (max-width: 767px) {
+			width: 100%;
 		}
 	}
 
@@ -991,6 +1090,11 @@
 		opacity: 1;
 		pointer-events: all;
 		visibility: visible;
+
+		@media screen and (max-width: 767px) {
+			top: 0;
+			bottom: 0;
+		}
 	}
 }
 // ====== SEARCH END ======
@@ -1035,8 +1139,13 @@
 		border: 2px solid $White;
 		position: absolute;
 		top: 0;
-		@include adaptiv-value("right", 5, 0, 1);
+		@include adaptiv-value("right", 0, 5, 1);
 		transform: translate(0, -50%);
+
+		@media screen and (max-width: 767px) {
+			top: 5px;
+			right: 0;
+		}
 	}
 
 	&__preview {

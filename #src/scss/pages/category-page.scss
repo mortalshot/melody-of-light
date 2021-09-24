@@ -201,6 +201,18 @@
     }
 }
 
+.with-sidebar__sidebar-sticky._active {
+    .filter__body {
+        max-height: 525px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+}
+
 .price-filter {
     &__values {
         display: flex;
@@ -422,6 +434,7 @@
 
                     .select2-selection__rendered {
                         font-weight: 700;
+                        @include adaptiv-font(14, 20, 12, 1);
                         color: $Orange;
                         padding-left: 0 !important;
                         transition: $transition ease opacity 0s;
@@ -614,10 +627,9 @@
         justify-content: space-between;
 
         label {
-            font-size: 14px;
-            line-height: 20px;
             white-space: nowrap;
             cursor: pointer;
+            @include adaptiv-font(14, 20, 12, 1);
 
             &:not(:last-child) {
                 padding-right: 8px;

@@ -29,14 +29,17 @@
             <div class="location__dropdown-info">Выберите город</div>
             <a href="" class="location__dropdown-close"><i class="icon-close"></i></a>
         </div>
-        <select class="location__dropdown-select" name="city">
-            <option></option>
-            <option value="SPB" selected>Санкт-Петербург</option>
-            <option value="MOS">Москва</option>
-            <option value="RND">Ростов-на-Дону</option>
-            <option value="KAL">Калининград</option>
-            <option value="VOL">Волгоград</option>
-        </select>
+        <div class="location__dropdown-select-wrapper">
+            <select class="location__dropdown-select" name="city">
+                <option></option>
+                <option value="SPB" selected>Санкт-Петербург</option>
+                <option value="MOS">Москва</option>
+                <option value="RND">Ростов-на-Дону</option>
+                <option value="KAL">Калининград</option>
+                <option value="VOL">Волгоград</option>
+            </select>
+            <div class="location__dropdown-select2"></div>
+        </div>
         <div class="location__dropdown-popular">
             <div class="location__dropdown-popular-label">Популярные города</div>
             <ul class="location__dropdown-popular-list">
@@ -336,14 +339,17 @@
             <div class="location__dropdown-info">Выберите город</div>
             <a href="" class="location__dropdown-close"><i class="icon-close"></i></a>
         </div>
-        <select class="location__dropdown-select" name="city">
-            <option></option>
-            <option value="SPB" selected>Санкт-Петербург</option>
-            <option value="MOS">Москва</option>
-            <option value="RND">Ростов-на-Дону</option>
-            <option value="KAL">Калининград</option>
-            <option value="VOL">Волгоград</option>
-        </select>
+        <div class="location__dropdown-select-wrapper">
+            <select class="location__dropdown-select" name="city">
+                <option></option>
+                <option value="SPB" selected>Санкт-Петербург</option>
+                <option value="MOS">Москва</option>
+                <option value="RND">Ростов-на-Дону</option>
+                <option value="KAL">Калининград</option>
+                <option value="VOL">Волгоград</option>
+            </select>
+            <div class="location__dropdown-select2"></div>
+        </div>
         <div class="location__dropdown-popular">
             <div class="location__dropdown-popular-label">Популярные города</div>
             <ul class="location__dropdown-popular-list">
@@ -390,8 +396,146 @@
 
                     <div class="header__controls header__column">
                         <div class="header__compare"><a href="compare.html"><i class="icon-compare"></i></a></div>
-                        <div class="header__search"><a href=""><i class="icon-search"></i></a></div>
+                        <div class="header__search">
+                            <a href=""><i class="icon-search"></i></a>
+                        </div>
                         <div class="header__user"><a href=""><i class="icon-user"></i></a></div>
+                    </div>
+
+                    <div class="search-results">
+                        <form action="#" class="search__form search-form">
+                            <button type="submit" class="search-form__btn icon-search"></button>
+                            <input autocomplete="off" type="text" name="form[]" placeholder="Поиск" class="form__input search-form__input">
+                            <a href="" class="search-results__close"><i class="icon-close"></i></a>
+                        </form>
+                        <div class="search-results__item search-results__category">
+                            <div class="search-results__title">Категории</div>
+                            <ul class="search-results__category-list">
+                                <li class="search-results__category-item">
+                                    <a href="category.html" class="search-results__category-link">
+                                        <div class="search-results__category-item-image"><img src="./img/category/category-1.svg" alt=""></div>
+                                        <div class="search-results__category-item-title"><span>Люс</span>тры</div>
+                                    </a>
+                                </li>
+                                <li class="search-results__category-item">
+                                    <a href="category.html" class="search-results__category-link">
+                                        <div class="search-results__category-item-image"><img src="./img/category/category-1.svg" alt=""></div>
+                                        <div class="search-results__category-item-title"><span>Люс</span>тры2</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-results__item search-results__products">
+                            <div class="search-results__title">Товары</div>
+                            <ul class="search-results__products-list">
+                                <li class="search-results__product">
+                                    <a href="single-product.html" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-1.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра потолочныая ArtLAMP BL</div>
+                                            <div class="search-results__product-category">Категория «Люстры»</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column">
+                                            <div class="search-results__product-price-current">750 ₽</div>
+                                            <div class="search-results__product-price-old">1 580 ₽</div>
+                                        </div>
+
+                                    </a>
+                                </li>
+
+                                <li class="search-results__product">
+                                    <a href="single-product.html" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-2.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра потолочная</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+
+                                    </a>
+                                </li>
+
+                                <li class="search-results__product">
+                                    <a href="single-product.html" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-3.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра BELLA PRO</div>
+                                            <div class="search-results__product-category">Категория «Люстры»</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column">
+                                            <div class="search-results__product-price search-results__product-column"> 5 990 ₽ </div>
+                                        </div>
+
+                                    </a>
+                                </li>
+
+                                <li class="search-results__product">
+                                    <a href="https://www.google.com/" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-4.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра потолочныая для прихожей за словесными горами в стране гласных и согласных живут, рыбные тексты. Встретил рыбного большой о дороге жизни первую они сих вдали!</div>
+                                            <div class="search-results__product-category">Категория «Люстры»</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column">
+                                            <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+                                        </div>
+
+                                    </a>
+                                </li>
+
+                                <li class="search-results__product">
+                                    <a href="single-product.html" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-2.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра потолочная</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+
+                                    </a>
+                                </li>
+
+                                <li class="search-results__product">
+                                    <a href="single-product.html" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-3.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра BELLA PRO</div>
+                                            <div class="search-results__product-category">Категория «Люстры»</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column">
+                                            <div class="search-results__product-price search-results__product-column"> 5 990 ₽ </div>
+                                        </div>
+
+                                    </a>
+                                </li>
+
+                                <li class="search-results__product">
+                                    <a href="https://www.google.com/" class="search-results__product-link">
+                                        <div class="search-results__product-image search-results__product-column"><img src="./img/search/search-product-4.jpg" alt=""></div>
+
+                                        <div class="search-results__product-name search-results__product-column">
+                                            <div class="search-results__product-title"><span>Люс</span>тра потолочныая для прихожей за словесными горами в стране гласных и согласных живут, рыбные тексты. Встретил рыбного большой о дороге жизни первую они сих вдали!</div>
+                                            <div class="search-results__product-category">Категория «Люстры»</div>
+                                        </div>
+
+                                        <div class="search-results__product-price search-results__product-column">
+                                            <div class="search-results__product-price search-results__product-column"> 1 250 ₽ </div>
+                                        </div>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>

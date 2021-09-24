@@ -298,6 +298,18 @@
 		}
 	}
 }
+
+.with-sidebar__sidebar-sticky._active {
+	.lamps-sidebar__accordion {
+		max-height: 525px;
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		&::-webkit-scrollbar {
+			width: 0px;
+		}
+	}
+}
 // ====== LAMPS-SIDEBAR END ======
 
 // ====== MAIN-BANNERS START ======
@@ -336,11 +348,28 @@
 		@include adaptiv-value("padding-left", 40, 15, 1);
 		@include adaptiv-value("padding-right", 40, 15, 1);
 		display: flex;
-		flex-direction: column;
 		position: relative;
 		overflow: hidden;
 		border-radius: 2px;
 		@include adaptiv-value("min-height", 350, 186, 1);
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: linear-gradient(0deg, rgba(42, 48, 66, 0.5), rgba(42, 48, 66, 0.5));
+			pointer-events: none;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__title {
@@ -657,6 +686,15 @@
 		align-items: flex-start;
 		padding: 10px;
 
+		@media screen and (max-width: 500px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			span {
+				margin-right: 5px;
+			}
+		}
+
 		span {
 			display: none;
 			min-width: 52px;
@@ -692,6 +730,11 @@
 			}
 		}
 
+		@media screen and (max-width: 500px) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -724,6 +767,11 @@
 		text-decoration: underline transparent from-font;
 		text-underline-offset: 3px;
 		transition: $transition ease text-decoration 0s;
+
+		@media screen and (max-width: 500px) {
+			font-size: 12px;
+			line-height: 16px;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 16px;
@@ -1187,7 +1235,7 @@
 		@include adaptiv-value("padding-left", 32, 10, 1);
 		@include adaptiv-value("padding-right", 32, 10, 1);
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 991px) {
 			flex: 0 0 50%;
 		}
 	}
@@ -1262,6 +1310,9 @@
 		@media screen and (max-width: 575px) {
 			top: auto;
 			bottom: 100px;
+			right: auto;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 

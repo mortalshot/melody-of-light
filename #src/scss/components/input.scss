@@ -79,6 +79,8 @@
     }
 
     &__checkbox {
+        position: relative;
+        
         input {
             appearance: none;
             -moz-appearance: none;
@@ -137,6 +139,8 @@
     }
 
     &__radio {
+        position: relative;
+
         input {
             appearance: none;
             -moz-appearance: none;
