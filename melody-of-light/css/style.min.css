@@ -3282,9 +3282,6 @@ textarea.form__input {
     transition: 0.3s ease top 0s;
   }
 }
-.header--small .header__top {
-  display: none;
-}
 .header--small .header__bottom {
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
   height: calc(86px - 6px);
@@ -5222,7 +5219,7 @@ textarea.form__input {
 }
 
 .with-sidebar__sidebar-sticky._active .filter__body {
-  max-height: 525px;
+  max-height: 550px;
   overflow-y: auto;
   overflow-x: hidden;
 }
