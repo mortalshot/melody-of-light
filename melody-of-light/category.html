@@ -605,6 +605,50 @@
 	<div class="category with-sidebar">
 		<div class="with-sidebar__row _container">
 			<aside class="with-sidebar__sidebar">
+				<ul class="another-category">
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>C 1 плафоном</span>
+							<span class="another-category__val">19</span>
+						</a>
+					</li>
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>C 2 плафономи</span>
+							<span class="another-category__val">91</span>
+						</a>
+					</li>
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>C 3 плафономи</span>
+							<span class="another-category__val">24</span>
+						</a>
+					</li>
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>Гибкие бра</span>
+							<span class="another-category__val">19</span>
+						</a>
+					</li>
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>Подвески для зеркал</span>
+							<span class="another-category__val">44</span>
+						</a>
+					</li>
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>Подвески для картин</span>
+							<span class="another-category__val">25</span>
+						</a>
+					</li>
+					<li class="another-category__item">
+						<a href="" class="another-category__link">
+							<span>Подвески для лестниц</span>
+							<span class="another-category__val">19</span>
+						</a>
+					</li>
+				</ul>
 				<div class="with-sidebar__sidebar-sticky">
 					<form action="#" class="filter">
 						<div class="filter__heading">
@@ -637,20 +681,20 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Форма светильников</span></button>
 								<div class="accordion__text">
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-bushe">
-										<span>Буше<span class="filter__num">(23)</span></span>
+										<input type="checkbox" name="form-bushe" data-name="form-bushe1">
+										<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Квадратная<span class="filter__num">(189)</span></span>
+										<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya1">
+										<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Клетка<span class="filter__num">(48)</span></span>
+										<input type="checkbox" name="form-kletka" data-name="form-kletka1">
+										<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Колесо<span class="filter__num">(9)</span></span>
+										<input type="checkbox" name="form-koleso" data-name="form-koleso1">
+										<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 									</label>
 								</div>
 							</div>
@@ -699,12 +743,18 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Стиль</span></button>
 								<div class="accordion__text">
 									<label class="form__radio">
-										<input type="radio" name="filter-style">
-										<span>Лофт<span class="filter__num">(23)</span></span>
+										<input type="radio" name="filter-style" data-name="loft" checked>
+										<span>
+											<span class="filter__text">Лофт</span>
+											<span class="filter__num">(23)</span>
+										</span>
 									</label>
 									<label class="form__radio">
-										<input type="radio" name="filter-style">
-										<span>Хай-тек<span class="filter__num">(189)</span></span>
+										<input type="radio" name="filter-style" data-name="high-tech">
+										<span>
+											<span class="filter__text">Хай-тек</span>
+											<span class="filter__num">(189)</span>
+										</span>
 									</label>
 								</div>
 							</div>
@@ -712,20 +762,20 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Тип лампочки</span></button>
 								<div class="accordion__text">
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-bushe">
-										<span>Буше<span class="filter__num">(23)</span></span>
+										<input type="checkbox" name="form-bushe" data-name="form-bushe2">
+										<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Квадратная<span class="filter__num">(189)</span></span>
+										<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya2">
+										<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Клетка<span class="filter__num">(48)</span></span>
+										<input type="checkbox" name="form-kletka" data-name="form-kletka2">
+										<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Колесо<span class="filter__num">(9)</span></span>
+										<input type="checkbox" name="form-koleso" data-name="form-koleso2">
+										<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 									</label>
 								</div>
 							</div>
@@ -733,20 +783,20 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Место применения</span></button>
 								<div class="accordion__text">
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-bushe">
-										<span>Буше<span class="filter__num">(23)</span></span>
+										<input type="checkbox" name="form-bushe" data-name="form-bushe3">
+										<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Квадратная<span class="filter__num">(189)</span></span>
+										<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya3">
+										<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Клетка<span class="filter__num">(48)</span></span>
+										<input type="checkbox" name="form-kletka" data-name="form-kletka3">
+										<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Колесо<span class="filter__num">(9)</span></span>
+										<input type="checkbox" name="form-koleso" data-name="form-koleso3">
+										<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 									</label>
 								</div>
 							</div>
@@ -754,20 +804,20 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Параметры плафонов</span></button>
 								<div class="accordion__text">
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-bushe">
-										<span>Буше<span class="filter__num">(23)</span></span>
+										<input type="checkbox" name="form-bushe" data-name="form-bushe4">
+										<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Квадратная<span class="filter__num">(189)</span></span>
+										<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya4">
+										<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Клетка<span class="filter__num">(48)</span></span>
+										<input type="checkbox" name="form-kletka" data-name="form-kletka4">
+										<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Колесо<span class="filter__num">(9)</span></span>
+										<input type="checkbox" name="form-koleso" data-name="form-koleso4">
+										<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 									</label>
 								</div>
 							</div>
@@ -775,20 +825,20 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Выключатель</span></button>
 								<div class="accordion__text">
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-bushe">
-										<span>Буше<span class="filter__num">(23)</span></span>
+										<input type="checkbox" name="form-bushe" data-name="form-bushe5">
+										<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Квадратная<span class="filter__num">(189)</span></span>
+										<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya5">
+										<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Клетка<span class="filter__num">(48)</span></span>
+										<input type="checkbox" name="form-kletka" data-name="form-kletka5">
+										<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Колесо<span class="filter__num">(9)</span></span>
+										<input type="checkbox" name="form-koleso" data-name="form-koleso5">
+										<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 									</label>
 								</div>
 							</div>
@@ -796,20 +846,20 @@
 								<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Степень защиты</span></button>
 								<div class="accordion__text">
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-bushe">
-										<span>Буше<span class="filter__num">(23)</span></span>
+										<input type="checkbox" name="form-bushe" data-name="form-bushe6">
+										<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Квадратная<span class="filter__num">(189)</span></span>
+										<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya6">
+										<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Клетка<span class="filter__num">(48)</span></span>
+										<input type="checkbox" name="form-kletka" data-name="form-kletka6">
+										<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 									</label>
 									<label class="form__checkbox">
-										<input type="checkbox" name="form-kvadtarnaya">
-										<span>Колесо<span class="filter__num">(9)</span></span>
+										<input type="checkbox" name="form-koleso" data-name="form-koleso6">
+										<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 									</label>
 								</div>
 							</div>
@@ -831,70 +881,10 @@
 				</div>
 
 				<div class="category__tags">
-					<div class="category__tag">
+					<div class="category__tag" data-id="loft">
 						<label class="category__tag-inner">
-							<input type="checkbox" name="C 1 плафоном" checked>
-							<span>C 1 плафоном <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="C 2 плафонами" checked>
-							<span>C 2 плафонами <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="C 3 плафонами">
-							<span>C 3 плафонами <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="Гибкие бра">
-							<span>Гибкие бра <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="C 1 плафоном">
-							<span>C 1 плафоном <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="C 1 плафоном">
-							<span>C 1 плафоном <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="C 1 плафоном">
-							<span>C 1 плафоном <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="Подсветки для зеркал">
-							<span>Подсветки для зеркал <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="Подсветки для картин">
-							<span>Подсветки для картин <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="Подсветка для лестниц">
-							<span>Подсветка для лестниц <i class="icon-close"></i></span>
-						</label>
-					</div>
-					<div class="category__tag">
-						<label class="category__tag-inner">
-							<input type="checkbox" name="Все">
-							<span>Все <i class="icon-close"></i></span>
+							<input type="radio" name="filter-style" checked="">
+							<span>Лофт  <i class="icon-close"></i></span>
 						</label>
 					</div>
 				</div>
@@ -1610,20 +1600,20 @@
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Форма светильников</span></button>
 					<div class="accordion__text">
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
+							<input type="checkbox" name="form-bushe" data-name="form-bushe21">
+							<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
+							<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya21">
+							<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
+							<input type="checkbox" name="form-kletka" data-name="form-kletka21">
+							<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
+							<input type="checkbox" name="form-koleso" data-name="form-koleso21">
+							<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 						</label>
 					</div>
 				</div>
@@ -1670,14 +1660,20 @@
 				</div>
 				<div class="accordion__item accordion__item">
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Стиль</span></button>
-					<div class="accordion__text">
+					<div class="accordion__text" style="display: block;">
 						<label class="form__radio">
-							<input type="radio" name="filter-style">
-							<span>Лофт<span class="filter__num">(23)</span></span>
+							<input type="radio" name="filter-style" data-name="loft2" checked>
+							<span>
+								<span class="filter__text">Лофт</span>
+								<span class="filter__num">(23)</span>
+							</span>
 						</label>
 						<label class="form__radio">
-							<input type="radio" name="filter-style">
-							<span>Хай-тек<span class="filter__num">(189)</span></span>
+							<input type="radio" name="filter-style" data-name="high-tech2">
+							<span>
+								<span class="filter__text">Хай-тек</span>
+								<span class="filter__num">(189)</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -1685,20 +1681,20 @@
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Тип лампочки</span></button>
 					<div class="accordion__text">
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
+							<input type="checkbox" name="form-bushe" data-name="form-bushe22">
+							<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
+							<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya22">
+							<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
+							<input type="checkbox" name="form-kletka" data-name="form-kletka22">
+							<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
+							<input type="checkbox" name="form-koleso" data-name="form-koleso22">
+							<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 						</label>
 					</div>
 				</div>
@@ -1706,20 +1702,20 @@
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Место применения</span></button>
 					<div class="accordion__text">
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
+							<input type="checkbox" name="form-bushe" data-name="form-bushe23">
+							<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
+							<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya23">
+							<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
+							<input type="checkbox" name="form-kletka" data-name="form-kletka23">
+							<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
+							<input type="checkbox" name="form-koleso" data-name="form-koleso23">
+							<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 						</label>
 					</div>
 				</div>
@@ -1727,20 +1723,20 @@
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Параметры плафонов</span></button>
 					<div class="accordion__text">
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
+							<input type="checkbox" name="form-bushe" data-name="form-bushe24">
+							<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
+							<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya24">
+							<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
+							<input type="checkbox" name="form-kletka" data-name="form-kletka24">
+							<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
+							<input type="checkbox" name="form-koleso" data-name="form-koleso24">
+							<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 						</label>
 					</div>
 				</div>
@@ -1748,20 +1744,20 @@
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Выключатель</span></button>
 					<div class="accordion__text">
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
+							<input type="checkbox" name="form-bushe" data-name="form-bushe25">
+							<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
+							<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya25">
+							<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
+							<input type="checkbox" name="form-kletka" data-name="form-kletka25">
+							<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
+							<input type="checkbox" name="form-koleso" data-name="form-koleso25">
+							<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 						</label>
 					</div>
 				</div>
@@ -1769,20 +1765,20 @@
 					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Степень защиты</span></button>
 					<div class="accordion__text">
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
+							<input type="checkbox" name="form-bushe" data-name="form-bushe26">
+							<span><span class="filter__text">Буше</span><span class="filter__num">(23)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
+							<input type="checkbox" name="form-kvadtarnaya" data-name="form-kvadtarnaya26">
+							<span><span class="filter__text">Квадратная</span><span class="filter__num">(189)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
+							<input type="checkbox" name="form-kletka" data-name="form-kletka26">
+							<span><span class="filter__text">Клетка</span><span class="filter__num">(48)</span></span>
 						</label>
 						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
+							<input type="checkbox" name="form-koleso" data-name="form-koleso26">
+							<span><span class="filter__text">Колесо</span><span class="filter__num">(9)</span></span>
 						</label>
 					</div>
 				</div>

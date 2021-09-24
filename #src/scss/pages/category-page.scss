@@ -250,6 +250,7 @@
 
     .fancybox__slide {
         justify-content: flex-end;
+        padding: 0;
 
         &::before,
         &::after {
@@ -824,4 +825,40 @@
         }
     }
 }
+
+.another-category {
+    &:not(:last-child) {
+        margin-bottom: 35px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__link {
+        color: $fontColor;
+        text-decoration: underline transparent from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration, $transition opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.6;
+
+                span:first-child {
+                    text-decoration: underline $fontColor from-font;
+                }
+            }
+        }
+    }
+
+    &__val {
+        display: inline-block;
+        margin-left: 16px;
+        color: $Gray;
+    }
+}
+
 // ====== CATEGORY END ======

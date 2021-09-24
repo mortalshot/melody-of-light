@@ -13,4 +13,5 @@
 @@include('components/tabs.js')
 @@include('components/tooltip.js')
 @@include('components/form.js')
+@@include('components/category-filter.js')
 
