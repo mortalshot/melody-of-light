@@ -29,9 +29,6 @@ if ($('.category-widget__swiper').length > 0) {
         slidesPerView: 2.2,
         spaceBetween: 8,
         watchOverflow: true,
-        lazy: true,
-        preloadImages: true,
-        loadPrevNext: true,
 
         navigation: {
             prevEl: '.category-widget__swiper .swiper-button-prev',
