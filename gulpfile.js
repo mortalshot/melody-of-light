@@ -36,6 +36,7 @@ let path = {
 		css: project_name + "/css/",
 		images: project_name + "/img/",
 		fonts: project_name + "/fonts/",
+		pdf: project_name + "/pdf/",
 		json: project_name + "/json/"
 	},
 	src: {
@@ -45,6 +46,7 @@ let path = {
 		css: src_folder + "/scss/style.scss",
 		images: [src_folder + "/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}", "!**/favicon.*"],
 		fonts: src_folder + "/fonts/*.ttf",
+		pdf: src_folder + "/pdf/*.pdf",
 		json: src_folder + "/json/**/*.*"
 	},
 	watch: {
@@ -102,6 +104,10 @@ function json() {
 	return src(path.src.json, {})
 		.pipe(dest(path.build.json))
 		.pipe(browsersync.stream());
+}
+function pdf() {
+	return src(path.src.pdf, {})
+		.pipe(dest(path.build.pdf))
 }
 function js() {
 	return src(path.src.js, {})
@@ -299,7 +305,7 @@ function htmlBuild() {
 		.pipe(browsersync.stream());
 }
 let fontsBuild = gulp.series(fonts_otf, fonts, fontstyle);
-let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, copyFolders, json, html, css, js, favicon, images));
+let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, copyFolders, json, pdf, html, css, js, favicon, images));
 let watch = gulp.series(buildDev, gulp.parallel(watchFiles, browserSync));
 let build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imagesBuild);
 

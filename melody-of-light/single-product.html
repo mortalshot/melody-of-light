@@ -818,7 +818,7 @@
 							</div>
 							<span>4,5 средняя оценка</span>
 						</div>
-						<a href="" class="product-reviews__btn btn btn-bg">Оставить отзыв</a>
+						<a href="" class="product-reviews__btn btn btn-bg" data-fancybox="" data-src="#review">Оставить отзыв</a>
 					</div>
 
 					<div class="product-reviews__list">
@@ -1276,222 +1276,39 @@
 		</div>
 	</section>
 
-	<!-- filter mobile start -->
-	<div id="filter-mobile" class="fancybox__popup" style="display:none;">
-		<form action="#" class="filter">
-			<div class="filter__heading">
-				<a href="" class="fancybox__close">Скрыть</a>
-				<div class="filter__title">Фильтр</div>
-				<div class="filter__reset">
-					<a href="">
-						<i class="icon-reload"></i>
-						<span>Сбросить</span>
-					</a>
+	<div id="review" class="review fancybox__popup" style="display:none;">
+		<form action="#" id="reviewForm" class="form">
+			<h4 class="review__title fancybox__popup-title">Ваш отзыв</h4>
+
+			<div class="form__row review__rating">
+				<div class="form__item col-12 col-sm-6">
+					<input type="text" class="form__input" name="Name" placeholder="Имя" autocomplete="name">
+				</div>
+				<div class="form__item col-12 col-sm-6 review__rating-row">
+					<div class="rating _rating-set">
+						<div class="rating__body">
+							<div class="rating__active"></div>
+							<div class="rating__items">
+								<input type="radio" class="rating__input" name="product-rating" value="1">
+								<input type="radio" class="rating__input" name="product-rating" value="2">
+								<input type="radio" class="rating__input" name="product-rating" value="3">
+								<input type="radio" class="rating__input" name="product-rating" value="4">
+								<input type="radio" class="rating__input" name="product-rating" value="5">
+							</div>
+						</div>
+						<div class="rating__value">4.3</div>
+					</div>
 				</div>
 			</div>
-			<div data-spollers="" class="filter__body accordion">
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title _active"><span>Цена</span></button>
-					<div class="accordion__text">
-						<div class="price-filter">
-							<div class="form__row price-filter__values">
-								<div class="form__item col-6 price-filter__values-input">
-									<input id="price-start2" autocomplete="off" type="text" name="form[]" class="form__input">
-								</div>
-								<div class="form__item col-6 price-filter__values-input">
-									<input id="price-end2" autocomplete="off" type="text" name="form[]" class="form__input">
-								</div>
-							</div>
-							<div class="price-filter__slider2"></div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Форма светильников</span></button>
-					<div class="accordion__text">
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
-						</label>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Парметры плафонов</span></button>
-					<div class="accordion__text">
-						<label for="visota-ot" class="form__label">Высота, мм</label>
-						<div class="form__row">
-							<div class="form__item col-6">
-								<input id="visota-ot" type="text" class="form__input" name="visota-ot">
-							</div>
-							<div class="form__item col-6">
-								<input type="text" class="form__input" name="visota-do">
-							</div>
-						</div>
-						<label for="glybina-ot" class="form__label">Глубина, мм</label>
-						<div class="form__row">
-							<div class="form__item col-6">
-								<input id="glybina-ot" type="text" class="form__input" name="glybina-ot">
-							</div>
-							<div class="form__item col-6">
-								<input type="text" class="form__input" name="glybina-do">
-							</div>
-						</div>
-						<label for="diametr-ot" class="form__label">Диаметр, мм</label>
-						<div class="form__row">
-							<div class="form__item col-6">
-								<input id="diametr-ot" type="text" class="form__input" name="diametr-ot">
-							</div>
-							<div class="form__item col-6">
-								<input type="text" class="form__input" name="diametr-do">
-							</div>
-						</div>
-						<label for="shirina-ot" class="form__label">Ширина, мм</label>
-						<div class="form__row">
-							<div class="form__item col-6">
-								<input id="shirina-ot" type="text" class="form__input" name="shirina-ot">
-							</div>
-							<div class="form__item col-6">
-								<input type="text" class="form__input" name="shirina-do">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Стиль</span></button>
-					<div class="accordion__text">
-						<label class="form__radio">
-							<input type="radio" name="filter-style">
-							<span>Лофт<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__radio">
-							<input type="radio" name="filter-style">
-							<span>Хай-тек<span class="filter__num">(189)</span></span>
-						</label>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Тип лампочки</span></button>
-					<div class="accordion__text">
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
-						</label>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Место применения</span></button>
-					<div class="accordion__text">
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
-						</label>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Параметры плафонов</span></button>
-					<div class="accordion__text">
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
-						</label>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Выключатель</span></button>
-					<div class="accordion__text">
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
-						</label>
-					</div>
-				</div>
-				<div class="accordion__item accordion__item">
-					<button tabindex="-1" type="button" data-spoller class="accordion__title"><span>Степень защиты</span></button>
-					<div class="accordion__text">
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-bushe">
-							<span>Буше<span class="filter__num">(23)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Квадратная<span class="filter__num">(189)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Клетка<span class="filter__num">(48)</span></span>
-						</label>
-						<label class="form__checkbox">
-							<input type="checkbox" name="form-kvadtarnaya">
-							<span>Колесо<span class="filter__num">(9)</span></span>
-						</label>
-					</div>
+			<div class="form__row">
+				<div class="form__item col-12">
+					<textarea type="text" class="form__input" placeholder="Ваш комментарий"></textarea>
 				</div>
 			</div>
 
-			<div class="filter__accept"><button class="btn btn-bg">Применить</button></div>
+			<div class="review__btn"><button class="btn btn-bg">Оставить отзыв</button></div>
 		</form>
 	</div>
-	<!-- filter mobile end -->
 </main>
 
 <footer class="site__footer footer ">
@@ -1626,12 +1443,12 @@
 
             <div class="form__row">
                 <div class="form__item col-12">
-                    <input id="authFormEmail" type="email" name="Email" class="form__input" placeholder="Email">
+                    <input id="authFormEmail" type="email" name="Email" class="form__input" placeholder="Email" autocomplete="email">
                 </div>
                 <div class="form__item col-12">
                     <div class="form__password">
                         <div class="form__password-input">
-                            <input id="authFormPassword" type="password" name="Password" class="form__input form__input--password" placeholder="Пароль">
+                            <input id="authFormPassword" type="password" name="Password" class="form__input form__input--password" placeholder="Пароль" autocomplete="new-password">
                             <label class="form__password-show">
                                 <input type="checkbox" name="show password">
                                 <span><i class="icon-show-pass"></i></span>
@@ -1665,15 +1482,15 @@
 
             <div class="form__row">
                 <div class="form__item col-12">
-                    <input id="regestrationFormEmail" type="text" name="Email" class="form__input form__input--phone" placeholder="+7 (___) ___-__-__">
+                    <input id="regestrationFormPhone" type="text" name="Email" class="form__input form__input--phone" placeholder="+7 (___) ___-__-__">
                 </div>
                 <div class="form__item col-12">
-                    <input id="regestrationFormEmail" type="email" name="Email" class="form__input" placeholder="Email">
+                    <input id="regestrationFormEmail" type="email" name="Email" class="form__input" placeholder="Email" autocomplete="email">
                 </div>
                 <div class="form__item col-12">
                     <div class="form__password">
                         <div class="form__password-input">
-                            <input id="regestrationFormPassword" type="password" name="Password" class="form__input form__input--password" placeholder="Пароль">
+                            <input id="regestrationFormPassword" type="password" name="Password" class="form__input form__input--password" placeholder="Пароль" autocomplete="new-password">
                             <label class="form__password-show">
                                 <input type="checkbox" name="show password">
                                 <span><i class="icon-show-pass"></i></span>
@@ -1684,7 +1501,7 @@
                 <div class="form__item col-12">
                     <div class="form__password">
                         <div class="form__password-input">
-                            <input id="regestrationFormPasswordRepeat" type="password" name="Password repeat" class="form__input form__input--password" placeholder="Пароль">
+                            <input id="regestrationFormPasswordRepeat" type="password" name="Password repeat" class="form__input form__input--password" placeholder="Пароль" autocomplete="current-password">
                             <label class="form__password-show">
                                 <input type="checkbox" name="show password">
                                 <span><i class="icon-show-pass"></i></span>

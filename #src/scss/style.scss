@@ -701,6 +701,11 @@
 			padding: 10px;
 			background-color: $White;
 
+			@media screen and (max-width: 500px) {
+				padding: 6px;
+				min-width: 38px;
+			}
+
 			&:not(:last-child) {
 				margin-bottom: 5px;
 			}

@@ -233,6 +233,7 @@
 
     #filter-mobile {
         padding: 0;
+        max-width: 100%;
         width: 100%;
         border-radius: 10px 10px 0 0;
 
@@ -611,6 +612,12 @@
         .product-item__controls {
             z-index: 1;
 
+            @media screen and (max-width: 991px) {
+                .product-item__compare, .product-item__wishlist {
+                    padding-left: 6px;
+                    padding-right: 6px;
+                }
+            }
             @media screen and (max-width: 500px) {
                 flex: 0 0 100%;
 

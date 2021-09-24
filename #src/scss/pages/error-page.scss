@@ -1,0 +1,92 @@
+.error-page {
+    .site__header {
+        @include adaptiv-value("padding-top", 24, 15, 1);
+        @include adaptiv-value("padding-bottom", 24, 15, 1);
+
+        .logo__link {
+            @include adaptiv-value("max-width", 200, 109, 1);
+        }
+    }
+
+    .site__main {
+        padding-top: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        background-color: transparent;
+        padding: 0;
+
+        &__bottom {
+            color: $fontColor;
+            @include adaptiv-value("padding-top", 40, 20, 1);
+            @include adaptiv-value("padding-bottom", 40, 20, 1);
+
+            @media screen and (max-width: 575px) {
+                display: block;
+            }
+        }
+
+        &__privacy {
+            flex: 1;
+
+            & + .footer__link {
+                @include adaptiv-value("margin-right", 70, 20, 1);
+                padding: 0;
+            }
+        }
+
+        &__link {
+            color: $fontColor;
+            text-decoration: underline $fontColor from-font;
+
+            @media screen and (max-width: 575px) {
+                margin: 0;
+            }
+        }
+
+        &__kan {
+            flex: initial;
+
+            @media screen and (max-width: 575px) {
+                margin-top: 20px;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.error {
+    @include adaptiv-value("padding-top", 100, 25, 1);
+    @include adaptiv-value("padding-bottom", 100, 25, 1);
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    &__body {
+        max-width: 345px;
+    }
+
+    &__404 {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__btn {
+    }
+}

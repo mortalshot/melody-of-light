@@ -1,0 +1,66 @@
+.rating {
+    display: flex;
+    align-items: flex-end;
+    font-size: 30px;
+    line-height: 1;
+
+    &__body {
+        position: relative;
+
+        &::before {
+            font-family: "icomoon" !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            content: "\e907 \e907 \e907 \e907 \e907";
+            display: block;
+            color: $LGray;
+        }
+    }
+
+    &__active {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        &::before {
+            content: "\e907 \e907 \e907 \e907 \e907";
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: $Yellow;
+            font-family: "icomoon" !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+        }
+    }
+
+    &__items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__input {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__value {
+        display: none;
+    }
+}
