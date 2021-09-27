@@ -34,6 +34,7 @@ $('.header--mobile .location__dropdown-select').on('select2:select', function (e
     var data = e.params.data;
     const text = data.text;
     $('.location__button span').html(text);
+    $('.header__burger').show();
 });
 
 

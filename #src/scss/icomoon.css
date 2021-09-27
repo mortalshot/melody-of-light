@@ -27,6 +27,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-reload-right:before {
+  content: "\e921";
+}
 .icon-zoom-in:before {
   content: "\e91e";
 }

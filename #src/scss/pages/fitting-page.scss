@@ -60,6 +60,8 @@
         border-radius: 100%;
         cursor: pointer;
         box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+        border: 2px solid transparent;
+        transition: $transition ease all 0s;
 
         @media screen and (max-width: 767px) {
             max-width: 26px;
@@ -67,11 +69,16 @@
         @media (any-hover: hover) {
             &:hover {
                 animation: wobble-hor-bottom 0.8s both;
+                transition: $transition ease all 0s;
             }
         }
 
         &:not(:last-child) {
             margin-bottom: 8px;
+        }
+
+        &._active {
+            border-color: $Orange;
         }
     }
 
@@ -160,8 +167,7 @@
         top: 0;
         z-index: 2;
         border-radius: 2px;
-        width: 100%;
-        max-width: 153px;
+        width: 153px;
         height: 119px;
         display: flex;
         align-items: flex-end;
@@ -171,6 +177,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        user-select: none;
         transition: $transition ease opacity 0s;
 
         &._active {
@@ -472,18 +479,18 @@
         transform-origin: 50% 50%;
     }
     15% {
-        transform: translateX(-3.5px) rotate(-3deg);
+        transform: translateX(-2.5px) rotate(-6deg);
     }
     30% {
-        transform: translateX(3.5px) rotate(1.5deg);
+        transform: translateX(2.5px) rotate(3.5deg);
     }
     45% {
-        transform: translateX(-3.5px) rotate(-3.6deg);
+        transform: translateX(-2.5px) rotate(-6.6deg);
     }
     60% {
-        transform: translateX(2px) rotate(2.4deg);
+        transform: translateX(1px) rotate(4.4deg);
     }
     75% {
-        transform: translateX(-1.5px) rotate(-1.2deg);
+        transform: translateX(-1px) rotate(-2.2deg);
     }
 }

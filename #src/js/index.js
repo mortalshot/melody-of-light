@@ -14,5 +14,7 @@
 @@include('components/tooltip.js')
 @@include('components/form.js')
 @@include('components/category-filter.js')
+@@include('components/compare.js')
+@@include('components/fitting.js')
 @@include('components/rating.js')
 
