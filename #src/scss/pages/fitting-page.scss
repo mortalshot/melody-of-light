@@ -178,6 +178,7 @@
         visibility: hidden;
         pointer-events: none;
         user-select: none;
+        transform: rotate(0deg);
         transition: $transition ease opacity 0s;
 
         &._active {

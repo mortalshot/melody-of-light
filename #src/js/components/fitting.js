@@ -71,8 +71,10 @@ if ($('._draggable').length > 0) {
         }
     })
 
-    let angle = 0;
     $('._draggable').on('click', function () {
+        let transform = $(this).css('transform');
+
+
         if ($('.fitting__main-control._active').hasClass('fitting__main-control--minimize')) {
             $(this).width("-=10");
             $(this).height("-=10");
@@ -80,14 +82,40 @@ if ($('._draggable').length > 0) {
             $(this).width("+=10");
             $(this).height("+=10");
         } else if ($('.fitting__main-control._active').hasClass('fitting__main-control--rotate-left')) {
-            angle -= 10;
+            var values = transform.split('(')[1],
+                values = values.split(')')[0],
+                values = values.split(',');
 
-            $(this).css({ 'transform': `rotate(${angle}deg)` });
+            var a = values[0]; // 0.866025
+            var b = values[1]; // 0.5
+            var c = values[2]; // -0.5
+            var d = values[3]; // 0.866025
+
+            let angle = Math.round(Math.asin(b) * (180 / Math.PI));
+
+
+            if (angle >= -80) {
+                angle -= 10;
+                $(this).css({ 'transform': `rotate(${angle}deg)` });
+            }
         }
         else if ($('.fitting__main-control._active').hasClass('fitting__main-control--rotate-right')) {
-            angle += 10;
+            var values = transform.split('(')[1],
+                values = values.split(')')[0],
+                values = values.split(',');
 
-            $(this).css({ 'transform': `rotate(${angle}deg)` });
+            var a = values[0]; // 0.866025
+            var b = values[1]; // 0.5
+            var c = values[2]; // -0.5
+            var d = values[3]; // 0.866025
+
+            let angle = Math.round(Math.asin(b) * (180 / Math.PI));
+
+
+            if (angle <= 80) {
+                angle += 10;
+                $(this).css({ 'transform': `rotate(${angle}deg)` });
+            }
         }
         else if ($('.fitting__main-control._active').hasClass('fitting__main-control--close')) {
             const data = $(this).attr('id');
@@ -95,6 +123,10 @@ if ($('._draggable').length > 0) {
             $(this).removeClass('_active');
         }
     })
+
+}
+
+function getAngle() {
 
 }
 // === ONLINE-FITTING PAGE END ===

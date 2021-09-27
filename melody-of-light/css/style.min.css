@@ -8395,6 +8395,7 @@ textarea.form__input {
   visibility: hidden;
   pointer-events: none;
   user-select: none;
+  transform: rotate(0deg);
   transition: 0.3s ease opacity 0s;
 }
 .fitting__main-item._active {
