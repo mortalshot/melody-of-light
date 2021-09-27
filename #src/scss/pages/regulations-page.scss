@@ -46,6 +46,7 @@
             bottom: 0;
             background: rgba(33, 33, 35, 0.8);
             opacity: 0;
+            pointer-events: none;
             transition: $transition ease opacity 0s;
         }
 

@@ -8167,6 +8167,7 @@ textarea.form__input {
   bottom: 0;
   background: rgba(33, 33, 35, 0.8);
   opacity: 0;
+  pointer-events: none;
   transition: 0.3s ease opacity 0s;
 }
 @media (any-hover: hover) {
