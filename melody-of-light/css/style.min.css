@@ -5107,7 +5107,7 @@ textarea.form__input {
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: thin;
-    max-height: 100% !important;
+    max-height: calc(100vh - 52px);
   }
   .filter__body::-webkit-scrollbar {
     width: 0px;
@@ -5224,7 +5224,8 @@ textarea.form__input {
   margin-left: 8px;
 }
 .filter__accept {
-  margin: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
   background-color: #fff;

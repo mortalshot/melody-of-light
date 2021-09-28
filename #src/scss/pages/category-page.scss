@@ -125,7 +125,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             scrollbar-width: thin;
-            max-height: 100% !important;
+            max-height: calc(100vh - #{$size-header-height-mobile - 6});
 
             &::-webkit-scrollbar {
                 width: 0px;
@@ -209,7 +209,8 @@
     }
 
     &__accept {
-        margin: 24px 0;
+        padding-top: 24px;
+        padding-bottom: 24px;
         @include adaptiv-value("padding-left", 24, 10, 1);
         @include adaptiv-value("padding-right", 24, 10, 1);
         background-color: $White;
