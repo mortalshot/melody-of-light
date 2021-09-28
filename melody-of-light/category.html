@@ -901,12 +901,12 @@
 						<div class="category__sorting">
 							<label for="product-sorting" class="category__sorting-label">Сортировать</label>
 							<select name="product-sorting" id="product-sorting" class="category__sorting-select">
-								<option value="По умолчанию">По умолчанию</option>
-								<option value="По популярности">По популярности</option>
-								<option value="По возрастанию цены" selected>По возрастанию цены</option>
-								<option value="По убыванию цены">По убыванию цены</option>
-								<option value="По новинкам">По новинкам</option>
-								<option value="По размеру скидки">По размеру скидки</option>
+								<option value="/?sort=p.sort_order&order=ASC">По умолчанию</option>
+								<option value="/?sort=rating&order=DESC">По популярности</option>
+								<option value="/?sort=price&order=ASC" selected>По возрастанию цены</option>
+								<option value="/?sort=price&order=DESC">По убыванию цены</option>
+								<option value="/?sort=p.date_added&order=DESC">По новинкам</option>
+								<option value="/?sort=special&order=DESC">По размеру скидки</option>
 							</select>
 						</div>
 
