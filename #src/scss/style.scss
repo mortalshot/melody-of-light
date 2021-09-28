@@ -572,6 +572,7 @@
 		background-color: $White;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		position: relative;
 		border-radius: 1px;
 		transition: $transition ease transform 0s;
@@ -601,6 +602,18 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
+		height: 100%;
+		max-height: 200px;
+		position: relative;
+		padding-bottom: math.div(386px, 440px) * 100%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 
 	&__item-title {

@@ -1,6 +1,12 @@
 .regulations-page {
     .fancybox__content {
         max-width: 560px;
+
+        & > .carousel__button.is-close {
+            top: 0px;
+            right: 0px;
+            transform: translate(100%, -100%)
+        }
     }
 }
 
