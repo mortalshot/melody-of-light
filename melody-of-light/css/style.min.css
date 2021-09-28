@@ -4936,6 +4936,14 @@ textarea.form__input {
   border-radius: 2px;
   background-color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .filter {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+  }
+}
 .filter__heading {
   display: flex;
   align-items: center;
@@ -4971,6 +4979,19 @@ textarea.form__input {
     border: 0;
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter__close {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .filter__close {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ec863d;
   }
 }
 .filter__title {
@@ -5086,7 +5107,7 @@ textarea.form__input {
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: thin;
-    max-height: calc(100vh - 96px - 52px);
+    max-height: 100% !important;
   }
   .filter__body::-webkit-scrollbar {
     width: 0px;
@@ -5280,7 +5301,35 @@ textarea.form__input {
 }
 @media screen and (max-width: 767px) {
   .category .with-sidebar__sidebar {
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(33, 33, 35, 0.7);
+    z-index: 51;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s ease all 0s;
+  }
+  .category .with-sidebar__sidebar._active {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  .category .with-sidebar__sidebar:not(:last-child) {
+    margin: 0;
+  }
+  .category .with-sidebar__sidebar-sticky {
+    width: 100%;
+  }
+  .category .with-sidebar__sidebar-sticky._active {
+    position: relative;
+    top: initial;
   }
 }
 .category .page-heading {
@@ -5603,7 +5652,8 @@ textarea.form__input {
   z-index: 1;
 }
 @media screen and (max-width: 991px) {
-  .category__item .product-item__controls .product-item__compare, .category__item .product-item__controls .product-item__wishlist {
+  .category__item .product-item__controls .product-item__compare,
+.category__item .product-item__controls .product-item__wishlist {
     padding-left: 6px;
     padding-right: 6px;
   }

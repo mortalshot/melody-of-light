@@ -4,6 +4,13 @@
     border-radius: 2px;
     background-color: $White;
 
+    @media screen and (max-width: 767px) {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+    }
+
     &__heading {
         display: flex;
         align-items: center;
@@ -18,6 +25,18 @@
             border: 0;
             padding-top: 16px;
             padding-bottom: 16px;
+        }
+    }
+
+    &__close {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+        @media screen and (max-width: 767px) {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            color: $Orange;
         }
     }
 
@@ -106,7 +125,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             scrollbar-width: thin;
-            max-height: calc(100vh - 96px - 52px);
+            max-height: 100% !important;
 
             &::-webkit-scrollbar {
                 width: 0px;
@@ -267,7 +286,39 @@
         padding-bottom: 0;
 
         @media screen and (max-width: 767px) {
-            display: none;
+            position: fixed;
+            top: 0;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background: rgba(33, 33, 35, 0.7);
+            z-index: 51;
+            display: flex;
+            align-items: flex-end;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: $transition ease all 0s;
+
+            &._active {
+                bottom: 0;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+
+            &:not(:last-child) {
+                margin: 0;
+            }
+
+            &-sticky {
+                width: 100%;
+
+                &._active {
+                    position: relative;
+                    top: initial;
+                }
+            }
         }
     }
 
@@ -613,7 +664,8 @@
             z-index: 1;
 
             @media screen and (max-width: 991px) {
-                .product-item__compare, .product-item__wishlist {
+                .product-item__compare,
+                .product-item__wishlist {
                     padding-left: 6px;
                     padding-right: 6px;
                 }
