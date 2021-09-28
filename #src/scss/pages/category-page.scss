@@ -211,12 +211,13 @@
     &__accept {
         padding-top: 24px;
         padding-bottom: 24px;
-        @include adaptiv-value("padding-left", 24, 10, 1);
-        @include adaptiv-value("padding-right", 24, 10, 1);
         background-color: $White;
 
-        button {
+        a, button {
             width: 100%;
+            color: $White;
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 }

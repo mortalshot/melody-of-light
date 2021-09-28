@@ -5226,22 +5226,13 @@ textarea.form__input {
 .filter__accept {
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
   background-color: #fff;
 }
-@media (max-width: 1280px) {
-  .filter__accept {
-    padding-left: calc(10px + 14 * ((100vw - 320px) / (960)));
-  }
-}
-@media (max-width: 1280px) {
-  .filter__accept {
-    padding-right: calc(10px + 14 * ((100vw - 320px) / (960)));
-  }
-}
-.filter__accept button {
+.filter__accept a, .filter__accept button {
   width: 100%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .with-sidebar__sidebar-sticky._active .filter__body {
